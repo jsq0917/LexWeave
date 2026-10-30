@@ -22,7 +22,9 @@ from common.law_utils import LAW_CODE_TO_FULL, LAW_FULL_TO_CODE, article_no_to_i
 from common.path_utils import read_json  # noqa: E402
 
 MIN_ALIAS_LEN = 2
-MAX_CONCEPTS_PER_ARTICLE = 12
+# P3 扩词典后概念数从 218 增至 291，12 的上限会让新概念挤掉既有金标概念；
+# 实测提到 16 时新旧边零丢失（旧边 3621 条全部保留），故上调。
+MAX_CONCEPTS_PER_ARTICLE = 16
 MIN_CONCEPT_CONFIDENCE = 0.5
 
 _CITE_RE = re.compile(r"第([零一二三四五六七八九十百千]+|\d+)条")

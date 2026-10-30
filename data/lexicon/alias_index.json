@@ -13,6 +13,13 @@
       "name": "经济补偿计算"
     }
   ],
+  "一般保证": [
+    {
+      "id": "general_guarantee",
+      "kind": "concept",
+      "name": "一般保证"
+    }
+  ],
   "三年": [
     {
       "id": "limitation_period",
@@ -60,6 +67,20 @@
       "id": "declaration_of_death",
       "kind": "concept",
       "name": "宣告死亡"
+    }
+  ],
+  "不动产权属证书": [
+    {
+      "id": "real_estate_title_certificate",
+      "kind": "concept",
+      "name": "不动产权属证书"
+    }
+  ],
+  "不动产登记簿": [
+    {
+      "id": "real_estate_register",
+      "kind": "concept",
+      "name": "不动产登记簿"
     }
   ],
   "不发工资": [
@@ -441,6 +462,13 @@
       "name": "买卖违约"
     }
   ],
+  "买受人": [
+    {
+      "id": "buyer",
+      "kind": "concept",
+      "name": "买受人"
+    }
+  ],
   "乱扣钱": [
     {
       "id": "wage_deduction",
@@ -512,6 +540,20 @@
       "name": "社保争议"
     }
   ],
+  "交付": [
+    {
+      "id": "delivery",
+      "kind": "concept",
+      "name": "交付"
+    }
+  ],
+  "交付时": [
+    {
+      "id": "delivery",
+      "kind": "concept",
+      "name": "交付"
+    }
+  ],
   "交强险": [
     {
       "id": "traffic_accident_liability",
@@ -550,13 +592,6 @@
       "id": "maternity_leave",
       "kind": "scenario",
       "name": "生育与产假"
-    }
-  ],
-  "产假待遇": [
-    {
-      "id": "maternity_benefit",
-      "kind": "concept",
-      "name": "生育保险待遇"
     }
   ],
   "产品缺陷": [
@@ -616,6 +651,13 @@
       "name": "隐私与个人信息"
     }
   ],
+  "人身自由": [
+    {
+      "id": "personal_freedom",
+      "kind": "concept",
+      "name": "人身自由"
+    }
+  ],
   "仓储合同": [
     {
       "id": "warehouse_contract",
@@ -635,6 +677,13 @@
       "id": "subrogation",
       "kind": "concept",
       "name": "代位权"
+    }
+  ],
+  "代位继承": [
+    {
+      "id": "subrogation_inheritance",
+      "kind": "concept",
+      "name": "代位继承"
     }
   ],
   "代位行使": [
@@ -773,25 +822,11 @@
       "name": "工资优先支付"
     }
   ],
-  "伤残待遇": [
+  "伤亡事故": [
     {
-      "id": "work_injury_benefit",
+      "id": "casualty_accident",
       "kind": "concept",
-      "name": "工伤保险待遇"
-    }
-  ],
-  "伤残等级": [
-    {
-      "id": "labor_capacity_assessment",
-      "kind": "concept",
-      "name": "劳动能力鉴定"
-    }
-  ],
-  "伤残鉴定": [
-    {
-      "id": "labor_capacity_assessment",
-      "kind": "concept",
-      "name": "劳动能力鉴定"
+      "name": "伤亡事故"
     }
   ],
   "低于最低工资": [
@@ -820,6 +855,13 @@
       "id": "easement",
       "kind": "concept",
       "name": "地役权"
+    }
+  ],
+  "供用电合同": [
+    {
+      "id": "utility_supply_contract",
+      "kind": "concept",
+      "name": "供用电合同"
     }
   ],
   "侵权": [
@@ -869,11 +911,23 @@
       "name": "泄密纠纷"
     }
   ],
+  "保理合同": [
+    {
+      "id": "factoring_contract",
+      "kind": "concept",
+      "name": "保理合同"
+    }
+  ],
   "保管人": [
     {
       "id": "custody_contract",
       "kind": "concept",
       "name": "保管合同"
+    },
+    {
+      "id": "custodian",
+      "kind": "concept",
+      "name": "保管人"
     }
   ],
   "保管合同": [
@@ -897,6 +951,11 @@
       "name": "保证"
     },
     {
+      "id": "guarantor",
+      "kind": "concept",
+      "name": "保证人"
+    },
+    {
       "id": "guarantee_dispute",
       "kind": "scenario",
       "name": "担保纠纷"
@@ -916,11 +975,18 @@
       "name": "保证合同"
     }
   ],
-  "倒班": [
+  "保证期间": [
     {
-      "id": "shift_system",
+      "id": "guarantee_period",
       "kind": "concept",
-      "name": "轮班制"
+      "name": "保证期间"
+    }
+  ],
+  "信用": [
+    {
+      "id": "credit",
+      "kind": "concept",
+      "name": "信用"
     }
   ],
   "借条": [
@@ -935,6 +1001,13 @@
       "id": "loan_contract",
       "kind": "concept",
       "name": "借款合同"
+    }
+  ],
+  "借款人": [
+    {
+      "id": "borrower",
+      "kind": "concept",
+      "name": "借款人"
     }
   ],
   "借款合同": [
@@ -958,6 +1031,20 @@
       "name": "民间借贷"
     }
   ],
+  "债务": [
+    {
+      "id": "debt_obligation",
+      "kind": "concept",
+      "name": "债务"
+    }
+  ],
+  "债务人": [
+    {
+      "id": "debtor_party",
+      "kind": "concept",
+      "name": "债务人"
+    }
+  ],
   "债务免除": [
     {
       "id": "release",
@@ -965,11 +1052,18 @@
       "name": "免除"
     }
   ],
-  "债务加入": [
+  "债权": [
     {
-      "id": "debt_assumption",
+      "id": "creditor_right",
       "kind": "concept",
-      "name": "债务加入"
+      "name": "债权"
+    }
+  ],
+  "债权人": [
+    {
+      "id": "creditor_party",
+      "kind": "concept",
+      "name": "债权人"
     }
   ],
   "债权人撤销": [
@@ -1185,11 +1279,25 @@
       "name": "离婚财产分割"
     }
   ],
+  "出卖人": [
+    {
+      "id": "seller",
+      "kind": "concept",
+      "name": "出卖人"
+    }
+  ],
   "出租": [
     {
       "id": "lease_contract",
       "kind": "concept",
       "name": "租赁合同"
+    }
+  ],
+  "出租人": [
+    {
+      "id": "lessor",
+      "kind": "concept",
+      "name": "出租人"
     }
   ],
   "出质": [
@@ -1211,6 +1319,13 @@
       "id": "fair_liability",
       "kind": "concept",
       "name": "公平责任"
+    }
+  ],
+  "分期付款": [
+    {
+      "id": "installment_payment",
+      "kind": "concept",
+      "name": "分期付款"
     }
   ],
   "利息过高": [
@@ -1481,6 +1596,13 @@
       "name": "劳动监察"
     }
   ],
+  "劳动竞赛": [
+    {
+      "id": "labor_competition",
+      "kind": "concept",
+      "name": "劳动竞赛"
+    }
+  ],
   "劳动纠纷": [
     {
       "id": "labor_dispute",
@@ -1523,13 +1645,6 @@
       "name": "劳动者单方解除"
     }
   ],
-  "劳动能力鉴定": [
-    {
-      "id": "labor_capacity_assessment",
-      "kind": "concept",
-      "name": "劳动能力鉴定"
-    }
-  ],
   "劳动行政部门": [
     {
       "id": "labor_administration",
@@ -1542,13 +1657,6 @@
       "id": "tort_medical",
       "kind": "scenario",
       "name": "医疗损害"
-    }
-  ],
-  "医疗保险": [
-    {
-      "id": "medical_insurance",
-      "kind": "concept",
-      "name": "医疗保险"
     }
   ],
   "医疗损害": [
@@ -1650,11 +1758,11 @@
       "name": "二倍工资"
     }
   ],
-  "双方代理": [
+  "发包人": [
     {
-      "id": "self_dealing",
+      "id": "employer_party",
       "kind": "concept",
-      "name": "自己代理"
+      "name": "发包人"
     }
   ],
   "发生自然灾害": [
@@ -1669,6 +1777,11 @@
       "id": "entrustment_contract",
       "kind": "concept",
       "name": "委托合同"
+    },
+    {
+      "id": "agent_party",
+      "kind": "concept",
+      "name": "受托人"
     }
   ],
   "受要约人": [
@@ -1676,6 +1789,13 @@
       "id": "acceptance",
       "kind": "concept",
       "name": "承诺"
+    }
+  ],
+  "受赠人": [
+    {
+      "id": "donee",
+      "kind": "concept",
+      "name": "受赠人"
     }
   ],
   "受遗赠人": [
@@ -1730,6 +1850,11 @@
       "id": "partnership_contract",
       "kind": "concept",
       "name": "合伙合同"
+    },
+    {
+      "id": "partner",
+      "kind": "concept",
+      "name": "合伙人"
     }
   ],
   "合伙企业": [
@@ -1876,6 +2001,13 @@
       "id": "contract_establishment",
       "kind": "concept",
       "name": "合同成立"
+    }
+  ],
+  "合同解除": [
+    {
+      "id": "contract_rescission_civil",
+      "kind": "concept",
+      "name": "合同解除"
     }
   ],
   "合同转让": [
@@ -2049,6 +2181,13 @@
       "name": "土地承包经营权"
     }
   ],
+  "土地经营权": [
+    {
+      "id": "land_management_right",
+      "kind": "concept",
+      "name": "土地经营权"
+    }
+  ],
   "在家上班": [
     {
       "id": "remote_work",
@@ -2103,13 +2242,6 @@
       "id": "pension_insurance",
       "kind": "concept",
       "name": "养老保险"
-    }
-  ],
-  "基本医疗保险": [
-    {
-      "id": "medical_insurance",
-      "kind": "concept",
-      "name": "医疗保险"
     }
   ],
   "基础条件发生": [
@@ -2173,20 +2305,6 @@
       "name": "失业保险"
     }
   ],
-  "失业保险待遇": [
-    {
-      "id": "unemployment_benefit",
-      "kind": "concept",
-      "name": "失业保险待遇"
-    }
-  ],
-  "失业保险金": [
-    {
-      "id": "unemployment_benefit",
-      "kind": "concept",
-      "name": "失业保险待遇"
-    }
-  ],
   "女职工": [
     {
       "id": "female_worker_protection",
@@ -2206,6 +2324,13 @@
       "id": "right_of_name",
       "kind": "concept",
       "name": "姓名权"
+    }
+  ],
+  "委托人": [
+    {
+      "id": "principal",
+      "kind": "concept",
+      "name": "委托人"
     }
   ],
   "委托代理": [
@@ -2257,6 +2382,13 @@
       "name": "女职工特殊保护"
     }
   ],
+  "存货人": [
+    {
+      "id": "depositor",
+      "kind": "concept",
+      "name": "存货人"
+    }
+  ],
   "宅基地": [
     {
       "id": "homestead_right",
@@ -2269,6 +2401,13 @@
       "id": "homestead_right",
       "kind": "concept",
       "name": "宅基地使用权"
+    }
+  ],
+  "安全保障义务": [
+    {
+      "id": "safety_obligation",
+      "kind": "concept",
+      "name": "安全保障义务"
     }
   ],
   "安全卫生": [
@@ -2304,6 +2443,13 @@
       "id": "project_term_contract",
       "kind": "concept",
       "name": "以完成一定工作任务为期限的劳动合同"
+    }
+  ],
+  "定作人": [
+    {
+      "id": "ordering_party",
+      "kind": "concept",
+      "name": "定作人"
     }
   ],
   "定金": [
@@ -2379,6 +2525,20 @@
       "id": "declaration_of_death",
       "kind": "concept",
       "name": "宣告死亡"
+    }
+  ],
+  "家庭暴力": [
+    {
+      "id": "domestic_violence",
+      "kind": "concept",
+      "name": "家庭暴力"
+    }
+  ],
+  "寄存人": [
+    {
+      "id": "custody_depositor",
+      "kind": "concept",
+      "name": "寄存人"
     }
   ],
   "封控不能履行": [
@@ -2461,6 +2621,27 @@
       "name": "合同履行"
     }
   ],
+  "履行地": [
+    {
+      "id": "performance_place",
+      "kind": "concept",
+      "name": "履行地点"
+    }
+  ],
+  "履行地点": [
+    {
+      "id": "performance_place",
+      "kind": "concept",
+      "name": "履行地点"
+    }
+  ],
+  "履行期限": [
+    {
+      "id": "performance_deadline",
+      "kind": "concept",
+      "name": "履行期限"
+    }
+  ],
   "工会": [
     {
       "id": "labor_union",
@@ -2508,26 +2689,7 @@
       "name": "工伤保险"
     }
   ],
-  "工伤保险待遇": [
-    {
-      "id": "work_injury_benefit",
-      "kind": "concept",
-      "name": "工伤保险待遇"
-    }
-  ],
-  "工伤待遇": [
-    {
-      "id": "work_injury_benefit",
-      "kind": "concept",
-      "name": "工伤保险待遇"
-    }
-  ],
   "工伤认定": [
-    {
-      "id": "work_injury_recognition",
-      "kind": "concept",
-      "name": "工伤认定"
-    },
     {
       "id": "work_injury",
       "kind": "scenario",
@@ -2739,13 +2901,6 @@
       "name": "就业歧视"
     }
   ],
-  "并存的债务承担": [
-    {
-      "id": "debt_assumption",
-      "kind": "concept",
-      "name": "债务加入"
-    }
-  ],
   "延长工作时间": [
     {
       "id": "work_hour_extension",
@@ -2772,6 +2927,13 @@
       "id": "building_liability",
       "kind": "concept",
       "name": "建筑物物件损害责任"
+    }
+  ],
+  "建设单位": [
+    {
+      "id": "construction_unit",
+      "kind": "concept",
+      "name": "建设单位"
     }
   ],
   "建设工程合同": [
@@ -2842,6 +3004,13 @@
       "name": "不可抗力与情势变更"
     }
   ],
+  "惩罚性赔偿": [
+    {
+      "id": "punitive_damages",
+      "kind": "concept",
+      "name": "惩罚性赔偿"
+    }
+  ],
   "意思表示": [
     {
       "id": "expression_of_intent",
@@ -2891,6 +3060,13 @@
       "name": "非全日制用工"
     }
   ],
+  "托运人": [
+    {
+      "id": "shipper",
+      "kind": "concept",
+      "name": "托运人"
+    }
+  ],
   "扣押档案": [
     {
       "id": "handover_dispute",
@@ -2933,11 +3109,25 @@
       "name": "土地承包经营权"
     }
   ],
+  "承包人": [
+    {
+      "id": "contractor_party",
+      "kind": "concept",
+      "name": "承包人"
+    }
+  ],
   "承揽": [
     {
       "id": "work_contract",
       "kind": "concept",
       "name": "承揽合同"
+    }
+  ],
+  "承揽人": [
+    {
+      "id": "work_contractor",
+      "kind": "concept",
+      "name": "承揽人"
     }
   ],
   "承揽合同": [
@@ -2952,6 +3142,13 @@
       "id": "lease_contract",
       "kind": "concept",
       "name": "租赁合同"
+    }
+  ],
+  "承租人": [
+    {
+      "id": "lessee",
+      "kind": "concept",
+      "name": "承租人"
     }
   ],
   "承诺": [
@@ -2975,11 +3172,79 @@
       "name": "技术合同"
     }
   ],
+  "技术咨询": [
+    {
+      "id": "technology_consulting_contract",
+      "kind": "concept",
+      "name": "技术咨询合同"
+    }
+  ],
+  "技术咨询合同": [
+    {
+      "id": "technology_consulting_contract",
+      "kind": "concept",
+      "name": "技术咨询合同"
+    }
+  ],
   "技术开发": [
     {
       "id": "technology_contract",
       "kind": "concept",
       "name": "技术合同"
+    },
+    {
+      "id": "technology_development_contract",
+      "kind": "concept",
+      "name": "技术开发合同"
+    }
+  ],
+  "技术开发合同": [
+    {
+      "id": "technology_development_contract",
+      "kind": "concept",
+      "name": "技术开发合同"
+    }
+  ],
+  "技术服务": [
+    {
+      "id": "technology_service_contract",
+      "kind": "concept",
+      "name": "技术服务合同"
+    }
+  ],
+  "技术服务合同": [
+    {
+      "id": "technology_service_contract",
+      "kind": "concept",
+      "name": "技术服务合同"
+    }
+  ],
+  "技术许可": [
+    {
+      "id": "technology_license_contract",
+      "kind": "concept",
+      "name": "技术许可合同"
+    }
+  ],
+  "技术许可合同": [
+    {
+      "id": "technology_license_contract",
+      "kind": "concept",
+      "name": "技术许可合同"
+    }
+  ],
+  "技术转让": [
+    {
+      "id": "technology_transfer_contract",
+      "kind": "concept",
+      "name": "技术转让合同"
+    }
+  ],
+  "技术转让合同": [
+    {
+      "id": "technology_transfer_contract",
+      "kind": "concept",
+      "name": "技术转让合同"
     }
   ],
   "抚养": [
@@ -3069,6 +3334,13 @@
       "id": "guarantee_dispute",
       "kind": "scenario",
       "name": "担保纠纷"
+    }
+  ],
+  "担保合同": [
+    {
+      "id": "security_contract",
+      "kind": "concept",
+      "name": "担保合同"
     }
   ],
   "担保物权": [
@@ -3298,6 +3570,20 @@
       "name": "违约金"
     }
   ],
+  "收养": [
+    {
+      "id": "adoption",
+      "kind": "concept",
+      "name": "收养"
+    }
+  ],
+  "收货人": [
+    {
+      "id": "consignee",
+      "kind": "concept",
+      "name": "收货人"
+    }
+  ],
   "放弃继承": [
     {
       "id": "inheritance_renunciation",
@@ -3317,6 +3603,13 @@
       "id": "contract_text",
       "kind": "concept",
       "name": "劳动合同文本"
+    }
+  ],
+  "旅客": [
+    {
+      "id": "passenger",
+      "kind": "concept",
+      "name": "旅客"
     }
   ],
   "无固定期限": [
@@ -3477,6 +3770,13 @@
       "name": "最低工资"
     }
   ],
+  "最高额抵押": [
+    {
+      "id": "maximum_mortgage",
+      "kind": "concept",
+      "name": "最高额抵押"
+    }
+  ],
   "月工资": [
     {
       "id": "severance_standard",
@@ -3585,6 +3885,13 @@
       "name": "合同权利义务转让"
     }
   ],
+  "权属证书": [
+    {
+      "id": "real_estate_title_certificate",
+      "kind": "concept",
+      "name": "不动产权属证书"
+    }
+  ],
   "构筑物": [
     {
       "id": "building_liability",
@@ -3597,6 +3904,13 @@
       "id": "working_hours",
       "kind": "concept",
       "name": "工时制度"
+    }
+  ],
+  "标的物": [
+    {
+      "id": "subject_matter",
+      "kind": "concept",
+      "name": "标的物"
     }
   ],
   "格式合同": [
@@ -3892,6 +4206,13 @@
       "name": "添附"
     }
   ],
+  "清偿": [
+    {
+      "id": "performance",
+      "kind": "concept",
+      "name": "清偿"
+    }
+  ],
   "清偿被继承人依法应当缴纳的税款和债务": [
     {
       "id": "estate_debt",
@@ -3911,6 +4232,13 @@
       "id": "tort_product",
       "kind": "scenario",
       "name": "产品责任"
+    }
+  ],
+  "物业服务人": [
+    {
+      "id": "property_service_provider",
+      "kind": "concept",
+      "name": "物业服务人"
     }
   ],
   "物业服务合同": [
@@ -3990,33 +4318,7 @@
       "name": "生育与产假"
     }
   ],
-  "生育保险": [
-    {
-      "id": "maternity_insurance",
-      "kind": "concept",
-      "name": "生育保险"
-    }
-  ],
-  "生育保险待遇": [
-    {
-      "id": "maternity_benefit",
-      "kind": "concept",
-      "name": "生育保险待遇"
-    }
-  ],
-  "生育医疗费用": [
-    {
-      "id": "maternity_benefit",
-      "kind": "concept",
-      "name": "生育保险待遇"
-    }
-  ],
   "生育津贴": [
-    {
-      "id": "maternity_benefit",
-      "kind": "concept",
-      "name": "生育保险待遇"
-    },
     {
       "id": "maternity_leave",
       "kind": "scenario",
@@ -4159,6 +4461,13 @@
       "name": "劳动监察"
     }
   ],
+  "相对人": [
+    {
+      "id": "counterparty",
+      "kind": "concept",
+      "name": "相对人"
+    }
+  ],
   "相对人有理由相信": [
     {
       "id": "apparent_agency",
@@ -4185,6 +4494,11 @@
       "id": "adjacent_relation",
       "kind": "concept",
       "name": "相邻关系"
+    },
+    {
+      "id": "adjacent_right_holder",
+      "kind": "concept",
+      "name": "相邻权利人"
     }
   ],
   "真实意思": [
@@ -4192,6 +4506,13 @@
       "id": "expression_of_intent",
       "kind": "concept",
       "name": "意思表示"
+    }
+  ],
+  "知识产权": [
+    {
+      "id": "intellectual_property",
+      "kind": "concept",
+      "name": "知识产权"
     }
   ],
   "破产": [
@@ -4220,6 +4541,13 @@
       "id": "file_transfer",
       "kind": "concept",
       "name": "档案和社保转移"
+    }
+  ],
+  "社会保险基金": [
+    {
+      "id": "social_insurance_fund",
+      "kind": "concept",
+      "name": "社会保险基金"
     }
   ],
   "社保": [
@@ -4405,6 +4733,13 @@
       "name": "未成年工与童工"
     }
   ],
+  "第三人": [
+    {
+      "id": "third_party",
+      "kind": "concept",
+      "name": "第三人"
+    }
+  ],
   "第三方用工": [
     {
       "id": "labor_dispatch",
@@ -4424,6 +4759,20 @@
       "id": "open_ended_contract_request",
       "kind": "scenario",
       "name": "要求签无固定期限"
+    }
+  ],
+  "精神损害": [
+    {
+      "id": "mental_damages",
+      "kind": "concept",
+      "name": "精神损害赔偿"
+    }
+  ],
+  "精神损害赔偿": [
+    {
+      "id": "mental_damages",
+      "kind": "concept",
+      "name": "精神损害赔偿"
     }
   ],
   "紧急情况": [
@@ -4574,13 +4923,6 @@
       "name": "工时与休息"
     }
   ],
-  "综合计算工时": [
-    {
-      "id": "shift_system",
-      "kind": "concept",
-      "name": "轮班制"
-    }
-  ],
   "缔约过失": [
     {
       "id": "precontractual_liability",
@@ -4668,6 +5010,20 @@
       "name": "职业病"
     }
   ],
+  "职业培训": [
+    {
+      "id": "vocational_training",
+      "kind": "concept",
+      "name": "职业培训"
+    }
+  ],
+  "职业技能考核": [
+    {
+      "id": "vocational_skill_assessment",
+      "kind": "concept",
+      "name": "职业技能考核"
+    }
+  ],
   "职业病": [
     {
       "id": "occupational_disease",
@@ -4683,6 +5039,13 @@
       "id": "occupational_disease",
       "kind": "scenario",
       "name": "职业病"
+    }
+  ],
+  "职务技术成果": [
+    {
+      "id": "service_technical_achievement",
+      "kind": "concept",
+      "name": "职务技术成果"
     }
   ],
   "职工": [
@@ -4741,13 +5104,6 @@
       "name": "胁迫"
     }
   ],
-  "自己代理": [
-    {
-      "id": "self_dealing",
-      "kind": "concept",
-      "name": "自己代理"
-    }
-  ],
   "自然人": [
     {
       "id": "natural_person",
@@ -4774,6 +5130,13 @@
       "id": "wage",
       "kind": "concept",
       "name": "工资"
+    }
+  ],
+  "融资租赁合同": [
+    {
+      "id": "financing_lease_contract",
+      "kind": "concept",
+      "name": "融资租赁合同"
     }
   ],
   "行纪人": [
@@ -4814,6 +5177,13 @@
       "id": "agency_dispute",
       "kind": "scenario",
       "name": "代理纠纷"
+    }
+  ],
+  "被继承人": [
+    {
+      "id": "decedent",
+      "kind": "concept",
+      "name": "被继承人"
     }
   ],
   "被迫即时解除": [
@@ -4884,18 +5254,18 @@
       "name": "要约"
     }
   ],
+  "要约邀请": [
+    {
+      "id": "invitation_to_offer",
+      "kind": "concept",
+      "name": "要约邀请"
+    }
+  ],
   "见习期": [
     {
       "id": "probation_period",
       "kind": "concept",
       "name": "试用期"
-    }
-  ],
-  "视同工伤": [
-    {
-      "id": "work_injury_recognition",
-      "kind": "concept",
-      "name": "工伤认定"
     }
   ],
   "解除劳动合同": [
@@ -4917,6 +5287,11 @@
       "id": "contract_rescission",
       "kind": "concept",
       "name": "劳动合同解除"
+    },
+    {
+      "id": "contract_rescission_civil",
+      "kind": "concept",
+      "name": "合同解除"
     }
   ],
   "解除或者终止劳动合同的证明": [
@@ -4982,13 +5357,6 @@
       "name": "定金纠纷"
     }
   ],
-  "认定工伤": [
-    {
-      "id": "work_injury_recognition",
-      "kind": "concept",
-      "name": "工伤认定"
-    }
-  ],
   "证据": [
     {
       "id": "burden_of_proof",
@@ -5046,6 +5414,13 @@
       "id": "probation_period",
       "kind": "concept",
       "name": "试用期"
+    }
+  ],
+  "试用买卖": [
+    {
+      "id": "trial_sale",
+      "kind": "concept",
+      "name": "试用买卖"
     }
   ],
   "试用期": [
@@ -5174,6 +5549,13 @@
       "name": "买卖违约"
     }
   ],
+  "贷款人": [
+    {
+      "id": "lender",
+      "kind": "concept",
+      "name": "贷款人"
+    }
+  ],
   "赔偿": [
     {
       "id": "damages",
@@ -5207,6 +5589,13 @@
       "id": "gift_contract",
       "kind": "concept",
       "name": "赠与合同"
+    }
+  ],
+  "赠与人": [
+    {
+      "id": "donor",
+      "kind": "concept",
+      "name": "赠与人"
     }
   ],
   "赠与合同": [
@@ -5300,6 +5689,13 @@
       "name": "试用期辞退"
     }
   ],
+  "转租": [
+    {
+      "id": "sublease",
+      "kind": "concept",
+      "name": "转租"
+    }
+  ],
   "转移手续": [
     {
       "id": "file_transfer",
@@ -5312,20 +5708,6 @@
       "id": "creditor_assignment",
       "kind": "concept",
       "name": "债权转让"
-    }
-  ],
-  "轮班": [
-    {
-      "id": "shift_system",
-      "kind": "concept",
-      "name": "轮班制"
-    }
-  ],
-  "轮班制": [
-    {
-      "id": "shift_system",
-      "kind": "concept",
-      "name": "轮班制"
     }
   ],
   "辞职": [
@@ -5464,6 +5846,11 @@
   ],
   "连带保证": [
     {
+      "id": "joint_guarantee",
+      "kind": "concept",
+      "name": "连带责任保证"
+    },
+    {
       "id": "guarantee_dispute",
       "kind": "scenario",
       "name": "担保纠纷"
@@ -5474,6 +5861,13 @@
       "id": "joint_liability",
       "kind": "concept",
       "name": "连带责任"
+    }
+  ],
+  "连带责任保证": [
+    {
+      "id": "joint_guarantee",
+      "kind": "concept",
+      "name": "连带责任保证"
     }
   ],
   "连带赔偿": [

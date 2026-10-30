@@ -1,0 +1,30 @@
+{
+  "total": 5023,
+  "rule_total": 5018,
+  "manual_total": 5,
+  "edge_type": {
+    "REFERS_TO": 4204,
+    "DEFINES": 819
+  },
+  "defines_ratio": 0.163,
+  "cue_distribution": {
+    "no_cue": 4204,
+    "normative:应当": 201,
+    "normative_subject:可以": 153,
+    "normative_subject:应当": 109,
+    "normative:可以": 103,
+    "normative:不得": 74,
+    "系词定义": 49,
+    "normative_subject:有权": 38,
+    "normative:有权": 36,
+    "normative_subject:不得": 18,
+    "normative:必须": 12,
+    "是指": 10,
+    "包括": 8,
+    "manual": 5,
+    "所称号": 2,
+    "分为": 1
+  },
+  "window_chars": 60,
+  "rule": "定义式（是指/系指/即指/指的是/所称/包括/分为/统称，或前置『本法所称』）、句首裸系词『X 是……』、或分句主语位 + 应当/不得/可以/有权/必须 → DEFINES；其余 → REFERS_TO"
+}

@@ -19,18 +19,25 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from app.__001__ingest.__000__lexicon_seed import (  # noqa: E402
     CONCEPTS,
+    GOLD_PATH_REQUIRES,
     LAW_CODES,
     REQUIRES,
     SCENARIOS,
 )
 from config import settings  # noqa: E402
 from common.logging_utils import get_logger  # noqa: E402
-from common.path_utils import write_json, write_jsonl  # noqa: E402
+from common.path_utils import read_json, read_jsonl, write_json, write_jsonl  # noqa: E402
 
 log = get_logger("lexicon")
 
 
-def build() -> dict:
+def _compose() -> tuple[list[dict], list[dict], list[dict], list[dict], dict, dict, dict]:
+    """按种子编译出全部产物（不落盘）。
+
+    与 :func:`build` 分开，是为了让 ``--check`` 能在**不写文件**的前提下复算一遍，
+    再把结果和磁盘上的 jsonl 逐条比对。这样「有人手改了 jsonl 却没改种子」会立刻暴露，
+    而不是等到别人按 README 重建时数字对不上。
+    """
     concept_ids = [c[0] for c in CONCEPTS]
     dup = [k for k, v in Counter(concept_ids).items() if v > 1]
     if dup:
@@ -80,11 +87,24 @@ def build() -> dict:
         )
 
     requires_rows = []
+    seen_requires: set[tuple[str, str]] = set()
     for src, dst in REQUIRES:
         if src not in known or dst not in known:
             raise ValueError(f"REQUIRES 边非法: {src} -> {dst}")
+        if (src, dst) in seen_requires:
+            continue
+        seen_requires.add((src, dst))
         requires_rows.append(
             {"source": src, "target": dst, "relation": "REQUIRES", "provenance": "manual", "confidence": 0.9}
+        )
+    for src, dst in GOLD_PATH_REQUIRES:
+        if src not in known or dst not in known:
+            raise ValueError(f"金标补边非法: {src} -> {dst}")
+        if (src, dst) in seen_requires:
+            continue
+        seen_requires.add((src, dst))
+        requires_rows.append(
+            {"source": src, "target": dst, "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
         )
 
     special_rows = [
@@ -108,6 +128,7 @@ def build() -> dict:
         "concepts": len(concept_rows),
         "scenarios": len(scenario_rows),
         "requires_edges": len(requires_rows),
+        "gold_path_requires": len(GOLD_PATH_REQUIRES),
         "special_of_edges": len(special_rows),
         "scenario_concept_edges": sum(len(s["concepts"]) for s in scenario_rows),
         "aliases": len(alias_index),
@@ -118,6 +139,23 @@ def build() -> dict:
         },
     }
 
+    return concept_rows, scenario_rows, requires_rows, special_rows, alias_index, collisions, stats
+
+
+ARTIFACTS = (
+    ("concepts.jsonl", 0),
+    ("scenarios.jsonl", 1),
+    ("requires.jsonl", 2),
+    ("special_of.jsonl", 3),
+    ("alias_index.json", 4),
+    ("alias_collisions.json", 5),
+    ("stats.json", 6),
+)
+
+
+def build() -> dict:
+    """编译并落盘，返回体检结果。"""
+    concept_rows, scenario_rows, requires_rows, special_rows, alias_index, collisions, stats = _compose()
     out = settings.lexicon_dir
     write_jsonl(out / "concepts.jsonl", concept_rows)
     write_jsonl(out / "scenarios.jsonl", scenario_rows)
@@ -129,7 +167,53 @@ def build() -> dict:
     return stats
 
 
+def check() -> list[str]:
+    """不落盘地复算一遍，与磁盘上的产物逐条比对，返回漂移说明（空列表表示一致）。
+
+    存在的意义：术语库是「种子 → jsonl」的单向编译产物，但历史上出现过
+    直接改 jsonl、不回写种子的情况，于是重建一次就少 10 个概念、23 条边，
+    而 README 里的节点/边数还停在旧构建上。这个检查把这类漂移变成一条可执行的断言。
+    """
+    composed = _compose()
+    drift: list[str] = []
+    out = settings.lexicon_dir
+    for name, idx in ARTIFACTS:
+        path = out / name
+        if not path.exists():
+            drift.append(f"{name}: 文件不存在")
+            continue
+        if name.endswith(".jsonl"):
+            on_disk = read_jsonl(path)
+            expected = composed[idx]
+        else:
+            on_disk = read_json(path)
+            expected = composed[idx]
+            if name == "alias_index.json":
+                expected = {k: v for k, v in sorted(expected.items())}
+        if on_disk != expected:
+            if isinstance(expected, list):
+                drift.append(
+                    f"{name}: 磁盘 {len(on_disk)} 条 / 重建 {len(expected)} 条"
+                    f"（{'内容不同，条数相同' if len(on_disk) == len(expected) else '条数已漂移'}）"
+                )
+            else:
+                drift.append(f"{name}: 内容不一致")
+    return drift
+
+
 def main() -> None:
+    if "--check" in sys.argv:
+        drift = check()
+        if drift:
+            for d in drift:
+                log.error("术语库漂移 %s", d)
+            raise SystemExit(
+                "术语库与种子不一致：请把改动回写 __000__lexicon_seed.py 后重跑 "
+                "`python app/__001__ingest/__001__build_lexicon.py`"
+            )
+        log.info("术语库与种子一致（%s）", settings.lexicon_dir)
+        return
+
     stats = build()
     log.info("术语库 %s", stats)
     if stats["concepts"] < 150:

@@ -27,7 +27,12 @@ from common.llm import get_llm  # noqa: E402
 from common.logging_utils import get_logger  # noqa: E402
 from common.path_utils import read_jsonl, write_json, write_jsonl  # noqa: E402
 from eval.common import JsonCache, bigram_overlap, cohen_kappa  # noqa: E402
-from eval.gold_combos import COMBOS  # noqa: E402
+from eval.gold_combos import (  # noqa: E402
+    ARTICLE_OVERRIDES,
+    COMBOS,
+    OVERRIDE_REASONS,
+    UNRESOLVED,
+)
 
 log = get_logger("build_gold")
 
@@ -45,12 +50,16 @@ QUESTION_SYSTEM = (
 
 # v3：v2 只说「必须覆盖所有争点」，模型仍会写窄。v3 把每个争点逐条列给模型，
 # 并要求题面在同一句提问里分别点到，题面才真的需要全部被锁条文。
+# v4：v3 仍会把某个争点写成「背景事实」（如「公司没给我交社保」）而不是问题，审校员据此判
+# 「该条文不是回答所必需」。v4 要求每个争点都写成用户真正在问的问题，题面才需要对应规则。
 QUESTION_SYSTEM_STRICT = (
     QUESTION_SYSTEM
-    + "另外：这是多争点问题，题面必须在同一个提问里**分别点到下面列出的每个争点**（每个争点至少用一个生活化说法点到，不得遗漏），"
-    "但不得出现条号、不得摘抄原文句子。"
+    + "另外：这是多争点问题，题面必须在同一个提问里**分别点到下面列出的每个争点**，"
+    "而且每个争点都要写成用户真正想问的**问题**（例如「公司是不是必须给我交社保」「我是不是必须在一个月内签书面合同」），"
+    "不能只当成背景事实陈述（例如只说「公司没给我交社保」就跳到下一个问题）；"
+    "每个争点至少用一个生活化说法点到，不得遗漏；但不得出现条号、不得摘抄原文句子。"
 )
-QUESTION_VERSION = "v3"
+QUESTION_VERSION = "v4"
 
 NECESSITY_SYSTEM = (
     "你是法律推理审校员。给定一个用户问题与概念链中的一个环节，判断：要正确回答该问题，"
@@ -248,6 +257,7 @@ def main() -> None:
     concepts = {c["id"]: c for c in read_jsonl("data/lexicon/concepts.jsonl")}
     scenarios = {s["id"]: s for s in read_jsonl("data/lexicon/scenarios.jsonl")}
     requires = {(r["source"], r["target"]) for r in read_jsonl("data/lexicon/requires.jsonl")}
+    prev_rows = {r["id"]: r for r in read_jsonl("data/gold/gold_60.jsonl")} if Path("data/gold/gold_60.jsonl").exists() else {}
     store = get_graph_store()
     cache = JsonCache(Path("data/gold/llm_cache.json"))
     rng = random.Random(SEED)
@@ -265,13 +275,19 @@ def main() -> None:
         cid, hop, sid, chain, intent = combo
         scenario = scenarios[sid]
         chain_concepts = [concepts[c] for c in chain]
+        overrides = ARTICLE_OVERRIDES.get(cid, {})
         cands_map = {c["id"]: article_candidates(store, c, CANDIDATE_LIMIT) for c in chain_concepts}
         for c in chain_concepts:
             if not cands_map[c["id"]]:
                 raise RuntimeError(f"{cid}: 概念 {c['id']} 找不到可用条文")
+        # B7：人工确认的正确条文优先进入候选，并在最终选择时强制生效。
+        for concept_id, article_id in overrides.items():
+            pool = cands_map.setdefault(concept_id, [])
+            if article_id not in pool:
+                pool.insert(0, article_id)
         seed: list[str] = []
         for c in chain_concepts:
-            aid = cands_map[c["id"]][0]
+            aid = overrides.get(c["id"], cands_map[c["id"]][0])
             if aid not in seed:
                 seed.append(aid)
         laws = sorted({articles[a]["law_name"] for a in seed})
@@ -286,7 +302,8 @@ def main() -> None:
 
         issues = []
         for c in chain_concepts:
-            gist = re.split(r"[。；]", articles[cands_map[c["id"]][0]]["content"])[0][:26]
+            aid = overrides.get(c["id"], cands_map[c["id"]][0])
+            gist = re.split(r"[。；]", articles[aid]["content"])[0][:26]
             issues.append(f"{c['name']}（{gist}）")
 
         question, notes = generate_question(
@@ -316,6 +333,8 @@ def main() -> None:
         else:
             for c in chain_concepts:
                 chosen_map[c["id"]] = cands_map[c["id"]][0]
+        # B7：人工核对过的条文强制覆盖精排结果（精排只看字面相关性，会把定义条选错）。
+        chosen_map.update(overrides)
         expected: list[str] = []
         for a in chosen_map.values():
             if a not in expected:
@@ -435,6 +454,47 @@ def main() -> None:
     write_jsonl("data/gold/gold_60.jsonl", rows)
     write_json("data/gold/gold_report.json", report)
     log.info("金标 %s", report)
+
+    # B7：把「概念→条文」修正的 before→after 与理由落盘，供复核（不冒充人工标注）。
+    review_items = []
+    for gid, mapping in ARTICLE_OVERRIDES.items():
+        old_map = (prev_rows.get(gid) or {}).get("concept_articles", {})
+        for concept_id, after in mapping.items():
+            before = old_map.get(concept_id)
+            review_items.append(
+                {
+                    "gold_id": gid,
+                    "concept_id": concept_id,
+                    "before": before,
+                    "before_citation": articles[before]["citation"] if before in articles else None,
+                    "after": after,
+                    "after_citation": articles[after]["citation"],
+                    "changed": before != after,
+                    "reason": OVERRIDE_REASONS.get((gid, concept_id), ""),
+                    "basis": "该概念在对应法律中的规制条款 + 题面诉求；不看检索结果",
+                }
+            )
+    review = {
+        "reviewer": "assistant",
+        "scope": (
+            "assistant 按书面规则逐条核对 60 条金标的 concept→article 映射：只依据法条原文与题面诉求，"
+            "不参考检索命中，避免循环论证；修正后的条文必须与概念在图里有真实边。"
+            "这不是双人盲标，也不冒充人工 100 条。"
+        ),
+        "combos_reviewed": len(rows),
+        "combos_modified": len({it["gold_id"] for it in review_items if it["changed"]}),
+        "mappings_modified": sum(1 for it in review_items if it["changed"]),
+        "distinct_expected_articles": len({a for r in rows for a in r["expected_articles"]}),
+        "unresolved": UNRESOLVED,
+        "items": review_items,
+    }
+    write_json("data/eval_out/gold_article_review.json", review)
+    log.info(
+        "金标条文复核：修改 %d 条映射 / 涉及 %d 条题；未解决 %d 条",
+        review["mappings_modified"],
+        review["combos_modified"],
+        len(UNRESOLVED),
+    )
 
 
 if __name__ == "__main__":

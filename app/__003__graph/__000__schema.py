@@ -10,7 +10,8 @@ from dataclasses import dataclass, field
 from typing import Any, Literal
 
 LABELS = ("Article", "Concept", "Scenario")
-RELATIONS = ("APPLIES_TO", "DEFINES", "REQUIRES", "SPECIAL_OF", "CITES")
+# B7：Article→Concept 拆成 DEFINES（该条在定义/正面规制该概念）与 REFERS_TO（只是顺带提及）。
+RELATIONS = ("APPLIES_TO", "DEFINES", "REFERS_TO", "REQUIRES", "SPECIAL_OF", "CITES")
 
 # 概念与场景存在同名 ID（如 labor_dispatch / annual_leave），必须做命名空间隔离，
 # 否则同一图里两个不同实体共用节点键。Article 用「law#num」天然唯一，无需前缀。
@@ -60,11 +61,12 @@ class QueryPlan:
 
 CYPHER_TEMPLATES: dict[str, str] = {
     "concept_articles": """
-        MATCH (a:Article)-[r:DEFINES]->(c:Concept)
+        MATCH (a:Article)-[r:DEFINES|REFERS_TO]->(c:Concept)
         WHERE c.id IN $concept_ids
         RETURN a.id AS article_id, a.law_name AS law_name, a.article_no AS article_no,
                a.article_num AS article_num, a.chapter_path AS chapter_path,
-               collect(DISTINCT c.id) AS concepts, avg(r.confidence) AS confidence,
+               collect(DISTINCT c.id) AS concepts,
+               avg(coalesce(r.score, r.confidence, 1.0)) AS confidence,
                count(DISTINCT c.id) AS concept_hits
         ORDER BY confidence DESC, concept_hits DESC, a.id ASC
         LIMIT $limit

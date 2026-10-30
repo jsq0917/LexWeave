@@ -5,40 +5,46 @@
     "medium": 30,
     "complex": 30
   },
-  "rule_accuracy": 0.6625,
-  "lr_loo_accuracy": 0.65,
+  "rule_accuracy": 0.7,
+  "lr_loo_accuracy": 0.7375,
   "rule_confusion": {
     "simple": {
-      "simple": 17,
+      "simple": 16,
       "medium": 3,
-      "complex": 0
+      "complex": 1
     },
     "medium": {
       "simple": 0,
-      "medium": 9,
-      "complex": 21
+      "medium": 11,
+      "complex": 19
     },
     "complex": {
       "simple": 0,
-      "medium": 3,
-      "complex": 27
+      "medium": 1,
+      "complex": 29
     }
   },
   "wrong_rule_examples": [
     {
-      "query": "固定期限劳动合同是怎么规定的？",
+      "query": "劳动合同解除是怎么规定的？",
+      "label": "simple",
+      "rule": "complex",
+      "n_concepts": 3
+    },
+    {
+      "query": "承租人是怎么规定的？",
       "label": "simple",
       "rule": "medium",
       "n_concepts": 2
     },
     {
-      "query": "限制民事行为能力是怎么规定的？",
+      "query": "非过失性辞退是怎么规定的？",
       "label": "simple",
       "rule": "medium",
       "n_concepts": 2
     },
     {
-      "query": "自己代理是怎么规定的？",
+      "query": "无效民事法律行为是怎么规定的？",
       "label": "simple",
       "rule": "medium",
       "n_concepts": 2
@@ -56,22 +62,16 @@
       "n_concepts": 3
     },
     {
-      "query": "我入职两个月还在试用期，公司说我不符合录用条件就辞退，这算合法吗？试用期长短和辞退理由都站得住脚吗？",
+      "query": "我还在试用期，公司说我不符合录用条件就把我辞了，这合法吗？试用期工资给得对不对？",
       "label": "medium",
       "rule": "complex",
-      "n_concepts": 3
+      "n_concepts": 4
     },
     {
       "query": "我离职时签了竞业限制协议，但公司一直不给补偿，这协议对我这种普通员工还有约束力吗？",
       "label": "medium",
       "rule": "complex",
       "n_concepts": 3
-    },
-    {
-      "query": "我是劳务派遣员工，想自己辞职，公司非让干满两个月，我提前多久书面通知才能走？",
-      "label": "medium",
-      "rule": "complex",
-      "n_concepts": 4
     }
   ],
   "wrong_lr_examples": [
@@ -86,7 +86,7 @@
       "pred": "complex"
     },
     {
-      "query": "我入职两个月还在试用期，公司说我不符合录用条件就辞退，这算合法吗？试用期长短和辞退理由都站得住脚吗？",
+      "query": "我还在试用期，公司说我不符合录用条件就把我辞了，这合法吗？试用期工资给得对不对？",
       "label": "medium",
       "pred": "complex"
     },
@@ -96,22 +96,22 @@
       "pred": "complex"
     },
     {
-      "query": "我是劳务派遣员工，想自己辞职，公司非让干满两个月，我提前多久书面通知才能走？",
-      "label": "medium",
-      "pred": "complex"
-    },
-    {
-      "query": "我还在试用期，拿的钱比同岗位最低档还少，也低于我们这儿的最低工资，这差额能要回来吗？",
-      "label": "medium",
-      "pred": "complex"
-    },
-    {
       "query": "我做每天四小时的小时工，公司说口头约定就行，但工资要拖到月底才发一次，这样合法吗？",
       "label": "medium",
       "pred": "complex"
     },
     {
-      "query": "我通过劳务派遣公司去另一家公司上班，现在出了纠纷，该找劳务派遣公司还是那家实际用我的公司？",
+      "query": "员工离职带走客户名单，公司想问：他这样算不算违反了保密约定、侵犯了商业秘密，能不能追究他的责任？",
+      "label": "medium",
+      "pred": "complex"
+    },
+    {
+      "query": "员工长期病假，医疗期还没满公司就停发工资还想解除合同，这算不算违法终止？我该咋办？",
+      "label": "medium",
+      "pred": "complex"
+    },
+    {
+      "query": "店里想招个十五岁的孩子做帮工，这算不算用童工？那未成年工的特殊保护又该怎么算？",
       "label": "medium",
       "pred": "complex"
     }

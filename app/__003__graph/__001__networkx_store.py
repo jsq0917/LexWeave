@@ -94,12 +94,16 @@ def build_multidigraph(
         )
 
     for m in mentions:
+        edge_type = m.get("edge_type", "DEFINES")
+        score = round(float(m.get("confidence", 0.8)) * float(m.get("defines_score", 1.0)), 4)
         g.add_edge(
             m["article_id"],
             m["concept_id"],
-            key="DEFINES",
-            relation="DEFINES",
+            key=edge_type,
+            relation=edge_type,
             confidence=m.get("confidence", 0.8),
+            score=score,
+            cue=m.get("cue"),
             provenance=m.get("provenance", "rule"),
             aliases=m.get("aliases", []),
             count=m.get("count", 1),
@@ -142,8 +146,10 @@ class NetworkXGraphStore:
         for u, v, key, data in self.g.edges(keys=True, data=True):
             rel = data.get("relation", key)
             conf = float(data.get("confidence", data.get("weight", 1.0)) or 1.0)
-            if rel == "DEFINES":
-                self._concept_to_articles.setdefault(v, []).append((u, conf))
+            score = float(data.get("score", conf) or conf)
+            if rel in ("DEFINES", "REFERS_TO"):
+                # 候选池不变（两种边都进），但 REFERS_TO 在排序上被降权（0.45）。
+                self._concept_to_articles.setdefault(v, []).append((u, score))
             elif rel == "APPLIES_TO":
                 self._scenario_to_concepts.setdefault(u, []).append((v, conf))
                 self._concept_scenarios.setdefault(v, []).append((u, conf))
@@ -301,7 +307,10 @@ def build_and_save(
     out_path = out_path or (settings.graph_dir / "lexweave_graph.pkl")
 
     articles = read_jsonl(extracted_dir / "articles.jsonl")
-    mentions = read_jsonl(extracted_dir / "mentions.jsonl")
+    # B7：优先读边类型化文件（DEFINES / REFERS_TO）；缺失时回落旧文件并全部标 DEFINES。
+    from app.__002__extract.__003__edge_typing import load_typed
+
+    mentions = load_typed(extracted_dir)
     cites = read_jsonl(extracted_dir / "cites.jsonl")
     concepts = read_jsonl(lexicon_dir / "concepts.jsonl")
     scenarios = read_jsonl(lexicon_dir / "scenarios.jsonl")

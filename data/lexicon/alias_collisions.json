@@ -302,30 +302,6 @@
       "name": "社保争议"
     }
   ],
-  "工伤认定": [
-    {
-      "id": "work_injury_recognition",
-      "kind": "concept",
-      "name": "工伤认定"
-    },
-    {
-      "id": "work_injury",
-      "kind": "scenario",
-      "name": "工伤认定与待遇"
-    }
-  ],
-  "生育津贴": [
-    {
-      "id": "maternity_benefit",
-      "kind": "concept",
-      "name": "生育保险待遇"
-    },
-    {
-      "id": "maternity_leave",
-      "kind": "scenario",
-      "name": "生育与产假"
-    }
-  ],
   "职业健康检查": [
     {
       "id": "occupational_health_check",
@@ -360,6 +336,18 @@
       "id": "minor_worker",
       "kind": "scenario",
       "name": "未成年工与童工"
+    }
+  ],
+  "解除合同": [
+    {
+      "id": "contract_rescission",
+      "kind": "concept",
+      "name": "劳动合同解除"
+    },
+    {
+      "id": "contract_rescission_civil",
+      "kind": "concept",
+      "name": "合同解除"
     }
   ],
   "合同终止": [
@@ -492,6 +480,18 @@
       "name": "诉讼时效"
     }
   ],
+  "相邻权利人": [
+    {
+      "id": "adjacent_relation",
+      "kind": "concept",
+      "name": "相邻关系"
+    },
+    {
+      "id": "adjacent_right_holder",
+      "kind": "concept",
+      "name": "相邻权利人"
+    }
+  ],
   "担保": [
     {
       "id": "security_interest",
@@ -559,6 +559,11 @@
       "name": "保证"
     },
     {
+      "id": "guarantor",
+      "kind": "concept",
+      "name": "保证人"
+    },
+    {
       "id": "guarantee_dispute",
       "kind": "scenario",
       "name": "担保纠纷"
@@ -574,6 +579,54 @@
       "id": "sales_breach",
       "kind": "scenario",
       "name": "买卖违约"
+    }
+  ],
+  "保管人": [
+    {
+      "id": "custody_contract",
+      "kind": "concept",
+      "name": "保管合同"
+    },
+    {
+      "id": "custodian",
+      "kind": "concept",
+      "name": "保管人"
+    }
+  ],
+  "受托人": [
+    {
+      "id": "entrustment_contract",
+      "kind": "concept",
+      "name": "委托合同"
+    },
+    {
+      "id": "agent_party",
+      "kind": "concept",
+      "name": "受托人"
+    }
+  ],
+  "合伙人": [
+    {
+      "id": "partnership_contract",
+      "kind": "concept",
+      "name": "合伙合同"
+    },
+    {
+      "id": "partner",
+      "kind": "concept",
+      "name": "合伙人"
+    }
+  ],
+  "技术开发": [
+    {
+      "id": "technology_contract",
+      "kind": "concept",
+      "name": "技术合同"
+    },
+    {
+      "id": "technology_development_contract",
+      "kind": "concept",
+      "name": "技术开发合同"
     }
   ],
   "产品责任": [
@@ -711,6 +764,18 @@
       "id": "inheritance_dispute",
       "kind": "scenario",
       "name": "继承纠纷"
+    }
+  ],
+  "连带保证": [
+    {
+      "id": "joint_guarantee",
+      "kind": "concept",
+      "name": "连带责任保证"
+    },
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
     }
   ]
 }

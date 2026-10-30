@@ -1,26 +1,27 @@
 {
-  "concepts": 218,
+  "concepts": 281,
   "scenarios": 53,
-  "requires_edges": 174,
-  "special_of_edges": 128,
-  "scenario_concept_edges": 201,
-  "aliases": 770,
-  "alias_collisions": 57,
+  "requires_edges": 196,
+  "gold_path_requires": 35,
+  "special_of_edges": 183,
+  "scenario_concept_edges": 198,
+  "aliases": 822,
+  "alias_collisions": 62,
   "concept_types": {
-    "document": 9,
-    "status": 16,
-    "entity": 11,
-    "doctrine": 31,
-    "procedure": 36,
-    "contract": 22,
-    "obligation": 12,
-    "remedy": 19,
-    "right": 48,
+    "document": 11,
+    "status": 17,
+    "entity": 43,
+    "doctrine": 35,
+    "procedure": 42,
+    "contract": 32,
+    "obligation": 17,
+    "remedy": 21,
+    "right": 49,
     "liability": 14
   },
   "concepts_per_law": {
-    "lcl": 75,
-    "ll": 50,
-    "cc": 124
+    "lcl": 73,
+    "ll": 49,
+    "cc": 190
   }
 }

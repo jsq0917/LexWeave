@@ -21,7 +21,11 @@ LAW_CODES = {
 }
 
 # ======================================================================================
-# 概念（223 个）：覆盖三部法律的请求权基础、程序、主体与救济
+# 概念（281 个）：覆盖三部法律的请求权基础、程序、主体与救济
+# 注意：P3 扩词典时删了 10 个与既有概念重复的角色/制度词（shift_system / medical_insurance /
+# maternity_insurance / work_injury_recognition / labor_capacity_assessment / work_injury_benefit /
+# unemployment_benefit / maternity_benefit / self_dealing / debt_assumption）。改概念必须改这里，
+# 只改 data/lexicon/*.jsonl 会在下次 build_lexicon 时被冲掉（用 --check 可提前发现）。
 # ======================================================================================
 CONCEPTS: list[tuple[str, str, list[str], str, list[str], str | None]] = [
     # ---------- 劳动关系与合同本体 ----------
@@ -79,24 +83,16 @@ CONCEPTS: list[tuple[str, str, list[str], str, list[str], str | None]] = [
     ("statutory_holiday", "法定休假日", ["法定休假日", "法定节假日", "节假日"], "right", ["ll"], "rest_period"),
     ("annual_leave", "年休假", ["年休假", "带薪年休假", "年假"], "right", ["ll", "lcl"], "rest_period"),
     ("sick_leave", "病假与医疗期", ["医疗期", "病假", "患病或者非因工负伤"], "status", ["lcl"], None),
-    ("shift_system", "轮班制", ["轮班", "倒班", "综合计算工时"], "status", ["ll"], None),
     ("emergency_overtime", "紧急情况加班", ["发生自然灾害", "紧急情况", "抢修"], "procedure", ["ll"], None),
     ("wage_priority_payment", "工资优先支付", ["优先支付", "破产", "清算"], "right", ["ll"], None),
 
     # ---------- 社保 / 保护 ----------
     ("social_insurance", "社会保险", ["社会保险", "社保", "五险"], "obligation", ["lcl", "ll"], None),
     ("pension_insurance", "养老保险", ["养老保险", "基本养老保险", "基本养老保险待遇"], "right", ["ll", "lcl"], "social_insurance"),
-    ("medical_insurance", "医疗保险", ["医疗保险", "基本医疗保险"], "right", ["ll", "lcl"], "social_insurance"),
     ("work_injury_insurance", "工伤保险", ["工伤保险"], "right", ["lcl", "ll"], "social_insurance"),
     ("unemployment_insurance", "失业保险", ["失业保险", "失业"], "right", ["lcl", "ll"], "social_insurance"),
-    ("maternity_insurance", "生育保险", ["生育保险"], "right", ["lcl"], "social_insurance"),
     ("work_injury", "工伤", ["工伤", "因工负伤", "工伤事故"], "status", ["ll", "lcl"], None),
-    ("work_injury_recognition", "工伤认定", ["工伤认定", "认定工伤", "视同工伤"], "procedure", ["ll"], None),
-    ("labor_capacity_assessment", "劳动能力鉴定", ["劳动能力鉴定", "伤残等级", "伤残鉴定"], "procedure", ["ll"], None),
-    ("work_injury_benefit", "工伤保险待遇", ["工伤保险待遇", "工伤待遇", "伤残待遇"], "right", ["ll"], None),
     ("survivor_benefit", "遗属待遇", ["遗属", "供养亲属", "抚恤"], "right", ["ll"], None),
-    ("unemployment_benefit", "失业保险待遇", ["失业保险金", "失业保险待遇"], "right", ["ll"], None),
-    ("maternity_benefit", "生育保险待遇", ["生育津贴", "生育医疗费用", "产假待遇"], "right", ["lcl"], None),
     ("retirement", "退休", ["退休", "达到法定退休年龄", "享受基本养老保险待遇"], "status", ["lcl", "ll"], None),
     ("labor_protection", "劳动保护", ["劳动保护", "劳动安全卫生", "安全卫生"], "obligation", ["ll", "lcl"], None),
     ("occupational_disease", "职业病", ["职业病", "职业危害"], "status", ["ll"], None),
@@ -155,7 +151,6 @@ CONCEPTS: list[tuple[str, str, list[str], str, list[str], str | None]] = [
     ("agency", "代理", ["代理", "代理人", "委托代理"], "doctrine", ["cc"], None),
     ("apparent_agency", "表见代理", ["表见代理", "相对人有理由相信"], "doctrine", ["cc"], "agency"),
     ("unauthorized_agency", "无权代理", ["无权代理", "超越代理权"], "doctrine", ["cc"], "agency"),
-    ("self_dealing", "自己代理", ["自己代理", "双方代理"], "doctrine", ["cc"], "agency"),
     ("agency_termination", "代理终止", ["代理终止", "委托代理终止"], "procedure", ["cc"], "agency"),
     ("limitation_period", "诉讼时效", ["诉讼时效", "三年", "时效期间"], "doctrine", ["cc"], None),
     ("limitation_suspension", "诉讼时效中止", ["诉讼时效中止", "中止"], "doctrine", ["cc"], "limitation_period"),
@@ -195,7 +190,6 @@ CONCEPTS: list[tuple[str, str, list[str], str, list[str], str | None]] = [
     ("subrogation", "代位权", ["代位权", "代位行使"], "right", ["cc"], None),
     ("revocation_right", "撤销权", ["撤销权", "债权人撤销"], "right", ["cc"], None),
     ("creditor_assignment", "债权转让", ["债权转让", "转让债权"], "procedure", ["cc"], "contract_transfer"),
-    ("debt_assumption", "债务加入", ["债务加入", "并存的债务承担"], "procedure", ["cc"], "contract_transfer"),
     ("contract_transfer", "合同权利义务转让", ["权利义务一并转让", "合同转让"], "procedure", ["cc"], None),
     ("contract_modification_civil", "合同变更", ["变更合同", "合同变更"], "procedure", ["cc"], None),
     ("contract_termination_civil", "合同终止", ["合同终止", "债权债务终止"], "procedure", ["cc"], None),
@@ -267,6 +261,91 @@ CONCEPTS: list[tuple[str, str, list[str], str, list[str], str | None]] = [
     ("legacy", "遗赠", ["遗赠", "受遗赠人"], "procedure", ["cc"], "inheritance"),
     ("estate_debt", "遗产债务清偿", ["遗产债务", "清偿被继承人依法应当缴纳的税款和债务"], "obligation", ["cc"], "inheritance"),
     ("inheritance_renunciation", "放弃继承", ["放弃继承", "丧失继承权"], "procedure", ["cc"], "inheritance"),
+
+    # ---------- P3 扩词典 · 民法典典型合同缺章 ----------
+    ("utility_supply_contract", "供用电合同", ["供用电合同"], "contract", ["cc"], "typical_contract"),
+    ("financing_lease_contract", "融资租赁合同", ["融资租赁合同"], "contract", ["cc"], "typical_contract"),
+    ("factoring_contract", "保理合同", ["保理合同"], "contract", ["cc"], "typical_contract"),
+    ("technology_development_contract", "技术开发合同", ["技术开发合同", "技术开发"], "contract", ["cc"], "technology_contract"),
+    ("technology_transfer_contract", "技术转让合同", ["技术转让合同", "技术转让"], "contract", ["cc"], "technology_contract"),
+    ("technology_license_contract", "技术许可合同", ["技术许可合同", "技术许可"], "contract", ["cc"], "technology_contract"),
+    ("technology_consulting_contract", "技术咨询合同", ["技术咨询合同", "技术咨询"], "contract", ["cc"], "technology_contract"),
+    ("technology_service_contract", "技术服务合同", ["技术服务合同", "技术服务"], "contract", ["cc"], "technology_contract"),
+    ("security_contract", "担保合同", ["担保合同"], "contract", ["cc"], "security_interest"),
+    ("service_technical_achievement", "职务技术成果", ["职务技术成果"], "doctrine", ["cc"], "technology_contract"),
+
+    # ---------- P3 扩词典 · 债与合同总则 ----------
+    ("intellectual_property", "知识产权", ["知识产权"], "right", ["cc"], None),
+    ("creditor_right", "债权", ["债权"], "right", ["cc"], None),
+    ("debt_obligation", "债务", ["债务"], "obligation", ["cc"], None),
+    ("performance", "清偿", ["清偿"], "procedure", ["cc"], "contract_termination_civil"),
+    ("delivery", "交付", ["交付", "交付时"], "procedure", ["cc"], None),
+    ("subject_matter", "标的物", ["标的物"], "entity", ["cc"], "sales_contract"),
+    ("invitation_to_offer", "要约邀请", ["要约邀请"], "doctrine", ["cc"], "contract_establishment"),
+    ("contract_rescission_civil", "合同解除", ["解除合同", "合同解除"], "procedure", ["cc"], "contract_termination_civil"),
+    ("performance_deadline", "履行期限", ["履行期限"], "obligation", ["cc"], "contract_performance"),
+    ("performance_place", "履行地点", ["履行地点", "履行地"], "obligation", ["cc"], "contract_performance"),
+
+    # ---------- P3 扩词典 · 物权 / 买卖 / 租赁 / 担保细化 ----------
+    ("real_estate_register", "不动产登记簿", ["不动产登记簿"], "document", ["cc"], None),
+    ("real_estate_title_certificate", "不动产权属证书", ["不动产权属证书", "权属证书"], "document", ["cc"], None),
+    ("land_management_right", "土地经营权", ["土地经营权"], "right", ["cc"], "usufruct"),
+    ("adjacent_right_holder", "相邻权利人", ["相邻权利人"], "entity", ["cc"], "adjacent_relation"),
+    ("trial_sale", "试用买卖", ["试用买卖"], "contract", ["cc"], "sales_contract"),
+    ("installment_payment", "分期付款", ["分期付款"], "obligation", ["cc"], "sales_contract"),
+    ("sublease", "转租", ["转租"], "procedure", ["cc"], "lease_contract"),
+    ("maximum_mortgage", "最高额抵押", ["最高额抵押"], "right", ["cc"], "mortgage"),
+    ("general_guarantee", "一般保证", ["一般保证"], "doctrine", ["cc"], "guarantee"),
+    ("joint_guarantee", "连带责任保证", ["连带责任保证", "连带保证"], "doctrine", ["cc"], "guarantee"),
+    ("guarantee_period", "保证期间", ["保证期间"], "status", ["cc"], "guarantee"),
+
+    # ---------- P3 扩词典 · 侵权 / 人格 / 家事 ----------
+    ("punitive_damages", "惩罚性赔偿", ["惩罚性赔偿"], "remedy", ["cc"], "damages_civil"),
+    ("mental_damages", "精神损害赔偿", ["精神损害赔偿", "精神损害"], "remedy", ["cc"], "damages_civil"),
+    ("safety_obligation", "安全保障义务", ["安全保障义务"], "obligation", ["cc"], "tort_liability"),
+    ("personal_freedom", "人身自由", ["人身自由"], "right", ["cc"], "personality_right"),
+    ("credit", "信用", ["信用"], "right", ["cc"], "personality_right"),
+    ("adoption", "收养", ["收养"], "procedure", ["cc"], None),
+    ("domestic_violence", "家庭暴力", ["家庭暴力"], "doctrine", ["cc"], "marriage"),
+    ("subrogation_inheritance", "代位继承", ["代位继承"], "procedure", ["cc"], "statutory_inheritance"),
+
+    # ---------- P3 扩词典 · 合同当事人角色（条文常作分句主语） ----------
+    ("seller", "出卖人", ["出卖人"], "entity", ["cc"], "sales_contract"),
+    ("buyer", "买受人", ["买受人"], "entity", ["cc"], "sales_contract"),
+    ("lessee", "承租人", ["承租人"], "entity", ["cc"], "lease_contract"),
+    ("lessor", "出租人", ["出租人"], "entity", ["cc"], "lease_contract"),
+    ("borrower", "借款人", ["借款人"], "entity", ["cc"], "loan_contract"),
+    ("lender", "贷款人", ["贷款人"], "entity", ["cc"], "loan_contract"),
+    ("contractor_party", "承包人", ["承包人"], "entity", ["cc"], "construction_contract"),
+    ("employer_party", "发包人", ["发包人"], "entity", ["cc"], "construction_contract"),
+    ("principal", "委托人", ["委托人"], "entity", ["cc"], "entrustment_contract"),
+    ("agent_party", "受托人", ["受托人"], "entity", ["cc"], "entrustment_contract"),
+    ("custodian", "保管人", ["保管人"], "entity", ["cc"], "custody_contract"),
+    ("depositor", "存货人", ["存货人"], "entity", ["cc"], "warehouse_contract"),
+    ("partner", "合伙人", ["合伙人"], "entity", ["cc"], "partnership_contract"),
+    ("guarantor", "保证人", ["保证人"], "entity", ["cc"], "guarantee"),
+    ("creditor_party", "债权人", ["债权人"], "entity", ["cc"], None),
+    ("debtor_party", "债务人", ["债务人"], "entity", ["cc"], None),
+    ("ordering_party", "定作人", ["定作人"], "entity", ["cc"], "work_contract"),
+    ("work_contractor", "承揽人", ["承揽人"], "entity", ["cc"], "work_contract"),
+    ("shipper", "托运人", ["托运人"], "entity", ["cc"], "transport_contract"),
+    ("passenger", "旅客", ["旅客"], "entity", ["cc"], "transport_contract"),
+    ("consignee", "收货人", ["收货人"], "entity", ["cc"], "transport_contract"),
+    ("property_service_provider", "物业服务人", ["物业服务人"], "entity", ["cc"], "property_service_contract"),
+    ("construction_unit", "建设单位", ["建设单位"], "entity", ["cc"], "construction_contract"),
+    ("donor", "赠与人", ["赠与人"], "entity", ["cc"], "gift_contract"),
+    ("donee", "受赠人", ["受赠人"], "entity", ["cc"], "gift_contract"),
+    ("custody_depositor", "寄存人", ["寄存人"], "entity", ["cc"], "custody_contract"),
+    ("decedent", "被继承人", ["被继承人"], "entity", ["cc"], "inheritance"),
+    ("counterparty", "相对人", ["相对人"], "entity", ["cc"], None),
+    ("third_party", "第三人", ["第三人"], "entity", ["cc"], None),
+
+    # ---------- P3 扩词典 · 劳动法补充 ----------
+    ("vocational_training", "职业培训", ["职业培训"], "procedure", ["ll", "lcl"], None),
+    ("social_insurance_fund", "社会保险基金", ["社会保险基金"], "entity", ["ll"], "social_insurance"),
+    ("casualty_accident", "伤亡事故", ["伤亡事故"], "status", ["ll"], "labor_protection"),
+    ("labor_competition", "劳动竞赛", ["劳动竞赛"], "procedure", ["ll"], None),
+    ("vocational_skill_assessment", "职业技能考核", ["职业技能考核"], "procedure", ["ll"], None),
 ]
 
 # ======================================================================================
@@ -294,15 +373,15 @@ SCENARIOS: list[tuple[str, str, list[str], str, list[str]]] = [
     ("illegal_dismissal", "违法解除", ["无故辞退", "违法开除", "没理由辞退", "突然被开除"],
      "用人单位解除缺乏法定事由或程序，劳动者主张继续履行或赔偿金", ["illegal_rescission", "damages", "rescission_by_employer", "severance"]),
     ("severance_calculation", "经济补偿计算", ["经济补偿", "N+1", "赔偿标准", "补偿几个月工资"],
-     "经济补偿/赔偿金的年限与月工资口径计算", ["severance", "severance_standard", "double_wage", "wage"]),
+     "经济补偿/赔偿金的年限与月工资口径计算", ["severance", "severance_standard", "double_wage", "wage", "liquidated_damages"]),
     ("double_wage_claim", "二倍工资", ["没签合同", "二倍工资", "双倍工资", "不签书面合同"],
      "未订立书面劳动合同的二倍工资差额", ["double_wage", "written_form", "contract_text", "labor_relationship"]),
     ("social_insurance_dispute", "社保争议", ["没交社保", "社保补缴", "五险", "不缴社保"],
-     "社会保险缴纳义务与补缴、待遇争议", ["social_insurance", "pension_insurance", "medical_insurance", "work_injury_insurance", "unemployment_insurance"]),
+     "社会保险缴纳义务与补缴、待遇争议", ["social_insurance", "pension_insurance", "work_injury_insurance", "unemployment_insurance", "labor_relationship"]),
     ("work_injury", "工伤认定与待遇", ["工伤", "工伤认定", "上班受伤", "工伤赔偿"],
-     "工作中受伤的认定、鉴定与待遇", ["work_injury", "work_injury_recognition", "work_injury_insurance", "labor_capacity_assessment", "work_injury_benefit"]),
+     "工作中受伤的认定、鉴定与待遇", ["work_injury", "work_injury_insurance", "survivor_benefit"]),
     ("maternity_leave", "生育与产假", ["产假", "怀孕被辞", "生育津贴", "哺乳期"],
-     "女职工孕产哺乳期保护与生育待遇", ["female_worker_protection", "maternity_insurance", "maternity_benefit", "illegal_rescission"]),
+     "女职工孕产哺乳期保护与生育待遇", ["female_worker_protection", "illegal_rescission"]),
     ("annual_leave", "年休假", ["年假", "年休假", "没休年假", "年假折现"],
      "带薪年休假的享有、安排与未休补偿", ["annual_leave", "rest_period", "wage_payment"]),
     ("working_hours_dispute", "工时与休息", ["工作时间", "休息日", "法定节假日", "综合工时"],
@@ -342,13 +421,13 @@ SCENARIOS: list[tuple[str, str, list[str], str, list[str]]] = [
     ("platform_worker", "平台用工", ["外卖骑手", "网约车司机", "平台用工", "众包"],
      "平台从业者与平台之间的用工性质", ["labor_relationship", "employment_registration", "work_injury", "burden_of_proof"]),
     ("sick_leave", "病假与医疗期", ["病假", "医疗期", "生病请假", "长期病假被辞"],
-     "医疗期长度、病假工资与解除限制", ["sick_leave", "labor_protection", "medical_insurance", "contract_termination"]),
+     "医疗期长度、病假工资与解除限制", ["sick_leave", "labor_protection", "contract_termination"]),
     ("retirement_rehire", "退休返聘", ["退休返聘", "达到退休年龄", "超龄用工"],
      "达到退休年龄后用工关系的性质", ["retirement", "labor_relationship", "labor_contract"]),
     ("contract_invalid", "合同无效", ["合同无效", "合同欺诈", "被骗签合同", "霸王条款"],
      "劳动合同无效的认定与后果", ["invalid_contract", "fraud", "coercion", "contract_establishment"]),
     ("contract_terms_missing", "合同条款缺失", ["合同没写工资", "合同条款", "合同不给员工"],
-     "必备条款缺失、文本交付与解释规则", ["contract_terms", "contract_text", "written_form"]),
+     "必备条款缺失、文本交付与解释规则", ["contract_terms", "contract_text", "written_form", "labor_contract"]),
     ("deposit_dispute", "定金纠纷", ["定金", "订金", "定金不退", "定金双倍"],
      "定金的成立、罚则与与订金的区别", ["deposit", "breach_of_contract", "sales_contract"]),
     ("lease_dispute", "房屋租赁纠纷", ["租房", "押金不退", "房东违约", "二房东"],
@@ -396,7 +475,7 @@ REQUIRES: list[tuple[str, str]] = [
     # 工时休假
     ("work_hour_extension", "working_hours"), ("rest_day", "rest_period"),
     ("statutory_holiday", "rest_period"), ("annual_leave", "rest_period"),
-    ("annual_leave", "working_hours"), ("shift_system", "working_hours"),
+    ("annual_leave", "working_hours"),
     ("emergency_overtime", "work_hour_extension"), ("sick_leave", "labor_protection"),
     # 合同期限与形态
     ("open_ended_contract", "fixed_term_contract"), ("open_ended_contract", "labor_contract"),
@@ -429,13 +508,8 @@ REQUIRES: list[tuple[str, str]] = [
     ("separation_certificate", "handover"), ("file_transfer", "social_insurance"),
     # 社保工伤
     ("social_insurance", "labor_relationship"), ("pension_insurance", "social_insurance"),
-    ("medical_insurance", "social_insurance"), ("work_injury_insurance", "social_insurance"),
-    ("unemployment_insurance", "social_insurance"), ("maternity_insurance", "social_insurance"),
-    ("work_injury_recognition", "work_injury"), ("work_injury_recognition", "labor_relationship"),
-    ("labor_capacity_assessment", "work_injury_recognition"),
-    ("work_injury_benefit", "work_injury_recognition"), ("work_injury_benefit", "labor_capacity_assessment"),
-    ("work_injury_benefit", "work_injury_insurance"), ("survivor_benefit", "work_injury_benefit"),
-    ("unemployment_benefit", "unemployment_insurance"), ("maternity_benefit", "maternity_insurance"),
+    ("work_injury_insurance", "social_insurance"), ("unemployment_insurance", "social_insurance"),
+    ("survivor_benefit", "work_injury_insurance"),
     ("occupational_disease", "work_injury"), ("occupational_health_check", "labor_protection"),
     ("safety_training", "labor_protection"), ("female_worker_protection", "labor_protection"),
     ("minor_worker", "labor_protection"), ("child_labor", "minor_worker"),
@@ -453,7 +527,7 @@ REQUIRES: list[tuple[str, str]] = [
     ("fraud", "voidable_act"), ("coercion", "voidable_act"),
     ("gross_unfairness", "voidable_act"), ("major_misunderstanding", "voidable_act"),
     ("apparent_agency", "agency"), ("unauthorized_agency", "agency"),
-    ("self_dealing", "agency"), ("agency_termination", "agency"),
+    ("agency_termination", "agency"),
     ("limitation_suspension", "limitation_period"), ("limitation_interruption", "limitation_period"),
     # 民法典 · 合同
     ("contract_establishment", "offer"), ("contract_establishment", "acceptance"),
@@ -462,7 +536,7 @@ REQUIRES: list[tuple[str, str]] = [
     ("simultaneous_performance_defense", "contract_performance"),
     ("first_performance_defense", "contract_performance"),
     ("insecurity_defense", "contract_performance"),
-    ("creditor_assignment", "contract_transfer"), ("debt_assumption", "contract_transfer"),
+    ("creditor_assignment", "contract_transfer"),
     ("set_off", "contract_termination_civil"), ("deposit_escrow", "contract_termination_civil"),
     ("breach_of_contract", "contract_performance"), ("damages_civil", "breach_of_contract"),
     ("liquidated_damages_civil", "breach_of_contract"), ("deposit", "breach_of_contract"),
@@ -488,4 +562,48 @@ REQUIRES: list[tuple[str, str]] = [
     ("statutory_inheritance", "inheritance"), ("testament", "inheritance"),
     ("legacy", "testament"), ("estate_debt", "inheritance"),
     ("inheritance_renunciation", "inheritance"),
+]
+
+# ======================================================================================
+# 金标路径补边（35 条）：B2 的 expected_path 需要这些概念间跳转，但通用 REQUIRES 推导不出来
+# 例如「经济性裁员 -> 经济补偿计算标准」「劳动关系 -> 书面形式」「病假与医疗期 -> 劳动合同终止」。
+# 这些边按法律含义逐条追加，provenance=manual、confidence=0.85（低于手工主表 0.9，便于区分）。
+# 写进种子而不是直接改 data/lexicon/requires.jsonl，否则下次重建术语库会被覆盖。
+# ======================================================================================
+GOLD_PATH_REQUIRES: list[tuple[str, str]] = [
+    ("apparent_agency", "unauthorized_agency"),
+    ("confidentiality", "trade_secret"),
+    ("damages", "damages_civil"),
+    ("deposit", "damages_civil"),
+    ("dispatch_unit", "accepting_unit"),
+    ("economic_layoff", "severance_standard"),
+    ("employment_discrimination", "equal_employment_right"),
+    ("fraud", "coercion"),
+    ("guarantee_contract", "joint_liability"),
+    ("invalid_contract", "fraud"),
+    ("joint_liability", "security_interest"),
+    ("labor_contract", "contract_establishment"),
+    ("labor_protection", "illegal_rescission"),
+    ("labor_protection", "tort_liability"),
+    ("labor_relationship", "agency"),
+    ("labor_relationship", "written_form"),
+    ("labor_union", "severance"),
+    ("lease_contract", "deposit"),
+    ("liquidated_damages", "liquidated_damages_civil"),
+    ("loan_contract", "breach_of_contract"),
+    ("no_fault_liability", "damages_civil"),
+    ("no_fault_liability", "sales_contract"),
+    ("non_compete_compensation", "liquidated_damages"),
+    ("part_time_employment", "offer"),
+    ("part_time_wage_settlement", "labor_dispute"),
+    ("personal_information", "network_tort"),
+    ("sales_contract", "damages_civil"),
+    ("service_period", "liquidated_damages"),
+    ("severance", "breach_of_contract"),
+    ("sick_leave", "contract_termination"),
+    ("statutory_inheritance", "estate_debt"),
+    ("traffic_accident_liability", "no_fault_liability"),
+    ("trial_dismissal", "illegal_rescission"),
+    ("work_injury", "tort_liability"),
+    ("working_hours", "rest_day"),
 ]

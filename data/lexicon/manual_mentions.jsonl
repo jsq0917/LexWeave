@@ -1,0 +1,5 @@
+{"article_id": "lcl#37", "concept_id": "unilateral_rescission_by_worker", "aliases": ["劳动者提前三十日以书面形式通知用人单位"], "confidence": 0.95, "edge_type": "DEFINES", "note": "劳动合同法第三十七条是劳动者单方预告解除的核心条款；正文写的是『提前三十日……可以解除劳动合同』，别名词典里的『单方解除』未字面出现，故按法律含义手工补边"}
+{"article_id": "ll#38", "concept_id": "rest_day", "aliases": ["每周至少休息一日"], "confidence": 0.95, "edge_type": "DEFINES", "note": "劳动法第三十八条是『休息日』的正面规制（每周至少休息一日）；正文没有『休息日』三字，字面匹配漏掉了这条"}
+{"article_id": "cc#610", "concept_id": "sales_contract", "aliases": ["标的物不符合质量要求"], "confidence": 0.9, "edge_type": "DEFINES", "note": "民法典第六百一十条在买卖合同章内，规定质量不合格时买受人可拒收或解除合同；正文未出现『买卖』二字，字面匹配漏掉"}
+{"article_id": "ll#73", "concept_id": "pension_insurance", "aliases": ["退休"], "confidence": 0.9, "edge_type": "DEFINES", "note": "劳动法第七十三条列举『退休』情形下依法享受社会保险待遇，是养老保险待遇的直接依据；正文未出现『养老保险』字样"}
+{"article_id": "lcl#16", "concept_id": "contract_establishment", "aliases": ["签字或者盖章生效"], "confidence": 0.9, "edge_type": "DEFINES", "note": "劳动合同法第十六条规定劳动合同经双方签字或盖章生效，即劳动合同的成立/生效规则；概念『合同成立』的别名词典只收民法典说法，字面匹配漏掉劳动合同法这条"}

@@ -14,6 +14,9 @@ data/index/
 data/graph/
 data/sessions/
 data/.tmp/
+# Neo4j 的本地数据目录：docker compose 挂载点，含 store_lock / 事务日志，体积大且不可复现
+data/neo4j/
+data/eval_out/.defines_blind_cache.json
 .screenshots/
 *.log
 

@@ -16,7 +16,6 @@
 {"source":"statutory_holiday","target":"rest_period","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"annual_leave","target":"rest_period","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"annual_leave","target":"working_hours","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"shift_system","target":"working_hours","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"emergency_overtime","target":"work_hour_extension","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"sick_leave","target":"labor_protection","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"open_ended_contract","target":"fixed_term_contract","relation":"REQUIRES","provenance":"manual","confidence":0.9}
@@ -71,19 +70,9 @@
 {"source":"file_transfer","target":"social_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"social_insurance","target":"labor_relationship","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"pension_insurance","target":"social_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"medical_insurance","target":"social_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"work_injury_insurance","target":"social_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"unemployment_insurance","target":"social_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"maternity_insurance","target":"social_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"work_injury_recognition","target":"work_injury","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"work_injury_recognition","target":"labor_relationship","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"labor_capacity_assessment","target":"work_injury_recognition","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"work_injury_benefit","target":"work_injury_recognition","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"work_injury_benefit","target":"labor_capacity_assessment","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"work_injury_benefit","target":"work_injury_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"survivor_benefit","target":"work_injury_benefit","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"unemployment_benefit","target":"unemployment_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"maternity_benefit","target":"maternity_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
+{"source":"survivor_benefit","target":"work_injury_insurance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"occupational_disease","target":"work_injury","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"occupational_health_check","target":"labor_protection","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"safety_training","target":"labor_protection","relation":"REQUIRES","provenance":"manual","confidence":0.9}
@@ -112,7 +101,6 @@
 {"source":"major_misunderstanding","target":"voidable_act","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"apparent_agency","target":"agency","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"unauthorized_agency","target":"agency","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"self_dealing","target":"agency","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"agency_termination","target":"agency","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"limitation_suspension","target":"limitation_period","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"limitation_interruption","target":"limitation_period","relation":"REQUIRES","provenance":"manual","confidence":0.9}
@@ -125,7 +113,6 @@
 {"source":"first_performance_defense","target":"contract_performance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"insecurity_defense","target":"contract_performance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"creditor_assignment","target":"contract_transfer","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source":"debt_assumption","target":"contract_transfer","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"set_off","target":"contract_termination_civil","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"deposit_escrow","target":"contract_termination_civil","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"breach_of_contract","target":"contract_performance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
@@ -172,38 +159,38 @@
 {"source":"legacy","target":"testament","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"estate_debt","target":"inheritance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
 {"source":"inheritance_renunciation","target":"inheritance","relation":"REQUIRES","provenance":"manual","confidence":0.9}
-{"source": "apparent_agency", "target": "unauthorized_agency", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "confidentiality", "target": "trade_secret", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "damages", "target": "damages_civil", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "deposit", "target": "damages_civil", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "dispatch_unit", "target": "accepting_unit", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "economic_layoff", "target": "severance_standard", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "employment_discrimination", "target": "equal_employment_right", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "fraud", "target": "coercion", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "guarantee_contract", "target": "joint_liability", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "invalid_contract", "target": "fraud", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "joint_liability", "target": "security_interest", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "labor_contract", "target": "contract_establishment", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "labor_protection", "target": "illegal_rescission", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "labor_protection", "target": "tort_liability", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "labor_relationship", "target": "agency", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "labor_relationship", "target": "written_form", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "labor_union", "target": "severance", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "lease_contract", "target": "deposit", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "liquidated_damages", "target": "liquidated_damages_civil", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "loan_contract", "target": "breach_of_contract", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "no_fault_liability", "target": "damages_civil", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "no_fault_liability", "target": "sales_contract", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "part_time_employment", "target": "offer", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "part_time_wage_settlement", "target": "labor_dispute", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "personal_information", "target": "network_tort", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "sales_contract", "target": "damages_civil", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "service_period", "target": "liquidated_damages", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "severance", "target": "breach_of_contract", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "sick_leave", "target": "contract_termination", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "statutory_inheritance", "target": "estate_debt", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "traffic_accident_liability", "target": "no_fault_liability", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "trial_dismissal", "target": "illegal_rescission", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "work_injury", "target": "tort_liability", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "working_hours", "target": "rest_day", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
-{"source": "non_compete_compensation", "target": "liquidated_damages", "relation": "REQUIRES", "provenance": "manual", "confidence": 0.85}
+{"source":"apparent_agency","target":"unauthorized_agency","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"confidentiality","target":"trade_secret","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"damages","target":"damages_civil","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"deposit","target":"damages_civil","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"dispatch_unit","target":"accepting_unit","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"economic_layoff","target":"severance_standard","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"employment_discrimination","target":"equal_employment_right","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"fraud","target":"coercion","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"guarantee_contract","target":"joint_liability","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"invalid_contract","target":"fraud","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"joint_liability","target":"security_interest","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"labor_contract","target":"contract_establishment","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"labor_protection","target":"illegal_rescission","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"labor_protection","target":"tort_liability","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"labor_relationship","target":"agency","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"labor_relationship","target":"written_form","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"labor_union","target":"severance","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"lease_contract","target":"deposit","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"liquidated_damages","target":"liquidated_damages_civil","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"loan_contract","target":"breach_of_contract","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"no_fault_liability","target":"damages_civil","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"no_fault_liability","target":"sales_contract","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"non_compete_compensation","target":"liquidated_damages","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"part_time_employment","target":"offer","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"part_time_wage_settlement","target":"labor_dispute","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"personal_information","target":"network_tort","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"sales_contract","target":"damages_civil","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"service_period","target":"liquidated_damages","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"severance","target":"breach_of_contract","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"sick_leave","target":"contract_termination","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"statutory_inheritance","target":"estate_debt","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"traffic_accident_liability","target":"no_fault_liability","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"trial_dismissal","target":"illegal_rescission","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"work_injury","target":"tort_liability","relation":"REQUIRES","provenance":"manual","confidence":0.85}
+{"source":"working_hours","target":"rest_day","relation":"REQUIRES","provenance":"manual","confidence":0.85}

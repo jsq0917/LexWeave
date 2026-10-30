@@ -68,7 +68,13 @@ class Neo4jGraphStore:
         return self.execute(QueryPlan("article_detail", {"ids": ids}))
 
     def stats(self) -> dict[str, Any]:
-        return {"backend": "neo4j", **self.mgr.export_metadata_to_json()}
+        meta = self.mgr.export_metadata_to_json()
+        return {
+            "backend": "neo4j",
+            "nodes": sum(meta["labels"].values()),
+            "edges": sum(meta["relationships"].values()),
+            **meta,
+        }
 
     def export_json(self, path: Path) -> None:  # 与 NetworkX 后端保持同一接口
         nodes = self.mgr.run_query("MATCH (n) RETURN labels(n) AS labels, properties(n) AS props")

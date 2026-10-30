@@ -1,54 +1,54 @@
 {
   "articles": 1465,
-  "mentions": 3621,
-  "defines_edges": 3621,
-  "covered_articles": 1327,
-  "article_coverage": 0.906,
-  "covered_concepts": 208,
-  "concept_coverage": 0.954,
-  "uncovered_articles": 138,
+  "mentions": 5018,
+  "defines_edges": 5018,
+  "covered_articles": 1390,
+  "article_coverage": 0.949,
+  "covered_concepts": 281,
+  "concept_coverage": 1.0,
+  "uncovered_articles": 75,
   "cites": 97,
   "cross_law_cites": 0,
   "top_concepts": [
     [
       "contract_performance",
-      173
+      176
     ],
     [
       "employer",
-      155
+      156
     ],
     [
       "worker",
-      148
+      151
     ],
     [
       "damages",
       146
     ],
     [
+      "debt_obligation",
+      144
+    ],
+    [
+      "creditor_right",
+      115
+    ],
+    [
       "period_calculation",
       113
+    ],
+    [
+      "debtor_party",
+      93
     ],
     [
       "labor_contract",
       85
     ],
     [
-      "tort_liability",
-      70
-    ],
-    [
-      "legal_person",
-      68
-    ],
-    [
-      "property_right",
-      66
-    ],
-    [
-      "lease_contract",
-      64
+      "creditor_party",
+      78
     ]
   ],
   "llm": null

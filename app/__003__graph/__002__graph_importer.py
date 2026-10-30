@@ -42,12 +42,12 @@ MERGE (s:Scenario {id: r.id})
 SET s.key = r.key, s.name = r.name, s.aliases = r.aliases, s.description = r.description
 """
 
-DEFINES_CYPHER = """
+MENTION_REL_CYPHER = """
 UNWIND $rows AS r
 MATCH (a:Article {id: r.source}) MATCH (c:Concept {id: r.target})
-MERGE (a)-[e:DEFINES]->(c)
-SET e.confidence = r.confidence, e.provenance = r.provenance,
-    e.aliases = r.aliases, e.count = r.count
+MERGE (a)-[e:%s]->(c)
+SET e.confidence = r.confidence, e.score = r.score, e.cue = r.cue,
+    e.provenance = r.provenance, e.aliases = r.aliases, e.count = r.count
 """
 
 APPLIES_CYPHER = """
@@ -92,7 +92,10 @@ def import_all(clear: bool = False, extracted_dir: Path | None = None, lexicon_d
     articles = read_jsonl(extracted_dir / "articles.jsonl")
     concepts = read_jsonl(lexicon_dir / "concepts.jsonl")
     scenarios = read_jsonl(lexicon_dir / "scenarios.jsonl")
-    mentions = read_jsonl(extracted_dir / "mentions.jsonl")
+    # B7：优先读边类型化文件；缺失时回落旧 mentions 并全部标 DEFINES。
+    from app.__002__extract.__003__edge_typing import load_typed
+
+    mentions = load_typed(extracted_dir)
     cites = read_jsonl(extracted_dir / "cites.jsonl")
     requires = read_jsonl(lexicon_dir / "requires.jsonl")
     special_of = read_jsonl(lexicon_dir / "special_of.jsonl")
@@ -104,22 +107,29 @@ def import_all(clear: bool = False, extracted_dir: Path | None = None, lexicon_d
         log.info("%s: %d 行", label, total)
         return total
 
-    _run(ARTICLE_CYPHER, articles, "Article")
+    _run(ARTICLE_CYPHER, [dict(a, id=a["article_id"]) for a in articles], "Article")
     _run(CONCEPT_CYPHER, concepts, "Concept")
     _run(SCENARIO_CYPHER, [dict(s, id=scenario_node_id(s["id"])) for s in scenarios], "Scenario")
 
-    defines = [
-        {
-            "source": m["article_id"],
-            "target": m["concept_id"],
-            "confidence": m.get("confidence", 0.8),
-            "provenance": m.get("provenance", "rule"),
-            "aliases": m.get("aliases", []),
-            "count": m.get("count", 1),
-        }
-        for m in mentions
-    ]
-    _run(DEFINES_CYPHER, defines, "DEFINES")
+    by_type: dict[str, list[dict]] = {}
+    for m in mentions:
+        edge_type = m.get("edge_type", "DEFINES")
+        by_type.setdefault(edge_type, []).append(
+            {
+                "source": m["article_id"],
+                "target": m["concept_id"],
+                "confidence": m.get("confidence", 0.8),
+                "score": round(
+                    float(m.get("confidence", 0.8)) * float(m.get("defines_score", 1.0)), 4
+                ),
+                "cue": m.get("cue"),
+                "provenance": m.get("provenance", "rule"),
+                "aliases": m.get("aliases", []),
+                "count": m.get("count", 1),
+            }
+        )
+    for edge_type in ("DEFINES", "REFERS_TO"):
+        _run(MENTION_REL_CYPHER % edge_type, by_type.get(edge_type, []), edge_type)
 
     applies = [
         {

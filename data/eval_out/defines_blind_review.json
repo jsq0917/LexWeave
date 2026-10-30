@@ -1,0 +1,1631 @@
+{
+  "reviewer": "llm_blind_2of3",
+  "scope": "盲判：只给模型「概念名 + 条文全文」，不给匹配别名、偏移与 cue，两次投票（第二次选项顺序相反）、不一致时第三次取多数。与建边规则不同源，可作为定义级精度的独立估计；但它不是人工盲标，模型与建边脚本读的是同一批中文法条，仍可能共享同类先验。",
+  "model": "deepseek-chat",
+  "sample": 100,
+  "defines_total": 819,
+  "pass": 63,
+  "pass_rate": 0.63,
+  "votes_agree_rate": 0.89,
+  "kind_distribution": {
+    "正面规制": 55,
+    "顺带提及": 37,
+    "定义式": 8
+  },
+  "threshold": 0.85,
+  "meets_threshold": false,
+  "note": "B7 口径把「对概念的正面规制」也算 DEFINES，所以盲判同样接受「正面规制」；若只认「定义式」，看 kind_distribution 里的定义式条数。",
+  "items": [
+    {
+      "concept": "ordering_party",
+      "concept_name": "定作人",
+      "article_id": "cc#781",
+      "citation": "中华人民共和国民法典第七百八十一条",
+      "content": "承揽人交付的工作成果不符合质量要求的，定作人可以合理选择请求承揽人承担修理、重作、减少报酬、赔偿损失等违约责任。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "定作人作分句主语，规定其可请求违约责任",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "easement",
+      "concept_name": "地役权",
+      "article_id": "cc#376",
+      "citation": "中华人民共和国民法典第三百七十六条",
+      "content": "地役权人应当按照合同约定的利用目的和方法利用供役地，尽量减少对供役地权利人物权的限制。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "地役权人作主语，规定其应当按约定利用供役地",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "land_contract_management_right",
+      "concept_name": "土地承包经营权",
+      "article_id": "cc#791",
+      "citation": "中华人民共和国民法典第七百九十一条",
+      "content": "发包人可以与总承包人订立建设工程合同，也可以分别与勘察人、设计人、施工人订立勘察、设计、施工承包合同。发包人不得将应当由一个承包人完成的建设工程支解成若干部分发包给数个承包人。总承包人或者勘察、设计、施工承包人经发包人同意，可以将自己承包的部分工作交由第三人完成。第三人就其完成的工作成果与总承包人或者勘察、设计、施工承包人向发包人承担连带责任。承包人不得将其承包的全部建设工程转包给第三人或者将其承包的全部建设工程支解以后以分包的名义分别转包给第三人。禁止承包人将工程分包给不具备相应资质条件的单位。禁止分包单位将其承包的工程再分包。建设工程主体结构的施工必须由承包人自行完成。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "条文规范建设工程合同，未涉及土地承包经营权",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "security_interest",
+      "concept_name": "担保物权",
+      "article_id": "cc#566",
+      "citation": "中华人民共和国民法典第五百六十六条",
+      "content": "合同解除后，尚未履行的，终止履行；已经履行的，根据履行情况和合同性质，当事人可以请求恢复原状或者采取其他补救措施，并有权请求赔偿损失。合同因违约解除的，解除权人可以请求违约方承担违约责任，但是当事人另有约定的除外。主合同解除后，担保人对债务人应当承担的民事责任仍应当承担担保责任，但是担保合同另有约定的除外。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "担保物权未出现，仅提担保人责任，非规范对象",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "loan_contract",
+      "concept_name": "借款合同",
+      "article_id": "cc#669",
+      "citation": "中华人民共和国民法典第六百六十九条",
+      "content": "订立借款合同，借款人应当按照贷款人的要求提供与借款有关的业务活动和财务状况的真实情况。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是借款人提供真实情况的义务，借款合同作状语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "labor_contract",
+      "concept_name": "劳动合同",
+      "article_id": "lcl#45",
+      "citation": "中华人民共和国劳动合同法第四十五条",
+      "content": "劳动合同期满，有本法第四十二条规定情形之一的，劳动合同应当续延至相应的情形消失时终止。但是，本法第四十二条第二项规定丧失或者部分丧失劳动能力劳动者的劳动合同的终止，按照国家有关工伤保险的规定执行。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "劳动合同作主语，规定其应当续延终止",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "right_of_portrait",
+      "concept_name": "肖像权",
+      "article_id": "cc#1018",
+      "citation": "中华人民共和国民法典第一千零一十八条",
+      "content": "自然人享有肖像权，有权依法制作、使用、公开或者许可他人使用自己的肖像。肖像是通过影像、雕塑、绘画等方式在一定载体上所反映的特定自然人可以被识别的外部形象。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "肖像权作主语，规定其享有及权能",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lease_contract",
+      "concept_name": "租赁合同",
+      "article_id": "cc#752",
+      "citation": "中华人民共和国民法典第七百五十二条",
+      "content": "承租人应当按照约定支付租金。承租人经催告后在合理期限内仍不支付租金的，出租人可以请求支付全部租金；也可以解除合同，收回租赁物。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是承租人付租义务，租赁合同未作主语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "shipper",
+      "concept_name": "托运人",
+      "article_id": "cc#825",
+      "citation": "中华人民共和国民法典第八百二十五条",
+      "content": "托运人办理货物运输，应当向承运人准确表明收货人的姓名、名称或者凭指示的收货人，货物的名称、性质、重量、数量，收货地点等有关货物运输的必要情况。因托运人申报不实或者遗漏重要情况，造成承运人损失的，托运人应当承担赔偿责任。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "托运人作主语，规定其应当准确表明及赔偿责任",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_right",
+      "concept_name": "债权",
+      "article_id": "cc#447",
+      "citation": "中华人民共和国民法典第四百四十七条",
+      "content": "债务人不履行到期债务，债权人可以留置已经合法占有的债务人的动产，并有权就该动产优先受偿。前款规定的债权人为留置权人，占有的动产为留置财产。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "债权出现在主语修饰语中，规范对象是留置权",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "custody_contract",
+      "concept_name": "保管合同",
+      "article_id": "cc#892",
+      "citation": "中华人民共和国民法典第八百九十二条",
+      "content": "保管人应当妥善保管保管物。当事人可以约定保管场所或者方法。除紧急情况或者为维护寄存人利益外，不得擅自改变保管场所或者方法。",
+      "votes": [
+        "顺带提及",
+        "正面规制",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是保管人的保管义务，非保管合同本身 / 规范对象是保管人的保管义务，非保管合同本身",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "possession",
+      "concept_name": "占有",
+      "article_id": "cc#461",
+      "citation": "中华人民共和国民法典第四百六十一条",
+      "content": "占有的不动产或者动产毁损、灭失，该不动产或者动产的权利人请求赔偿的，占有人应当将因毁损、灭失取得的保险金、赔偿金或者补偿金等返还给权利人；权利人的损害未得到足够弥补的，恶意占有人还应当赔偿损失。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "占有人作为主语被规定返还及赔偿义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "minor_worker",
+      "concept_name": "未成年工",
+      "article_id": "ll#58",
+      "citation": "中华人民共和国劳动法第五十八条",
+      "content": "国家对女职工和未成年工实行特殊劳动保护。未成年工是指年满十六周岁未满十八周岁的劳动者。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文用'是指'直接定义未成年工",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "deposit_escrow",
+      "concept_name": "提存",
+      "article_id": "cc#574",
+      "citation": "中华人民共和国民法典第五百七十四条",
+      "content": "债权人可以随时领取提存物。但是，债权人对债务人负有到期债务的，在债权人未履行债务或者提供担保之前，提存部门根据债务人的要求应当拒绝其领取提存物。债权人领取提存物的权利，自提存之日起五年内不行使而消灭，提存物扣除提存费用后归国家所有。但是，债权人未履行对债务人的到期债务，或者债权人向提存部门书面表示放弃领取提存物权利的，债务人负担提存费用后有权取回提存物。",
+      "votes": [
+        "顺带提及",
+        "正面规制",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是债权人领取提存物，提存物为宾语 / 规范对象是债权人领取提存物，提存物为宾语",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_party",
+      "concept_name": "债权人",
+      "article_id": "cc#514",
+      "citation": "中华人民共和国民法典第五百一十四条",
+      "content": "以支付金钱为内容的债，除法律另有规定或者当事人另有约定外，债权人可以请求债务人以实际履行地的法定货币履行。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "债权人作分句主语，规定其可请求履行",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "borrower",
+      "concept_name": "借款人",
+      "article_id": "cc#669",
+      "citation": "中华人民共和国民法典第六百六十九条",
+      "content": "订立借款合同，借款人应当按照贷款人的要求提供与借款有关的业务活动和财务状况的真实情况。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "借款人作分句主语，规定其应当提供真实情况",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "legal_person",
+      "concept_name": "法人",
+      "article_id": "cc#80",
+      "citation": "中华人民共和国民法典第八十条",
+      "content": "营利法人应当设权力机构。权力机构行使修改法人章程，选举或者更换执行机构、监督机构成员，以及法人章程规定的其他职权。",
+      "votes": [
+        "顺带提及",
+        "正面规制",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是权力机构，法人仅作限定语 / 规范对象是权力机构，法人仅作限定语",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "custodian",
+      "concept_name": "保管人",
+      "article_id": "cc#908",
+      "citation": "中华人民共和国民法典第九百零八条",
+      "content": "存货人交付仓储物的，保管人应当出具仓单、入库单等凭证。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "保管人作分句主语，规定其应当出具凭证",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "unincorporated_organization",
+      "concept_name": "非法人组织",
+      "article_id": "cc#102",
+      "citation": "中华人民共和国民法典第一百零二条",
+      "content": "非法人组织是不具有法人资格，但是能够依法以自己的名义从事民事活动的组织。非法人组织包括个人独资企业、合伙企业、不具有法人资格的专业服务机构等。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文以'非法人组织是……'直接下定义",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "expression_of_intent",
+      "concept_name": "意思表示",
+      "article_id": "cc#141",
+      "citation": "中华人民共和国民法典第一百四十一条",
+      "content": "行为人可以撤回意思表示。撤回意思表示的通知应当在意思表示到达相对人前或者与意思表示同时到达相对人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "意思表示作首句主语，规定其可撤回",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "employer",
+      "concept_name": "用人单位",
+      "article_id": "ll#4",
+      "citation": "中华人民共和国劳动法第四条",
+      "content": "用人单位应当依法建立和完善规章制度，保障劳动者享有劳动权利和履行劳动义务。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "用人单位作首句主语，规定其应当建立规章制度",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "worker",
+      "concept_name": "劳动者",
+      "article_id": "lcl#23",
+      "citation": "中华人民共和国劳动合同法第二十三条",
+      "content": "用人单位与劳动者可以在劳动合同中约定保守用人单位的商业秘密和与知识产权相关的保密事项。对负有保密义务的劳动者，用人单位可以在劳动合同或者保密协议中与劳动者约定竞业限制条款，并约定在解除或者终止劳动合同后，在竞业限制期限内按月给予劳动者经济补偿。劳动者违反竞业限制约定的，应当按照约定向用人单位支付违约金。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "劳动者作主语，规定其可约定及违反时付违约金",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_party",
+      "concept_name": "债权人",
+      "article_id": "cc#511",
+      "citation": "中华人民共和国民法典第五百一十一条",
+      "content": "当事人就有关合同内容约定不明确，依据前条规定仍不能确定的，适用下列规定：（一）质量要求不明确的，按照强制性国家标准履行；没有强制性国家标准的，按照推荐性国家标准履行；没有推荐性国家标准的，按照行业标准履行；没有国家标准、行业标准的，按照通常标准或者符合合同目的的特定标准履行。（二）价款或者报酬不明确的，按照订立合同时履行地的市场价格履行；依法应当执行政府定价或者政府指导价的，依照规定履行。（三）履行地点不明确，给付货币的，在接受货币一方所在地履行；交付不动产的，在不动产所在地履行；其他标的，在履行义务一方所在地履行。（四）履行期限不明确的，债务人可以随时履行，债权人也可以随时请求履行，但是应当给对方必要的准备时间。（五）履行方式不明确的，按照有利于实现合同目的的方式履行。（六）履行费用的负担不明确的，由履行义务一方负担；因债权人原因增加的履行费用，由债权人负担。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "债权人仅在分句宾语或原因状语中出现，规范对象是履行规则",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "legal_person",
+      "concept_name": "法人",
+      "article_id": "cc#79",
+      "citation": "中华人民共和国民法典第七十九条",
+      "content": "设立营利法人应当依法制定法人章程。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是设立营利法人，法人章程为宾语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "principal",
+      "concept_name": "委托人",
+      "article_id": "cc#920",
+      "citation": "中华人民共和国民法典第九百二十条",
+      "content": "委托人可以特别委托受托人处理一项或者数项事务，也可以概括委托受托人处理一切事务。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "委托人作主语，规定其可特别或概括委托",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "seller",
+      "concept_name": "出卖人",
+      "article_id": "cc#595",
+      "citation": "中华人民共和国民法典第五百九十五条",
+      "content": "买卖合同是出卖人转移标的物的所有权于买受人，买受人支付价款的合同。",
+      "votes": [
+        "顺带提及",
+        "定义式",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "出卖人出现在定义宾语中，规范对象是买卖合同 / 出卖人出现在定义宾语中，规范对象是买卖合同",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "natural_person",
+      "concept_name": "自然人",
+      "article_id": "cc#1037",
+      "citation": "中华人民共和国民法典第一千零三十七条",
+      "content": "自然人可以依法向信息处理者查阅或者复制其个人信息；发现信息有错误的，有权提出异议并请求及时采取更正等必要措施。自然人发现信息处理者违反法律、行政法规的规定或者双方的约定处理其个人信息的，有权请求信息处理者及时删除。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "自然人作主语，规定其查阅、复制、更正、删除等权利",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "guarantor",
+      "concept_name": "保证人",
+      "article_id": "cc#692",
+      "citation": "中华人民共和国民法典第六百九十二条",
+      "content": "保证期间是确定保证人承担保证责任的期间，不发生中止、中断和延长。债权人与保证人可以约定保证期间，但是约定的保证期间早于主债务履行期限或者与主债务履行期限同时届满的，视为没有约定；没有约定或者约定不明确的，保证期间为主债务履行期限届满之日起六个月。债权人与债务人对主债务履行期限没有约定或者约定不明确的，保证期间自债权人请求债务人履行债务的宽限期届满之日起计算。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "条文规范保证期间，保证人仅作责任承担主体出现",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "ordering_party",
+      "concept_name": "定作人",
+      "article_id": "cc#775",
+      "citation": "中华人民共和国民法典第七百七十五条",
+      "content": "定作人提供材料的，应当按照约定提供材料。承揽人对定作人提供的材料应当及时检验，发现不符合约定时，应当及时通知定作人更换、补齐或者采取其他补救措施。承揽人不得擅自更换定作人提供的材料，不得更换不需要修理的零部件。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "定作人作主语，规定其应按约提供材料",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "loan_contract",
+      "concept_name": "借款合同",
+      "article_id": "cc#672",
+      "citation": "中华人民共和国民法典第六百七十二条",
+      "content": "贷款人按照约定可以检查、监督借款的使用情况。借款人应当按照约定向贷款人定期提供有关财务会计报表或者其他资料。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是贷款人检查监督权，借款合同未作主语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "debtor_party",
+      "concept_name": "债务人",
+      "article_id": "cc#549",
+      "citation": "中华人民共和国民法典第五百四十九条",
+      "content": "有下列情形之一的，债务人可以向受让人主张抵销：（一）债务人接到债权转让通知时，债务人对让与人享有债权，且债务人的债权先于转让的债权到期或者同时到期；（二）债务人的债权与转让的债权是基于同一合同产生。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "债务人作主语，规定其可主张抵销",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "employer",
+      "concept_name": "用人单位",
+      "article_id": "ll#25",
+      "citation": "中华人民共和国劳动法第二十五条",
+      "content": "劳动者有下列情形之一的，用人单位可以解除劳动合同：（一）在试用期间被证明不符合录用条件的；（二）严重违反劳动纪律或者用人单位规章制度的；（三）严重失职，营私舞弊，对用人单位利益造成重大损害的；（四）被依法追究刑事责任的。",
+      "votes": [
+        "正面规制",
+        "顺带提及",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "用人单位作主语，规定其可解除劳动合同 / 用人单位作主语，规定其可解除劳动合同",
+      "votes_agree": false,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "dispatch_unit",
+      "concept_name": "劳务派遣单位",
+      "article_id": "lcl#58",
+      "citation": "中华人民共和国劳动合同法第五十八条",
+      "content": "劳务派遣单位是本法所称用人单位，应当履行用人单位对劳动者的义务。劳务派遣单位与被派遣劳动者订立的劳动合同，除应当载明本法第十七条规定的事项外，还应当载明被派遣劳动者的用工单位以及派遣期限、工作岗位等情况。劳务派遣单位应当与被派遣劳动者订立二年以上的固定期限劳动合同，按月支付劳动报酬；被派遣劳动者在无工作期间，劳务派遣单位应当按照所在地人民政府规定的最低工资标准，向其按月支付报酬。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "首句直接定义劳务派遣单位为用人单位",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lease_contract",
+      "concept_name": "租赁合同",
+      "article_id": "cc#728",
+      "citation": "中华人民共和国民法典第七百二十八条",
+      "content": "出租人未通知承租人或者有其他妨害承租人行使优先购买权情形的，承租人可以请求出租人承担赔偿责任。但是，出租人与第三人订立的房屋买卖合同的效力不受影响。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是优先购买权受侵害的赔偿，租赁合同未作主语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "debtor_party",
+      "concept_name": "债务人",
+      "article_id": "cc#572",
+      "citation": "中华人民共和国民法典第五百七十二条",
+      "content": "标的物提存后，债务人应当及时通知债权人或者债权人的继承人、遗产管理人、监护人、财产代管人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "债务人作主语，规定其应当及时通知的义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "seller",
+      "concept_name": "出卖人",
+      "article_id": "cc#641",
+      "citation": "中华人民共和国民法典第六百四十一条",
+      "content": "当事人可以在买卖合同中约定买受人未履行支付价款或者其他义务的，标的物的所有权属于出卖人。出卖人对标的物保留的所有权，未经登记，不得对抗善意第三人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "出卖人作主语，规定其保留所有权及登记效力",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "seller",
+      "concept_name": "出卖人",
+      "article_id": "cc#739",
+      "citation": "中华人民共和国民法典第七百三十九条",
+      "content": "出租人根据承租人对出卖人、租赁物的选择订立的买卖合同，出卖人应当按照约定向承租人交付标的物，承租人享有与受领标的物有关的买受人的权利。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "出卖人作分句主语，规定其交付义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "property_service_contract",
+      "concept_name": "物业服务合同",
+      "article_id": "cc#281",
+      "citation": "中华人民共和国民法典第二百八十一条",
+      "content": "建筑物及其附属设施的维修资金，属于业主共有。经业主共同决定，可以用于电梯、屋顶、外墙、无障碍设施等共有部分的维修、更新和改造。建筑物及其附属设施的维修资金的筹集、使用情况应当定期公布。紧急情况下需要维修建筑物及其附属设施的，业主大会或者业主委员会可以依法申请使用建筑物及其附属设施的维修资金。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "条文规范维修资金，未以物业服务合同为主语或对象",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "technology_license_contract",
+      "concept_name": "技术许可合同",
+      "article_id": "cc#864",
+      "citation": "中华人民共和国民法典第八百六十四条",
+      "content": "技术转让合同和技术许可合同可以约定实施专利或者使用技术秘密的范围，但是不得限制技术竞争和技术发展。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "技术许可合同作主语，规定可约定范围",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "mortgage",
+      "concept_name": "抵押权",
+      "article_id": "cc#410",
+      "citation": "中华人民共和国民法典第四百一十条",
+      "content": "债务人不履行到期债务或者发生当事人约定的实现抵押权的情形，抵押权人可以与抵押人协议以抵押财产折价或者以拍卖、变卖该抵押财产所得的价款优先受偿。协议损害其他债权人利益的，其他债权人可以请求人民法院撤销该协议。抵押权人与抵押人未就抵押权实现方式达成协议的，抵押权人可以请求人民法院拍卖、变卖抵押财产。抵押财产折价或者变卖的，应当参照市场价格。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "抵押权人作为主语规定其可协议优先受偿等权利",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_right",
+      "concept_name": "债权",
+      "article_id": "cc#530",
+      "citation": "中华人民共和国民法典第五百三十条",
+      "content": "债权人可以拒绝债务人提前履行债务，但是提前履行不损害债权人利益的除外。债务人提前履行债务给债权人增加的费用，由债务人负担。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "债权人在首句主语位置，规定其可拒绝的权利",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "principal",
+      "concept_name": "委托人",
+      "article_id": "cc#928",
+      "citation": "中华人民共和国民法典第九百二十八条",
+      "content": "受托人完成委托事务的，委托人应当按照约定向其支付报酬。因不可归责于受托人的事由，委托合同解除或者委托事务不能完成的，委托人应当向受托人支付相应的报酬。当事人另有约定的，按照其约定。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "委托人作主语，规定其支付报酬义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "buyer",
+      "concept_name": "买受人",
+      "article_id": "cc#627",
+      "citation": "中华人民共和国民法典第六百二十七条",
+      "content": "买受人应当按照约定的地点支付价款。对支付地点没有约定或者约定不明确，依据本法第五百一十条的规定仍不能确定的，买受人应当在出卖人的营业地支付；但是，约定支付价款以交付标的物或者交付提取标的物单证为条件的，在交付标的物或者交付提取标的物单证的所在地支付。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "买受人作主语，规定其应当支付价款",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "work_contract",
+      "concept_name": "承揽合同",
+      "article_id": "cc#787",
+      "citation": "中华人民共和国民法典第七百八十七条",
+      "content": "定作人在承揽人完成工作前可以随时解除合同，造成承揽人损失的，应当赔偿损失。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是定作人解除权，承揽合同仅为背景",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "principal",
+      "concept_name": "委托人",
+      "article_id": "cc#852",
+      "citation": "中华人民共和国民法典第八百五十二条",
+      "content": "委托开发合同的委托人应当按照约定支付研究开发经费和报酬，提供技术资料，提出研究开发要求，完成协作事项，接受研究开发成果。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "委托人作主语，规定其应当支付等义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "custodian",
+      "concept_name": "保管人",
+      "article_id": "cc#900",
+      "citation": "中华人民共和国民法典第九百条",
+      "content": "保管期限届满或者寄存人提前领取保管物的，保管人应当将原物及其孳息归还寄存人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "保管人作主语，规定其应当归还义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_right",
+      "concept_name": "债权",
+      "article_id": "cc#118",
+      "citation": "中华人民共和国民法典第一百一十八条",
+      "content": "民事主体依法享有债权。债权是因合同、侵权行为、无因管理、不当得利以及法律的其他规定，权利人请求特定义务人为或者不为一定行为的权利。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文用'债权是……权利'直接下定义",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "medical_malpractice_liability",
+      "concept_name": "医疗损害责任",
+      "article_id": "cc#1227",
+      "citation": "中华人民共和国民法典第一千二百二十七条",
+      "content": "医疗机构及其医务人员不得违反诊疗规范实施不必要的检",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是医疗机构及医务人员的检查行为，非医疗损害责任",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "property_service_contract",
+      "concept_name": "物业服务合同",
+      "article_id": "cc#286",
+      "citation": "中华人民共和国民法典第二百八十六条",
+      "content": "业主应当遵守法律、法规以及管理规约，相关行为应当符合节约资源、保护生态环境的要求。对于物业服务企业或者其他管理人执行政府依法实施的应急处置措施和其他管理措施，业主应当依法予以配合。业主大会或者业主委员会，对任意弃置垃圾、排放污染物或者噪声、违反规定饲养动物、违章搭建、侵占通道、拒付物业费等损害他人合法权益的行为，有权依照法律、法规以及管理规约，请求行为人停止侵害、排除妨碍、消除危险、恢复原状、赔偿损失。业主或者其他行为人拒不履行相关义务的，有关当事人可以向有关行政主管部门报告或者投诉，有关行政主管部门应当依法处理。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "条文规范业主行为，物业服务合同仅在从句背景中提及",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "labor_contract",
+      "concept_name": "劳动合同",
+      "article_id": "lcl#12",
+      "citation": "中华人民共和国劳动合同法第十二条",
+      "content": "劳动合同分为固定期限劳动合同、无固定期限劳动合同和以完成一定工作任务为期限的劳动合同。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "条文以劳动合同为主语规定其分类构成",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lessor",
+      "concept_name": "出租人",
+      "article_id": "cc#711",
+      "citation": "中华人民共和国民法典第七百一十一条",
+      "content": "承租人未按照约定的方法或者未根据租赁物的性质使用租赁物，致使租赁物受到损失的，出租人可以解除合同并请求赔偿损失。",
+      "votes": [
+        "顺带提及",
+        "正面规制",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "出租人出现在分句主语，但规范对象是承租人行为 / 出租人出现在分句主语，但规范对象是承租人行为",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "worker",
+      "concept_name": "劳动者",
+      "article_id": "lcl#69",
+      "citation": "中华人民共和国劳动合同法第六十九条",
+      "content": "非全日制用工双方当事人可以订立口头协议。从事非全日制用工的劳动者可以与一个或者一个以上用人单位订立劳动合同；但是，后订立的劳动合同不得影响先订立的劳动合同的履行。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "劳动者作分句主语，规定可订立合同",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "employer",
+      "concept_name": "用人单位",
+      "article_id": "cc#261",
+      "citation": "中华人民共和国民法典第二百六十一条",
+      "content": "农民集体所有的不动产和动产，属于本集体成员集体所有。下列事项应当依照法定程序经本集体成员决定：（一）土地承包方案以及将土地发包给本集体以外的组织或者个人承包；（二）个别土地承包经营权人之间承包地的调整；（三）土地补偿费等费用的使用、分配办法；（四）集体出资的企业的所有权变动等事项；（五）法律规定的其他事项。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "条文规范集体成员决定事项，未以用人单位为主语规制",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "partner",
+      "concept_name": "合伙人",
+      "article_id": "cc#975",
+      "citation": "中华人民共和国民法典第九百七十五条",
+      "content": "合伙人的债权人不得代位行使合伙人依照本章规定和合伙合同享有的权利，但是合伙人享有的利益分配请求权除外。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是债权人代位权，合伙人作限定语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lien",
+      "concept_name": "留置权",
+      "article_id": "cc#452",
+      "citation": "中华人民共和国民法典第四百五十二条",
+      "content": "留置权人有权收取留置财产的孳息。前款规定的孳息应当先充抵收取孳息的费用。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "留置权人作主语，规定其有权收取孳息",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lessee",
+      "concept_name": "承租人",
+      "article_id": "cc#724",
+      "citation": "中华人民共和国民法典第七百二十四条",
+      "content": "有下列情形之一，非因承租人原因致使租赁物无法使用的，承租人可以解除合同：（一）租赁物被司法机关或者行政机关依法查封、扣押；（二）租赁物权属有争议；（三）租赁物具有违反法律、行政法规关于使用条件的强制性规定情形。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "承租人作主语，规定其可解除合同的权利",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "land_contract_management_right",
+      "concept_name": "土地承包经营权",
+      "article_id": "cc#803",
+      "citation": "中华人民共和国民法典第八百零三条",
+      "content": "发包人未按照约定的时间和要求提供原材料、设备、场地、资金、技术资料的，承包人可以顺延工程日期，并有权请求赔偿停工、窝工等损失。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "条文规范发包人义务，未涉及土地承包经营权",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "bona_fide_acquisition",
+      "concept_name": "善意取得",
+      "article_id": "cc#313",
+      "citation": "中华人民共和国民法典第三百一十三条",
+      "content": "善意受让人取得动产后，该动产上的原有权利消灭。但是，善意受让人在受让时知道或者应当知道该权利的除外。",
+      "votes": [
+        "顺带提及",
+        "正面规制",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是善意受让人取得动产的效力，非善意取得本身 / 规范对象是善意受让人取得动产的效力，非善意取得本身",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_party",
+      "concept_name": "债权人",
+      "article_id": "cc#975",
+      "citation": "中华人民共和国民法典第九百七十五条",
+      "content": "合伙人的债权人不得代位行使合伙人依照本章规定和合伙合同享有的权利，但是合伙人享有的利益分配请求权除外。",
+      "votes": [
+        "正面规制",
+        "顺带提及",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "债权人作主语，规定不得代位行使 / 债权人作主语，规定其不得代位行使权利",
+      "votes_agree": false,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "social_insurance",
+      "concept_name": "社会保险",
+      "article_id": "ll#73",
+      "citation": "中华人民共和国劳动法第七十三条",
+      "content": "劳动者在下列情形下，依法享受社会保险待遇：（一）退休；（二）患病、负伤；（三）因工伤残或者患职业病；（四）失业；（五）生育。劳动者死亡后，其遗属依法享受遗属津贴。劳动者享受社会保险待遇的条件和标准由法律、法规规定。劳动者享受的社会保险金必须按时足额支付。",
+      "votes": [
+        "顺带提及",
+        "正面规制",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "社会保险待遇出现在宾语位置，规范对象是劳动者 / 社会保险待遇作宾语，规范对象是劳动者享受待遇",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "employer_party",
+      "concept_name": "发包人",
+      "article_id": "cc#804",
+      "citation": "中华人民共和国民法典第八百零四条",
+      "content": "因发包人的原因致使工程中途停建、缓建的，发包人应当采取措施弥补或者减少损失，赔偿承包人因此造成的停工、窝工、倒运、机械设备调迁、材料和构件积压等损失和实际费用。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "发包人作分句主语，规定其弥补损失赔偿义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "brokerage_contract",
+      "concept_name": "行纪合同",
+      "article_id": "cc#951",
+      "citation": "中华人民共和国民法典第九百五十一条",
+      "content": "行纪合同是行纪人以自己的名义为委托人从事贸易活动，委托人支付报酬的合同。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文用'是'直接给行纪合同下定义",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "labor_relationship",
+      "concept_name": "劳动关系",
+      "article_id": "ll#16",
+      "citation": "中华人民共和国劳动法第十六条",
+      "content": "劳动合同是劳动者与用人单位确立劳动关系、明确双方权利和义务的协议。建立劳动关系应当订立劳动合同。",
+      "votes": [
+        "顺带提及",
+        "定义式",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "劳动关系出现在宾语位置，规范对象是劳动合同 / 劳动关系出现在宾语位置，规范对象是劳动合同",
+      "votes_agree": false,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "wage",
+      "concept_name": "工资",
+      "article_id": "ll#35",
+      "citation": "中华人民共和国劳动法第三十五条",
+      "content": "依法签订的集体合同对企业和企业全体职工具有约束力。职工个人与企业订立的劳动合同中劳动条件和劳动报酬等标准不得低于集体合同的规定。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "劳动报酬在从句中作标准，规范对象是集体合同效力",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lessee",
+      "concept_name": "承租人",
+      "article_id": "cc#725",
+      "citation": "中华人民共和国民法典第七百二十五条",
+      "content": "租赁物在承租人按照租赁合同占有期限内发生所有权变动的，不影响租赁合同的效力。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "承租人出现在介词短语中，规范对象是所有权变动不影响合同效力",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "mortgage",
+      "concept_name": "抵押权",
+      "article_id": "cc#419",
+      "citation": "中华人民共和国民法典第四百一十九条",
+      "content": "抵押权人应当在主债权诉讼时效期间行使抵押权；未行使的，人民法院不予保护。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "抵押权作宾语，规范对象是抵押权人行使行为",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "part_time_employment",
+      "concept_name": "非全日制用工",
+      "article_id": "lcl#69",
+      "citation": "中华人民共和国劳动合同法第六十九条",
+      "content": "非全日制用工双方当事人可以订立口头协议。从事非全日制用工的劳动者可以与一个或者一个以上用人单位订立劳动合同；但是，后订立的劳动合同不得影响先订立的劳动合同的履行。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "首句主语为非全日制用工，规定可订立口头协议",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lease_contract",
+      "concept_name": "租赁合同",
+      "article_id": "cc#740",
+      "citation": "中华人民共和国民法典第七百四十条",
+      "content": "出卖人违反向承租人交付标的物的义务，有下列情形之一的，承租人可以拒绝受领出卖人向其交付的标的物：（一）标的物严重不符合约定；（二）未按照约定交付标的物，经承租人或者出租人催告后在合理期限内仍未交付。承租人拒绝受领标的物的，应当及时通知出租人。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是出卖人交付义务及承租人拒收权，租赁合同未作主语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "subject_matter",
+      "concept_name": "标的物",
+      "article_id": "cc#641",
+      "citation": "中华人民共和国民法典第六百四十一条",
+      "content": "当事人可以在买卖合同中约定买受人未履行支付价款或者其他义务的，标的物的所有权属于出卖人。出卖人对标的物保留的所有权，未经登记，不得对抗善意第三人。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "标的物出现在介词短语和宾语中，规范对象是所有权保留约定",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lessee",
+      "concept_name": "承租人",
+      "article_id": "cc#740",
+      "citation": "中华人民共和国民法典第七百四十条",
+      "content": "出卖人违反向承租人交付标的物的义务，有下列情形之一的，承租人可以拒绝受领出卖人向其交付的标的物：（一）标的物严重不符合约定；（二）未按照约定交付标的物，经承租人或者出租人催告后在合理期限内仍未交付。承租人拒绝受领标的物的，应当及时通知出租人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "承租人作分句主语，规定其可拒绝受领",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "transport_contract",
+      "concept_name": "运输合同",
+      "article_id": "cc#820",
+      "citation": "中华人民共和国民法典第八百二十条",
+      "content": "承运人应当按照有效客票记载的时间、班次和座位号运输旅客。承运人迟延运输或者有其他不能正常运输情形的，应当及时告知和提醒旅客，采取必要的安置措施，并根据旅客的要求安排改乘其他班次或者退票；由此造成旅客损失的，承运人应当承担赔偿责任，但是不可归责于承运人的除外。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是承运人义务，运输合同未作主语",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "collective_contract",
+      "concept_name": "集体合同",
+      "article_id": "lcl#55",
+      "citation": "中华人民共和国劳动合同法第五十五条",
+      "content": "集体合同中劳动报酬和劳动条件等标准不得低于当地人民政府规定的最低标准；用人单位与劳动者订立的劳动合同中劳动报酬和劳动条件等标准不得低于集体合同规定的标准。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "集体合同作分句主语，规定其标准效力",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "property_right",
+      "concept_name": "物权",
+      "article_id": "cc#114",
+      "citation": "中华人民共和国民法典第一百一十四条",
+      "content": "民事主体依法享有物权。物权是权利人依法对特定的物享有直接支配和排他的权利，包括所有权、用益物权和担保物权。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文直接以'物权是……'下定义",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_right",
+      "concept_name": "债权",
+      "article_id": "cc#396",
+      "citation": "中华人民共和国民法典第三百九十六条",
+      "content": "企业、个体工商户、农业生产经营者可以将现有的以及将有的生产设备、原材料、半成品、产品抵押，债务人不履行到期债务或者发生当事人约定的实现抵押权的情形，债权人有权就抵押财产确定时的动产优先受偿。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "债权出现在从句中，规范对象是抵押及优先受偿",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "employer",
+      "concept_name": "用人单位",
+      "article_id": "ll#29",
+      "citation": "中华人民共和国劳动法第二十九条",
+      "content": "劳动者有下列情形之一的，用人单位不得依据本法第二十六条、第二十七条的规定解除劳动合同：（一）患职业病或者因工负伤并被确认丧失或者部分丧失劳动能力的；（二）患病或者负伤，在规定的医疗期内的；（三）女职工在孕期、产期、哺乳期内的；（四）法律、行政法规规定的其他情形。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "用人单位作主语，规定其不得解除劳动合同",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "civil_subject",
+      "concept_name": "民事主体",
+      "article_id": "cc#1031",
+      "citation": "中华人民共和国民法典第一千零三十一条",
+      "content": "民事主体享有荣誉权。任何组织或者个人不得非法剥夺他人的荣誉称号，不得诋毁、贬损他人的荣誉。获得的荣誉称号应当记载而没有记载的，民事主体可以请求记载；获得的荣誉称号记载错误的，民事主体可以请求更正。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "民事主体作首句主语，规定其享有荣誉权及请求权",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lender",
+      "concept_name": "贷款人",
+      "article_id": "cc#672",
+      "citation": "中华人民共和国民法典第六百七十二条",
+      "content": "贷款人按照约定可以检查、监督借款的使用情况。借款人应当按照约定向贷款人定期提供有关财务会计报表或者其他资料。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "贷款人作首句主语，规定其可检查监督",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "custodian",
+      "concept_name": "保管人",
+      "article_id": "cc#913",
+      "citation": "中华人民共和国民法典第九百一十三条",
+      "content": "保管人发现入库仓储物有变质或者其他损坏，危及其他仓储物的安全和正常保管的，应当催告存货人或者仓单持有人作出必要的处置。因情况紧急，保管人可以作出必要的处置；但是，事后应当将该情况及时通知存货人或者仓单持有人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "保管人作主语，规定其催告和处置义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "subject_matter",
+      "concept_name": "标的物",
+      "article_id": "cc#620",
+      "citation": "中华人民共和国民法典第六百二十条",
+      "content": "买受人收到标的物时应当在约定的检验期限内检验。没有约定检验期限的，应当及时检验。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "标的物在介词短语中，规范对象是买受人检验义务",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "part_time_employment",
+      "concept_name": "非全日制用工",
+      "article_id": "lcl#68",
+      "citation": "中华人民共和国劳动合同法第六十八条",
+      "content": "非全日制用工，是指以小时计酬为主，劳动者在同一用人单位一般平均每日工作时间不超过四小时，每周工作时间累计不超过二十四小时的用工形式。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文用「是指」直接给非全日制用工下定义",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "entrustment_contract",
+      "concept_name": "委托合同",
+      "article_id": "cc#935",
+      "citation": "中华人民共和国民法典第九百三十五条",
+      "content": "因委托人死亡或者被宣告破产、解散，致使委托合同终止将损害委托人利益的，在委托人的继承人、遗产管理人或者清算人承受委托事务之前，受托人应当继续处理委托事务。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "规范对象是受托人继续处理事务，委托合同仅作背景",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "adoption",
+      "concept_name": "收养",
+      "article_id": "cc#1109",
+      "citation": "中华人民共和国民法典第一千一百零九条",
+      "content": "外国人依法可以在中华人民共和国收养子女。外国人在中华人民共和国收养子女，应当经其所在国主管机关依照该国法律审查同意。收养人应当提供由其所在国有权机构出具的有关其年龄、婚姻、职业、财产、健康、有无受过刑事处罚等状况的证明材料，并与送养人签订书面协议，亲自向省、自治区、直辖市人民政府民政部门登记。前款规定的证明材料应当经收养人所在国外交机关或者外交机关授权的机构认证，并经中华人民共和国驻该国使领馆认证，但是国家另有规定的除外。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "收养作主语，规定外国人收养的条件与程序",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "employer",
+      "concept_name": "用人单位",
+      "article_id": "ll#37",
+      "citation": "中华人民共和国劳动法第三十七条",
+      "content": "对实行计件工作的劳动者，用人单位应当根据本法第三十六条规定的工时制度合理确定其劳动定额和计件报酬标准。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "用人单位作分句主语，规定其应当合理确定定额报酬",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "land_contract_management_right",
+      "concept_name": "土地承包经营权",
+      "article_id": "cc#338",
+      "citation": "中华人民共和国民法典第三百三十八条",
+      "content": "承包地被征收的，土地承包经营权人有权依据本法第二百四十三条的规定获得相应补偿。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "概念作主语，规定其有权获得补偿",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "guarantor",
+      "concept_name": "保证人",
+      "article_id": "cc#689",
+      "citation": "中华人民共和国民法典第六百八十九条",
+      "content": "保证人可以要求债务人提供反担保。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "保证人作主语，规定其可要求反担保",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "technology_transfer_contract",
+      "concept_name": "技术转让合同",
+      "article_id": "cc#870",
+      "citation": "中华人民共和国民法典第八百七十条",
+      "content": "技术转让合同的让与人和技术许可合同的许可人应当保证自己是所提供的技术的合法拥有者，并保证所提供的技术完整、无误、有效，能够达到约定的目标。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "概念作首句主语，规定其保证义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "debt_obligation",
+      "concept_name": "债务",
+      "article_id": "cc#454",
+      "citation": "中华人民共和国民法典第四百五十四条",
+      "content": "债务人可以请求留置权人在债务履行期限届满后行使留置权；留置权人不行使的，债务人可以请求人民法院拍卖、变卖留置财产。",
+      "votes": [
+        "正面规制",
+        "顺带提及",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "债务人在分句主语位置，规定其可请求行使留置权 / 债务人在分句主语位置，规定其可请求行使留置权",
+      "votes_agree": false,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "easement",
+      "concept_name": "地役权",
+      "article_id": "cc#381",
+      "citation": "中华人民共和国民法典第三百八十一条",
+      "content": "地役权不得单独抵押。土地经营权、建设用地使用权等抵押的，在实现抵押权时，地役权一并转让。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "地役权作首句主语，规定不得单独抵押",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "creditor_right",
+      "concept_name": "债权",
+      "article_id": "cc#539",
+      "citation": "中华人民共和国民法典第五百三十九条",
+      "content": "债务人以明显不合理的低价转让财产、以明显不合理的高价受让他人财产或者为他人的债务提供担保，影响债权人的债权实现，债务人的相对人知道或者应当知道该情形的，债权人可以请求人民法院撤销债务人的行为。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "债权出现在宾语位置，规范对象是撤销权",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "worker",
+      "concept_name": "劳动者",
+      "article_id": "ll#33",
+      "citation": "中华人民共和国劳动法第三十三条",
+      "content": "企业职工一方与企业可以就劳动报酬、工作时间、休息休假、劳动安全卫生、保险福利等事项，签订集体合同。集体合同草案应当提交职工代表大会或者全体职工讨论通过。集体合同由工会代表职工与企业签订；没有建立工会的企业，由职工推举的代表与企业签订。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "劳动者未作主语，规范对象是集体合同签订",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "offer",
+      "concept_name": "要约",
+      "article_id": "cc#472",
+      "citation": "中华人民共和国民法典第四百七十二条",
+      "content": "要约是希望与他人订立合同的意思表示，该意思表示应当符合下列条件：（一）内容具体确定；（二）表明经受要约人承诺，要约人即受该意思表示约束。",
+      "votes": [
+        "定义式",
+        "定义式"
+      ],
+      "kind": "定义式",
+      "reason": "条文以'要约是……'直接下定义",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "shipper",
+      "concept_name": "托运人",
+      "article_id": "cc#826",
+      "citation": "中华人民共和国民法典第八百二十六条",
+      "content": "货物运输需要办理审批、检验等手续的，托运人应当将办理完有关手续的文件提交承运人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "托运人作分句主语，规定其应当提交文件",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "pledge",
+      "concept_name": "质权",
+      "article_id": "cc#439",
+      "citation": "中华人民共和国民法典第四百三十九条",
+      "content": "出质人与质权人可以协议设立最高额质权。最高额质权除适用本节有关规定外，参照适用本编第十七章第二节的有关规定。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "质权人作主语，规定可协议设立最高额质权",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lessor",
+      "concept_name": "出租人",
+      "article_id": "cc#755",
+      "citation": "中华人民共和国民法典第七百五十五条",
+      "content": "融资租赁合同因买卖合同解除、被确认无效或者被撤销而解除，出卖人、租赁物系由承租人选择的，出租人有权请求承租人赔偿相应损失；但是，因出租人原因致使买卖合同解除、被确认无效或者被撤销的除外。出租人的损失已经在买卖合同解除、被确认无效或者被撤销时获得赔偿的，承租人不再承担相应的赔偿责任。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "出租人作分句主语，条文规定其有权请求赔偿",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "possession",
+      "concept_name": "占有",
+      "article_id": "cc#462",
+      "citation": "中华人民共和国民法典第四百六十二条",
+      "content": "占有的不动产或者动产被侵占的，占有人有权请求返还原物；对妨害占有的行为，占有人有权请求排除妨害或者消除危险；因侵占或者妨害造成损害的，占有人有权依法请求损害赔偿。占有人返还原物的请求权，自侵占发生之日起一年内未行使的，该请求权消灭。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "占有人作为分句主语被赋予请求权",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "adoption",
+      "concept_name": "收养",
+      "article_id": "cc#1044",
+      "citation": "中华人民共和国民法典第一千零四十四条",
+      "content": "收养应当遵循最有利于被收养人的原则，保障被收养人和收养人的合法权益。禁止借收养名义买卖未成年人。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "收养作首句主语，规定应遵循原则及禁止事项",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lease_contract",
+      "concept_name": "租赁合同",
+      "article_id": "cc#756",
+      "citation": "中华人民共和国民法典第七百五十六条",
+      "content": "融资租赁合同因租赁物交付承租人后意外毁损、灭失等不可归责于当事人的原因解除的，出租人可以请求承租人按照租赁物折旧情况给予补偿。",
+      "votes": [
+        "顺带提及",
+        "顺带提及"
+      ],
+      "kind": "顺带提及",
+      "reason": "租赁物是介词短语中的宾语，规范对象是融资租赁合同解除后的补偿",
+      "votes_agree": true,
+      "pass": false,
+      "provenance": "rule"
+    },
+    {
+      "concept": "work_contractor",
+      "concept_name": "承揽人",
+      "article_id": "cc#775",
+      "citation": "中华人民共和国民法典第七百七十五条",
+      "content": "定作人提供材料的，应当按照约定提供材料。承揽人对定作人提供的材料应当及时检验，发现不符合约定时，应当及时通知定作人更换、补齐或者采取其他补救措施。承揽人不得擅自更换定作人提供的材料，不得更换不需要修理的零部件。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "承揽人作主语，规定其检验、通知、不得更换义务",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "collective_contract",
+      "concept_name": "集体合同",
+      "article_id": "lcl#51",
+      "citation": "中华人民共和国劳动合同法第五十一条",
+      "content": "企业职工一方与用人单位通过平等协商，可以就劳动报酬、工作时间、休息休假、劳动安全卫生、保险福利等事项订立集体合同。集体合同草案应当提交职工代表大会或者全体职工讨论通过。集体合同由工会代表企业职工一方与用人单位订立；尚未建立工会的用人单位，由上级工会指导劳动者推举的代表与用人单位订立。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "条文以集体合同为规范对象，规定订立主体与程序",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    },
+    {
+      "concept": "lien",
+      "concept_name": "留置权",
+      "article_id": "cc#453",
+      "citation": "中华人民共和国民法典第四百五十三条",
+      "content": "留置权人与债务人应当约定留置财产后的债务履行期限；没有约定或者约定不明确的，留置权人应当给债务人六十日以上履行债务的期限，但是鲜活易腐等不易保管的动产除外。债务人逾期未履行的，留置权人可以与债务人协议以留置财产折价，也可以就拍卖、变卖留置财产所得的价款优先受偿。留置财产折价或者变卖的，应当参照市场价格。",
+      "votes": [
+        "正面规制",
+        "正面规制"
+      ],
+      "kind": "正面规制",
+      "reason": "留置权人作主语，规定其应约定及可优先受偿",
+      "votes_agree": true,
+      "pass": true,
+      "provenance": "rule"
+    }
+  ]
+}

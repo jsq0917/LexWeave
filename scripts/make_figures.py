@@ -174,11 +174,12 @@ def fig_bootstrap(out: Path) -> None:
 def fig_graph(out: Path) -> None:
     g = load("data/graph/graph.json")
     pairs = Counter((e["relation"], e["provenance"]) for e in g["edges"])
-    order = ["DEFINES", "APPLIES_TO", "REQUIRES", "SPECIAL_OF", "CITES"]
+    order = ["DEFINES", "REFERS_TO", "APPLIES_TO", "REQUIRES", "SPECIAL_OF", "CITES"]
     prov_cn = {"rule": "规则抽取", "manual": "人工编写", "regex": "正则抽取"}
     prov_color = {"rule": "#8FB6D9", "manual": "#C2705A", "regex": "#9DBFAE"}
+    total = len(g["edges"])
 
-    fig, ax = plt.subplots(figsize=(9.6, 3.6))
+    fig, ax = plt.subplots(figsize=(9.6, 3.8))
     y = np.arange(len(order))[::-1]
     left = np.zeros(len(order))
     for prov in ["rule", "manual", "regex"]:
@@ -196,11 +197,11 @@ def fig_graph(out: Path) -> None:
 
     ax.set_yticks(y)
     ax.set_yticklabels(order, fontsize=10.5)
-    ax.set_xlabel("边数（合计 4,259）", fontsize=10.5, color="#5B6673")
-    ax.set_title("边的构成：概念层 541 条全部人工编写，DEFINES 由规则抽取",
+    ax.set_xlabel(f"边数（合计 {total:,}）", fontsize=10.5, color="#5B6673")
+    ax.set_title("B7 拆边后：DEFINES 只留定义/正面规制，REFERS_TO 是顺带提及",
                  fontsize=11.8, pad=12, color="#1B2733")
     ax.legend(frameon=False, fontsize=9.3, loc="lower right")
-    ax.set_xlim(0, 4100)
+    ax.set_xlim(0, max(4100, int(max(left) * 1.08)))
     style(ax)
     ax.grid(axis="x", color="#EDF1F5", linewidth=0.9)
     ax.grid(axis="y", visible=False)
@@ -208,7 +209,7 @@ def fig_graph(out: Path) -> None:
     fig.text(
         0.01, 0.01,
         "数据来源：data/graph/graph.json（scripts/build_graph.py 产出，stats.json 同脚本刷新）。"
-        "DEFINES 混有「提及」而非「定义」，是 B1 抽检未达 85% 的原因，见 README §12 第 6 条。",
+        "DEFINES 数量跌破 800 是拆边的真实结果，未为凑数放宽规则，见 README §3 / §12 第 6 条。",
         fontsize=8.4, color=C_NEUTRAL,
     )
     fig.tight_layout(rect=(0, 0.05, 1, 1))
