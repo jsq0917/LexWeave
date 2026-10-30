@@ -1,0 +1,13 @@
+{
+  "source": "E:\\project\\LexWeave\\data\\corpus\\articles.jsonl",
+  "sha256": "8a3d7ca7e3e09b6fd8d1a4a4e8464603367132e6062865369826591930158d96",
+  "total": 1465,
+  "by_law": {
+    "lcl": 98,
+    "ll": 107,
+    "cc": 1260
+  },
+  "duplicate_ids": [],
+  "chapter_coverage": 131,
+  "chars": 113630
+}

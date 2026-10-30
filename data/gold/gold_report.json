@@ -1,0 +1,22 @@
+{
+  "total": 60,
+  "by_hop": {
+    "two_hop": 30,
+    "three_hop": 20,
+    "cross_law": 10
+  },
+  "leakage_fail": 0,
+  "leakage_fail_rate": 0.0,
+  "necessity_fail": 0,
+  "necessity_article_fail": 28,
+  "kappa_pass_a_vs_b1": 0.7923,
+  "kappa_pass_a_vs_b2": 0.7604,
+  "kappa_pass_b_stability": 0.9341,
+  "llm_used": true,
+  "mean_articles": 2.15,
+  "laws_covered": [
+    "中华人民共和国劳动合同法",
+    "中华人民共和国劳动法",
+    "中华人民共和国民法典"
+  ]
+}

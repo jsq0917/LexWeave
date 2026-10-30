@@ -1,0 +1,26 @@
+{
+  "concepts": 218,
+  "scenarios": 53,
+  "requires_edges": 174,
+  "special_of_edges": 128,
+  "scenario_concept_edges": 201,
+  "aliases": 770,
+  "alias_collisions": 57,
+  "concept_types": {
+    "document": 9,
+    "status": 16,
+    "entity": 11,
+    "doctrine": 31,
+    "procedure": 36,
+    "contract": 22,
+    "obligation": 12,
+    "remedy": 19,
+    "right": 48,
+    "liability": 14
+  },
+  "concepts_per_law": {
+    "lcl": 75,
+    "ll": 50,
+    "cc": 124
+  }
+}

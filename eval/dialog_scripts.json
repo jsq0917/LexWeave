@@ -1,0 +1,170 @@
+[
+  {
+    "id": "d01",
+    "desc": "工资拖欠：三问补齐三个槽位",
+    "turns": [
+      {"user": "公司拖欠我两个月工资", "status": "input_required", "slots": {}},
+      {"user": "月薪8000，2023年3月入职", "status": "input_required", "slots": {"monthly_wage": 8000, "start_date": "2023-03"}},
+      {"user": "2024年5月离职了", "status": "answered", "slots": {"monthly_wage": 8000, "start_date": "2023-03", "end_date": "2024-05"}}
+    ]
+  },
+  {
+    "id": "d02",
+    "desc": "工资拖欠：回填 + 修改已填槽位",
+    "turns": [
+      {"user": "老板欠我工资不给", "status": "input_required", "slots": {}},
+      {"user": "一个月4500块", "status": "input_required", "slots": {"monthly_wage": 4500}},
+      {"user": "2022年7月入职", "status": "input_required", "slots": {"monthly_wage": 4500, "start_date": "2022-07"}},
+      {"user": "不对，其实是2022年9月入职", "status": "input_required", "slots": {"monthly_wage": 4500, "start_date": "2022-09"}},
+      {"user": "2024年4月离职", "status": "answered", "slots": {"monthly_wage": 4500, "start_date": "2022-09", "end_date": "2024-04"}}
+    ]
+  },
+  {
+    "id": "d03",
+    "desc": "工资拖欠：单轮给齐（两个日期）",
+    "turns": [
+      {"user": "月薪6000，从2021年4月干到2023年6月", "status": "answered", "slots": {"monthly_wage": 6000, "start_date": "2021-04", "end_date": "2023-06"}}
+    ]
+  },
+  {
+    "id": "d04",
+    "desc": "未签合同：单轮直接回答",
+    "turns": [
+      {"user": "公司一直没跟我签劳动合同", "status": "answered", "slots": {"has_contract": false}}
+    ]
+  },
+  {
+    "id": "d05",
+    "desc": "试用期辞退：追问是否签合同",
+    "turns": [
+      {"user": "试用期被辞退了", "status": "input_required", "slots": {}},
+      {"user": "签了合同的", "status": "answered", "slots": {"has_contract": true}}
+    ]
+  },
+  {
+    "id": "d06",
+    "desc": "指代消解①：工资事实后接「没签合同」",
+    "turns": [
+      {"user": "月薪9000，2022年1月入职，2024年3月离职", "status": "answered", "slots": {"monthly_wage": 9000, "start_date": "2022-01", "end_date": "2024-03"}},
+      {"user": "那如果没签合同呢", "status": "answered", "coref": true, "inherited": ["monthly_wage", "start_date", "end_date"], "slots": {"monthly_wage": 9000, "start_date": "2022-01", "end_date": "2024-03", "has_contract": false}}
+    ]
+  },
+  {
+    "id": "d07",
+    "desc": "指代消解②：合同事实后接「拖欠工资」",
+    "turns": [
+      {"user": "公司没签合同", "status": "answered", "slots": {"has_contract": false}},
+      {"user": "那如果拖欠工资呢", "status": "input_required", "coref": true, "inherited": ["has_contract"], "slots": {"has_contract": false}},
+      {"user": "月薪7000，2023年2月入职，2024年1月离职", "status": "answered", "slots": {"has_contract": false, "monthly_wage": 7000, "start_date": "2023-02", "end_date": "2024-01"}}
+    ]
+  },
+  {
+    "id": "d08",
+    "desc": "指代消解③：「像我这样」沿用事实并新增未签合同",
+    "turns": [
+      {"user": "月薪5000，2023年6月入职", "status": "input_required", "slots": {"monthly_wage": 5000, "start_date": "2023-06"}},
+      {"user": "2024年2月离职", "status": "answered", "slots": {"monthly_wage": 5000, "start_date": "2023-06", "end_date": "2024-02"}},
+      {"user": "像我这样没签合同的，还能要双倍工资吗", "status": "answered", "coref": true, "inherited": ["monthly_wage", "start_date", "end_date"], "slots": {"monthly_wage": 5000, "start_date": "2023-06", "end_date": "2024-02", "has_contract": false}}
+    ]
+  },
+  {
+    "id": "d09",
+    "desc": "指代消解④：「那要是只欠一个月」不改槽位",
+    "turns": [
+      {"user": "月薪8000，2023年1月入职，2023年6月离职", "status": "answered", "slots": {"monthly_wage": 8000, "start_date": "2023-01", "end_date": "2023-06"}},
+      {"user": "那要是只欠了一个月呢", "status": "answered", "coref": true, "inherited": ["monthly_wage", "start_date", "end_date"], "slots": {"monthly_wage": 8000, "start_date": "2023-01", "end_date": "2023-06"}}
+    ]
+  },
+  {
+    "id": "d10",
+    "desc": "指代消解⑤：「同样的情况换到上海」只改城市",
+    "turns": [
+      {"user": "月薪7500，2022年3月入职，2024年2月离职", "status": "answered", "slots": {"monthly_wage": 7500, "start_date": "2022-03", "end_date": "2024-02"}},
+      {"user": "同样的情况，换到上海呢", "status": "answered", "coref": true, "inherited": ["monthly_wage", "start_date", "end_date"], "slots": {"monthly_wage": 7500, "start_date": "2022-03", "end_date": "2024-02", "city": "上海"}}
+    ]
+  },
+  {
+    "id": "d11",
+    "desc": "城市 + 工资拖欠：分轮补齐",
+    "turns": [
+      {"user": "我在杭州上班，工资一直拖着", "status": "input_required", "slots": {"city": "杭州"}},
+      {"user": "月薪6000", "status": "input_required", "slots": {"city": "杭州", "monthly_wage": 6000}},
+      {"user": "2021年5月到2023年8月", "status": "answered", "slots": {"city": "杭州", "monthly_wage": 6000, "start_date": "2021-05", "end_date": "2023-08"}}
+    ]
+  },
+  {
+    "id": "d12",
+    "desc": "工龄槽位：干了三年被辞退",
+    "turns": [
+      {"user": "我在公司干了三年，被辞退了", "status": "input_required", "slots": {"work_years": 3.0}},
+      {"user": "签了合同的", "status": "answered", "slots": {"work_years": 3.0, "has_contract": true}}
+    ]
+  },
+  {
+    "id": "d13",
+    "desc": "混合事实：未签合同 + 被辞退 + 月薪",
+    "turns": [
+      {"user": "没签合同，被辞退，月薪8000", "status": "input_required", "slots": {"has_contract": false, "monthly_wage": 8000}},
+      {"user": "2022年4月入职，2024年4月离职", "status": "answered", "slots": {"has_contract": false, "monthly_wage": 8000, "start_date": "2022-04", "end_date": "2024-04"}}
+    ]
+  },
+  {
+    "id": "d14",
+    "desc": "试用期 + 未签合同：一次给齐",
+    "turns": [
+      {"user": "试用期三个月，没签合同", "status": "answered", "slots": {"has_contract": false}}
+    ]
+  },
+  {
+    "id": "d15",
+    "desc": "工资拖欠：四次追问后回答",
+    "turns": [
+      {"user": "我被拖欠工资了", "status": "input_required", "slots": {}},
+      {"user": "月薪5500", "status": "input_required", "slots": {"monthly_wage": 5500}},
+      {"user": "2020年9月入职", "status": "input_required", "slots": {"monthly_wage": 5500, "start_date": "2020-09"}},
+      {"user": "2023年2月离职", "status": "answered", "slots": {"monthly_wage": 5500, "start_date": "2020-09", "end_date": "2023-02"}}
+    ]
+  },
+  {
+    "id": "d16",
+    "desc": "修改槽位：结束日期被更正",
+    "turns": [
+      {"user": "月薪6800，2021年3月入职", "status": "input_required", "slots": {"monthly_wage": 6800, "start_date": "2021-03"}},
+      {"user": "2022年7月离职", "status": "answered", "slots": {"monthly_wage": 6800, "start_date": "2021-03", "end_date": "2022-07"}},
+      {"user": "其实我是2023年1月才离职的", "status": "answered", "slots": {"monthly_wage": 6800, "start_date": "2021-03", "end_date": "2023-01"}}
+    ]
+  },
+  {
+    "id": "d17",
+    "desc": "城市 + 合同事实，接续问工资",
+    "turns": [
+      {"user": "我在深圳，公司没签合同还欠薪", "status": "answered", "slots": {"city": "深圳", "has_contract": false}},
+      {"user": "那如果是签了合同还拖欠工资呢", "status": "input_required", "coref": true, "inherited": ["city"], "slots": {"city": "深圳", "has_contract": true}},
+      {"user": "月薪8200，2023年3月入职，2024年9月离职", "status": "answered", "slots": {"city": "深圳", "has_contract": true, "monthly_wage": 8200, "start_date": "2023-03", "end_date": "2024-09"}}
+    ]
+  },
+  {
+    "id": "d18",
+    "desc": "一次给齐全部六个槽位",
+    "turns": [
+      {"user": "月薪12000，2020年6月入职，2024年6月离职，公司在北京", "status": "answered", "slots": {"monthly_wage": 12000, "start_date": "2020-06", "end_date": "2024-06", "city": "北京"}}
+    ]
+  },
+  {
+    "id": "d19",
+    "desc": "合同事实翻转：签了 -> 没签",
+    "turns": [
+      {"user": "公司跟我签了合同", "status": "answered", "slots": {"has_contract": true}},
+      {"user": "那要是没签合同呢", "status": "answered", "coref": true, "inherited": [], "slots": {"has_contract": false}}
+    ]
+  },
+  {
+    "id": "d20",
+    "desc": "未签合同 + 月薪，补齐起止日期",
+    "turns": [
+      {"user": "公司没签合同，我月薪6500", "status": "input_required", "slots": {"has_contract": false, "monthly_wage": 6500}},
+      {"user": "2022年8月入职", "status": "input_required", "slots": {"has_contract": false, "monthly_wage": 6500, "start_date": "2022-08"}},
+      {"user": "2024年8月离职", "status": "answered", "slots": {"has_contract": false, "monthly_wage": 6500, "start_date": "2022-08", "end_date": "2024-08"}}
+    ]
+  }
+]

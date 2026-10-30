@@ -1,0 +1,716 @@
+{
+  "合同条款": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    },
+    {
+      "id": "contract_terms_missing",
+      "kind": "scenario",
+      "name": "合同条款缺失"
+    }
+  ],
+  "劳动合同文本": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    },
+    {
+      "id": "contract_text",
+      "kind": "concept",
+      "name": "劳动合同文本"
+    }
+  ],
+  "合同无效": [
+    {
+      "id": "invalid_contract",
+      "kind": "concept",
+      "name": "无效劳动合同"
+    },
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    },
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    }
+  ],
+  "工作交接": [
+    {
+      "id": "handover",
+      "kind": "concept",
+      "name": "工作交接"
+    },
+    {
+      "id": "handover_dispute",
+      "kind": "scenario",
+      "name": "离职交接与证明"
+    }
+  ],
+  "无固定期限": [
+    {
+      "id": "open_ended_contract",
+      "kind": "concept",
+      "name": "无固定期限劳动合同"
+    },
+    {
+      "id": "open_ended_contract_request",
+      "kind": "scenario",
+      "name": "要求签无固定期限"
+    }
+  ],
+  "非全日制用工": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "非全日制": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "小时工": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "兼职": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "集体协商": [
+    {
+      "id": "collective_consultation",
+      "kind": "concept",
+      "name": "集体协商"
+    },
+    {
+      "id": "collective_contract",
+      "kind": "scenario",
+      "name": "集体合同"
+    }
+  ],
+  "服务期": [
+    {
+      "id": "service_period",
+      "kind": "concept",
+      "name": "服务期"
+    },
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "专项培训": [
+    {
+      "id": "training",
+      "kind": "concept",
+      "name": "专业技术培训"
+    },
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "保密协议": [
+    {
+      "id": "confidentiality",
+      "kind": "concept",
+      "name": "保密义务"
+    },
+    {
+      "id": "confidentiality_breach",
+      "kind": "scenario",
+      "name": "泄密纠纷"
+    }
+  ],
+  "竞业限制": [
+    {
+      "id": "non_compete",
+      "kind": "concept",
+      "name": "竞业限制"
+    },
+    {
+      "id": "non_compete_dispute",
+      "kind": "scenario",
+      "name": "竞业限制纠纷"
+    }
+  ],
+  "违约金": [
+    {
+      "id": "liquidated_damages",
+      "kind": "concept",
+      "name": "违约金"
+    },
+    {
+      "id": "liquidated_damages_civil",
+      "kind": "concept",
+      "name": "违约金"
+    }
+  ],
+  "拖欠工资": [
+    {
+      "id": "wage_deduction",
+      "kind": "concept",
+      "name": "克扣或拖欠工资"
+    },
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "最低工资标准": [
+    {
+      "id": "minimum_wage",
+      "kind": "concept",
+      "name": "最低工资"
+    },
+    {
+      "id": "minimum_wage_standard",
+      "kind": "concept",
+      "name": "最低工资标准"
+    },
+    {
+      "id": "minimum_wage",
+      "kind": "scenario",
+      "name": "最低工资"
+    }
+  ],
+  "加班费": [
+    {
+      "id": "overtime_pay",
+      "kind": "concept",
+      "name": "加班工资"
+    },
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "二倍工资": [
+    {
+      "id": "double_wage",
+      "kind": "concept",
+      "name": "二倍工资"
+    },
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    },
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    }
+  ],
+  "双倍工资": [
+    {
+      "id": "double_wage",
+      "kind": "concept",
+      "name": "二倍工资"
+    },
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    }
+  ],
+  "工作时间": [
+    {
+      "id": "working_hours",
+      "kind": "concept",
+      "name": "工时制度"
+    },
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "休息日": [
+    {
+      "id": "rest_day",
+      "kind": "concept",
+      "name": "休息日"
+    },
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "法定节假日": [
+    {
+      "id": "statutory_holiday",
+      "kind": "concept",
+      "name": "法定休假日"
+    },
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "五险": [
+    {
+      "id": "social_insurance",
+      "kind": "concept",
+      "name": "社会保险"
+    },
+    {
+      "id": "social_insurance_dispute",
+      "kind": "scenario",
+      "name": "社保争议"
+    }
+  ],
+  "工伤认定": [
+    {
+      "id": "work_injury_recognition",
+      "kind": "concept",
+      "name": "工伤认定"
+    },
+    {
+      "id": "work_injury",
+      "kind": "scenario",
+      "name": "工伤认定与待遇"
+    }
+  ],
+  "生育津贴": [
+    {
+      "id": "maternity_benefit",
+      "kind": "concept",
+      "name": "生育保险待遇"
+    },
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "职业健康检查": [
+    {
+      "id": "occupational_health_check",
+      "kind": "concept",
+      "name": "职业健康检查"
+    },
+    {
+      "id": "occupational_disease",
+      "kind": "scenario",
+      "name": "职业病"
+    }
+  ],
+  "哺乳期": [
+    {
+      "id": "female_worker_protection",
+      "kind": "concept",
+      "name": "女职工特殊保护"
+    },
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "童工": [
+    {
+      "id": "child_labor",
+      "kind": "concept",
+      "name": "童工"
+    },
+    {
+      "id": "minor_worker",
+      "kind": "scenario",
+      "name": "未成年工与童工"
+    }
+  ],
+  "合同终止": [
+    {
+      "id": "contract_termination",
+      "kind": "concept",
+      "name": "劳动合同终止"
+    },
+    {
+      "id": "contract_termination_civil",
+      "kind": "concept",
+      "name": "合同终止"
+    }
+  ],
+  "变更合同": [
+    {
+      "id": "contract_modification",
+      "kind": "concept",
+      "name": "劳动合同变更"
+    },
+    {
+      "id": "contract_modification_civil",
+      "kind": "concept",
+      "name": "合同变更"
+    }
+  ],
+  "违法解除": [
+    {
+      "id": "illegal_rescission",
+      "kind": "concept",
+      "name": "违法解除"
+    },
+    {
+      "id": "illegal_dismissal",
+      "kind": "scenario",
+      "name": "违法解除"
+    }
+  ],
+  "经济补偿": [
+    {
+      "id": "severance",
+      "kind": "concept",
+      "name": "经济补偿"
+    },
+    {
+      "id": "severance_calculation",
+      "kind": "scenario",
+      "name": "经济补偿计算"
+    }
+  ],
+  "劳动仲裁": [
+    {
+      "id": "arbitration",
+      "kind": "concept",
+      "name": "劳动仲裁"
+    },
+    {
+      "id": "arbitration_procedure",
+      "kind": "scenario",
+      "name": "劳动仲裁流程"
+    }
+  ],
+  "劳动争议诉讼": [
+    {
+      "id": "labor_dispute_litigation",
+      "kind": "concept",
+      "name": "劳动争议诉讼"
+    },
+    {
+      "id": "labor_litigation",
+      "kind": "scenario",
+      "name": "劳动争议诉讼"
+    },
+    {
+      "id": "labor_litigation",
+      "kind": "scenario",
+      "name": "劳动争议诉讼"
+    }
+  ],
+  "代理": [
+    {
+      "id": "agency",
+      "kind": "concept",
+      "name": "代理"
+    },
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "表见代理": [
+    {
+      "id": "apparent_agency",
+      "kind": "concept",
+      "name": "表见代理"
+    },
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "无权代理": [
+    {
+      "id": "unauthorized_agency",
+      "kind": "concept",
+      "name": "无权代理"
+    },
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "诉讼时效": [
+    {
+      "id": "limitation_period",
+      "kind": "concept",
+      "name": "诉讼时效"
+    },
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    },
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    }
+  ],
+  "担保": [
+    {
+      "id": "security_interest",
+      "kind": "concept",
+      "name": "担保物权"
+    },
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "损害赔偿": [
+    {
+      "id": "damages_civil",
+      "kind": "concept",
+      "name": "损害赔偿"
+    },
+    {
+      "id": "divorce_damages",
+      "kind": "concept",
+      "name": "离婚损害赔偿"
+    }
+  ],
+  "不可抗力": [
+    {
+      "id": "force_majeure",
+      "kind": "concept",
+      "name": "不可抗力"
+    },
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "情势变更": [
+    {
+      "id": "change_of_circumstances",
+      "kind": "concept",
+      "name": "情势变更"
+    },
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "定金": [
+    {
+      "id": "deposit",
+      "kind": "concept",
+      "name": "定金"
+    },
+    {
+      "id": "deposit_dispute",
+      "kind": "scenario",
+      "name": "定金纠纷"
+    }
+  ],
+  "保证人": [
+    {
+      "id": "guarantee",
+      "kind": "concept",
+      "name": "保证"
+    },
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "买卖合同": [
+    {
+      "id": "sales_contract",
+      "kind": "concept",
+      "name": "买卖合同"
+    },
+    {
+      "id": "sales_breach",
+      "kind": "scenario",
+      "name": "买卖违约"
+    }
+  ],
+  "产品责任": [
+    {
+      "id": "product_liability",
+      "kind": "concept",
+      "name": "产品责任"
+    },
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    },
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    }
+  ],
+  "产品缺陷": [
+    {
+      "id": "product_liability",
+      "kind": "concept",
+      "name": "产品责任"
+    },
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    }
+  ],
+  "交通事故": [
+    {
+      "id": "traffic_accident_liability",
+      "kind": "concept",
+      "name": "机动车交通事故责任"
+    },
+    {
+      "id": "tort_traffic",
+      "kind": "scenario",
+      "name": "交通事故赔偿"
+    }
+  ],
+  "医疗损害": [
+    {
+      "id": "medical_malpractice_liability",
+      "kind": "concept",
+      "name": "医疗损害责任"
+    },
+    {
+      "id": "tort_medical",
+      "kind": "scenario",
+      "name": "医疗损害"
+    }
+  ],
+  "名誉权": [
+    {
+      "id": "right_of_reputation",
+      "kind": "concept",
+      "name": "名誉权"
+    },
+    {
+      "id": "reputation_infringe",
+      "kind": "scenario",
+      "name": "名誉侵权"
+    }
+  ],
+  "隐私": [
+    {
+      "id": "right_of_privacy",
+      "kind": "concept",
+      "name": "隐私权"
+    },
+    {
+      "id": "privacy_infringe",
+      "kind": "scenario",
+      "name": "隐私与个人信息"
+    }
+  ],
+  "夫妻共同财产": [
+    {
+      "id": "marital_common_property",
+      "kind": "concept",
+      "name": "夫妻共同财产"
+    },
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "离婚": [
+    {
+      "id": "divorce",
+      "kind": "concept",
+      "name": "离婚"
+    },
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "继承": [
+    {
+      "id": "inheritance",
+      "kind": "concept",
+      "name": "继承"
+    },
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "遗产": [
+    {
+      "id": "inheritance",
+      "kind": "concept",
+      "name": "继承"
+    },
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "遗嘱": [
+    {
+      "id": "testament",
+      "kind": "concept",
+      "name": "遗嘱"
+    },
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ]
+}

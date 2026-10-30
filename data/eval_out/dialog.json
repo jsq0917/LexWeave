@@ -1,0 +1,75 @@
+{
+  "scripts": 20,
+  "turns": 48,
+  "status_accuracy": 1.0,
+  "slot_accuracy": 1.0,
+  "inheritance_accuracy": 1.0,
+  "coref_cases": [
+    {
+      "script": "d06",
+      "turn": 2,
+      "ok": true,
+      "inherited": [
+        "monthly_wage",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "script": "d07",
+      "turn": 2,
+      "ok": true,
+      "inherited": [
+        "has_contract"
+      ]
+    },
+    {
+      "script": "d08",
+      "turn": 3,
+      "ok": true,
+      "inherited": [
+        "monthly_wage",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "script": "d09",
+      "turn": 2,
+      "ok": true,
+      "inherited": [
+        "monthly_wage",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "script": "d10",
+      "turn": 2,
+      "ok": true,
+      "inherited": [
+        "monthly_wage",
+        "start_date",
+        "end_date"
+      ]
+    },
+    {
+      "script": "d17",
+      "turn": 2,
+      "ok": true,
+      "inherited": [
+        "city"
+      ]
+    },
+    {
+      "script": "d19",
+      "turn": 2,
+      "ok": true,
+      "inherited": []
+    }
+  ],
+  "coref_pass": "7/7",
+  "restart_ok": true,
+  "restart_continues": true,
+  "failures": []
+}

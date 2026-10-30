@@ -1,0 +1,55 @@
+{
+  "articles": 1465,
+  "mentions": 3621,
+  "defines_edges": 3621,
+  "covered_articles": 1327,
+  "article_coverage": 0.906,
+  "covered_concepts": 208,
+  "concept_coverage": 0.954,
+  "uncovered_articles": 138,
+  "cites": 97,
+  "cross_law_cites": 0,
+  "top_concepts": [
+    [
+      "contract_performance",
+      173
+    ],
+    [
+      "employer",
+      155
+    ],
+    [
+      "worker",
+      148
+    ],
+    [
+      "damages",
+      146
+    ],
+    [
+      "period_calculation",
+      113
+    ],
+    [
+      "labor_contract",
+      85
+    ],
+    [
+      "tort_liability",
+      70
+    ],
+    [
+      "legal_person",
+      68
+    ],
+    [
+      "property_right",
+      66
+    ],
+    [
+      "lease_contract",
+      64
+    ]
+  ],
+  "llm": null
+}

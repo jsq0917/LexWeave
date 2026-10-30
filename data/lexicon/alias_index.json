@@ -1,0 +1,5832 @@
+{
+  "996": [
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "N+1": [
+    {
+      "id": "severance_calculation",
+      "kind": "scenario",
+      "name": "经济补偿计算"
+    }
+  ],
+  "三年": [
+    {
+      "id": "limitation_period",
+      "kind": "concept",
+      "name": "诉讼时效"
+    }
+  ],
+  "三年时效": [
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    }
+  ],
+  "三期": [
+    {
+      "id": "female_worker_protection",
+      "kind": "concept",
+      "name": "女职工特殊保护"
+    }
+  ],
+  "上岗前检查": [
+    {
+      "id": "occupational_health_check",
+      "kind": "concept",
+      "name": "职业健康检查"
+    }
+  ],
+  "上班受伤": [
+    {
+      "id": "work_injury",
+      "kind": "scenario",
+      "name": "工伤认定与待遇"
+    }
+  ],
+  "下落不明满二年": [
+    {
+      "id": "declaration_of_disappearance",
+      "kind": "concept",
+      "name": "宣告失踪"
+    }
+  ],
+  "下落不明满四年": [
+    {
+      "id": "declaration_of_death",
+      "kind": "concept",
+      "name": "宣告死亡"
+    }
+  ],
+  "不发工资": [
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "不发工资辞职": [
+    {
+      "id": "immediate_resignation",
+      "kind": "scenario",
+      "name": "被迫即时解除"
+    }
+  ],
+  "不可抗力": [
+    {
+      "id": "force_majeure",
+      "kind": "concept",
+      "name": "不可抗力"
+    },
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "不可抗力与情势变更": [
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "不安抗辩": [
+    {
+      "id": "insecurity_defense",
+      "kind": "concept",
+      "name": "不安抗辩权"
+    }
+  ],
+  "不安抗辩权": [
+    {
+      "id": "insecurity_defense",
+      "kind": "concept",
+      "name": "不安抗辩权"
+    }
+  ],
+  "不想干了": [
+    {
+      "id": "resignation_notice",
+      "kind": "scenario",
+      "name": "主动辞职"
+    }
+  ],
+  "不招女性": [
+    {
+      "id": "employment_discrimination",
+      "kind": "scenario",
+      "name": "就业歧视"
+    }
+  ],
+  "不服仲裁起诉": [
+    {
+      "id": "labor_litigation",
+      "kind": "scenario",
+      "name": "劳动争议诉讼"
+    }
+  ],
+  "不满18岁": [
+    {
+      "id": "minor_worker",
+      "kind": "scenario",
+      "name": "未成年工与童工"
+    }
+  ],
+  "不满八周岁": [
+    {
+      "id": "no_civil_capacity",
+      "kind": "concept",
+      "name": "无民事行为能力"
+    }
+  ],
+  "不符合录用条件": [
+    {
+      "id": "trial_dismissal",
+      "kind": "concept",
+      "name": "试用期解除"
+    }
+  ],
+  "不签书面合同": [
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    }
+  ],
+  "不给加班费": [
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "不给离职证明": [
+    {
+      "id": "handover_dispute",
+      "kind": "scenario",
+      "name": "离职交接与证明"
+    }
+  ],
+  "不续签": [
+    {
+      "id": "contract_renewal",
+      "kind": "scenario",
+      "name": "合同到期续签"
+    }
+  ],
+  "不缴社保": [
+    {
+      "id": "social_insurance_dispute",
+      "kind": "scenario",
+      "name": "社保争议"
+    }
+  ],
+  "不缴社保辞职": [
+    {
+      "id": "immediate_resignation",
+      "kind": "scenario",
+      "name": "被迫即时解除"
+    }
+  ],
+  "不能胜任工作": [
+    {
+      "id": "non_fault_dismissal",
+      "kind": "concept",
+      "name": "非过失性辞退"
+    }
+  ],
+  "不能预见": [
+    {
+      "id": "force_majeure",
+      "kind": "concept",
+      "name": "不可抗力"
+    }
+  ],
+  "不论有无过错": [
+    {
+      "id": "no_fault_liability",
+      "kind": "concept",
+      "name": "无过错责任"
+    }
+  ],
+  "不论行为人有无过错": [
+    {
+      "id": "no_fault_liability",
+      "kind": "concept",
+      "name": "无过错责任"
+    }
+  ],
+  "专业技术培训": [
+    {
+      "id": "training",
+      "kind": "concept",
+      "name": "专业技术培训"
+    }
+  ],
+  "专项培训": [
+    {
+      "id": "training",
+      "kind": "concept",
+      "name": "专业技术培训"
+    },
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "业主": [
+    {
+      "id": "property_service_contract",
+      "kind": "concept",
+      "name": "物业服务合同"
+    }
+  ],
+  "业务员签合同": [
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "两倍工资": [
+    {
+      "id": "double_wage",
+      "kind": "concept",
+      "name": "二倍工资"
+    }
+  ],
+  "严重失职": [
+    {
+      "id": "fault_dismissal",
+      "kind": "concept",
+      "name": "过失性辞退"
+    }
+  ],
+  "严重违反用人单位的规章制度": [
+    {
+      "id": "fault_dismissal",
+      "kind": "concept",
+      "name": "过失性辞退"
+    }
+  ],
+  "丧失继承权": [
+    {
+      "id": "inheritance_renunciation",
+      "kind": "concept",
+      "name": "放弃继承"
+    }
+  ],
+  "个人信息": [
+    {
+      "id": "personal_information",
+      "kind": "concept",
+      "name": "个人信息"
+    }
+  ],
+  "个人信息保护": [
+    {
+      "id": "personal_information",
+      "kind": "concept",
+      "name": "个人信息"
+    }
+  ],
+  "个人独资企业": [
+    {
+      "id": "unincorporated_organization",
+      "kind": "concept",
+      "name": "非法人组织"
+    }
+  ],
+  "个体经济组织": [
+    {
+      "id": "employer",
+      "kind": "concept",
+      "name": "用人单位"
+    }
+  ],
+  "中介人": [
+    {
+      "id": "intermediary_contract",
+      "kind": "concept",
+      "name": "中介合同"
+    }
+  ],
+  "中介合同": [
+    {
+      "id": "intermediary_contract",
+      "kind": "concept",
+      "name": "中介合同"
+    }
+  ],
+  "中断": [
+    {
+      "id": "limitation_interruption",
+      "kind": "concept",
+      "name": "诉讼时效中断"
+    }
+  ],
+  "中止": [
+    {
+      "id": "limitation_suspension",
+      "kind": "concept",
+      "name": "诉讼时效中止"
+    }
+  ],
+  "中止履行": [
+    {
+      "id": "insecurity_defense",
+      "kind": "concept",
+      "name": "不安抗辩权"
+    }
+  ],
+  "主动辞职": [
+    {
+      "id": "resignation_notice",
+      "kind": "scenario",
+      "name": "主动辞职"
+    }
+  ],
+  "举证": [
+    {
+      "id": "burden_of_proof",
+      "kind": "concept",
+      "name": "举证责任"
+    }
+  ],
+  "举证责任": [
+    {
+      "id": "burden_of_proof",
+      "kind": "concept",
+      "name": "举证责任"
+    }
+  ],
+  "乘人之危": [
+    {
+      "id": "gross_unfairness",
+      "kind": "concept",
+      "name": "显失公平"
+    }
+  ],
+  "乙肝歧视": [
+    {
+      "id": "employment_discrimination",
+      "kind": "scenario",
+      "name": "就业歧视"
+    }
+  ],
+  "书面协议": [
+    {
+      "id": "written_form",
+      "kind": "concept",
+      "name": "书面形式"
+    }
+  ],
+  "书面合同": [
+    {
+      "id": "written_form",
+      "kind": "concept",
+      "name": "书面形式"
+    }
+  ],
+  "书面形式": [
+    {
+      "id": "written_form",
+      "kind": "concept",
+      "name": "书面形式"
+    }
+  ],
+  "书面通知": [
+    {
+      "id": "notice_period",
+      "kind": "concept",
+      "name": "提前通知期"
+    }
+  ],
+  "买到假货": [
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    }
+  ],
+  "买卖": [
+    {
+      "id": "sales_contract",
+      "kind": "concept",
+      "name": "买卖合同"
+    }
+  ],
+  "买卖合同": [
+    {
+      "id": "sales_contract",
+      "kind": "concept",
+      "name": "买卖合同"
+    },
+    {
+      "id": "sales_breach",
+      "kind": "scenario",
+      "name": "买卖违约"
+    }
+  ],
+  "买卖违约": [
+    {
+      "id": "sales_breach",
+      "kind": "scenario",
+      "name": "买卖违约"
+    }
+  ],
+  "乱扣钱": [
+    {
+      "id": "wage_deduction",
+      "kind": "scenario",
+      "name": "扣罚工资"
+    }
+  ],
+  "争议": [
+    {
+      "id": "labor_dispute",
+      "kind": "concept",
+      "name": "劳动争议"
+    }
+  ],
+  "事实劳动关系": [
+    {
+      "id": "labor_relationship",
+      "kind": "concept",
+      "name": "劳动关系"
+    }
+  ],
+  "二倍工资": [
+    {
+      "id": "double_wage",
+      "kind": "concept",
+      "name": "二倍工资"
+    },
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    },
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    }
+  ],
+  "二倍的工资": [
+    {
+      "id": "double_wage",
+      "kind": "concept",
+      "name": "二倍工资"
+    }
+  ],
+  "二倍的赔偿金": [
+    {
+      "id": "damages",
+      "kind": "concept",
+      "name": "赔偿金"
+    }
+  ],
+  "二房东": [
+    {
+      "id": "lease_dispute",
+      "kind": "scenario",
+      "name": "房屋租赁纠纷"
+    }
+  ],
+  "五险": [
+    {
+      "id": "social_insurance",
+      "kind": "concept",
+      "name": "社会保险"
+    },
+    {
+      "id": "social_insurance_dispute",
+      "kind": "scenario",
+      "name": "社保争议"
+    }
+  ],
+  "交强险": [
+    {
+      "id": "traffic_accident_liability",
+      "kind": "concept",
+      "name": "机动车交通事故责任"
+    }
+  ],
+  "交接手续": [
+    {
+      "id": "handover",
+      "kind": "concept",
+      "name": "工作交接"
+    }
+  ],
+  "交通事故": [
+    {
+      "id": "traffic_accident_liability",
+      "kind": "concept",
+      "name": "机动车交通事故责任"
+    },
+    {
+      "id": "tort_traffic",
+      "kind": "scenario",
+      "name": "交通事故赔偿"
+    }
+  ],
+  "交通事故赔偿": [
+    {
+      "id": "tort_traffic",
+      "kind": "scenario",
+      "name": "交通事故赔偿"
+    }
+  ],
+  "产假": [
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "产假待遇": [
+    {
+      "id": "maternity_benefit",
+      "kind": "concept",
+      "name": "生育保险待遇"
+    }
+  ],
+  "产品缺陷": [
+    {
+      "id": "product_liability",
+      "kind": "concept",
+      "name": "产品责任"
+    },
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    }
+  ],
+  "产品责任": [
+    {
+      "id": "product_liability",
+      "kind": "concept",
+      "name": "产品责任"
+    },
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    },
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    }
+  ],
+  "享受基本养老保险待遇": [
+    {
+      "id": "retirement",
+      "kind": "concept",
+      "name": "退休"
+    }
+  ],
+  "人格尊严": [
+    {
+      "id": "personality_right",
+      "kind": "concept",
+      "name": "人格权"
+    }
+  ],
+  "人格权": [
+    {
+      "id": "personality_right",
+      "kind": "concept",
+      "name": "人格权"
+    }
+  ],
+  "人脸识别": [
+    {
+      "id": "privacy_infringe",
+      "kind": "scenario",
+      "name": "隐私与个人信息"
+    }
+  ],
+  "仓储合同": [
+    {
+      "id": "warehouse_contract",
+      "kind": "concept",
+      "name": "仓储合同"
+    }
+  ],
+  "仓单": [
+    {
+      "id": "warehouse_contract",
+      "kind": "concept",
+      "name": "仓储合同"
+    }
+  ],
+  "代位权": [
+    {
+      "id": "subrogation",
+      "kind": "concept",
+      "name": "代位权"
+    }
+  ],
+  "代位行使": [
+    {
+      "id": "subrogation",
+      "kind": "concept",
+      "name": "代位权"
+    }
+  ],
+  "代理": [
+    {
+      "id": "agency",
+      "kind": "concept",
+      "name": "代理"
+    },
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "代理人": [
+    {
+      "id": "agency",
+      "kind": "concept",
+      "name": "代理"
+    }
+  ],
+  "代理纠纷": [
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "代理终止": [
+    {
+      "id": "agency_termination",
+      "kind": "concept",
+      "name": "代理终止"
+    }
+  ],
+  "以完成一定工作任务为期限": [
+    {
+      "id": "project_term_contract",
+      "kind": "concept",
+      "name": "以完成一定工作任务为期限的劳动合同"
+    }
+  ],
+  "以完成一定工作任务为期限的劳动合同": [
+    {
+      "id": "project_term_contract",
+      "kind": "concept",
+      "name": "以完成一定工作任务为期限的劳动合同"
+    }
+  ],
+  "仲裁": [
+    {
+      "id": "arbitration",
+      "kind": "concept",
+      "name": "劳动仲裁"
+    }
+  ],
+  "仲裁时效": [
+    {
+      "id": "arbitration_procedure",
+      "kind": "scenario",
+      "name": "劳动仲裁流程"
+    }
+  ],
+  "仲裁要多久": [
+    {
+      "id": "arbitration_procedure",
+      "kind": "scenario",
+      "name": "劳动仲裁流程"
+    }
+  ],
+  "企业": [
+    {
+      "id": "employer",
+      "kind": "concept",
+      "name": "用人单位"
+    }
+  ],
+  "企业法人": [
+    {
+      "id": "legal_person",
+      "kind": "concept",
+      "name": "法人"
+    }
+  ],
+  "休假": [
+    {
+      "id": "rest_period",
+      "kind": "concept",
+      "name": "休息休假"
+    }
+  ],
+  "休息休假": [
+    {
+      "id": "rest_period",
+      "kind": "concept",
+      "name": "休息休假"
+    }
+  ],
+  "休息日": [
+    {
+      "id": "rest_day",
+      "kind": "concept",
+      "name": "休息日"
+    },
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "休息时间": [
+    {
+      "id": "rest_period",
+      "kind": "concept",
+      "name": "休息休假"
+    }
+  ],
+  "众包": [
+    {
+      "id": "platform_worker",
+      "kind": "scenario",
+      "name": "平台用工"
+    }
+  ],
+  "优先支付": [
+    {
+      "id": "wage_priority_payment",
+      "kind": "concept",
+      "name": "工资优先支付"
+    }
+  ],
+  "伤残待遇": [
+    {
+      "id": "work_injury_benefit",
+      "kind": "concept",
+      "name": "工伤保险待遇"
+    }
+  ],
+  "伤残等级": [
+    {
+      "id": "labor_capacity_assessment",
+      "kind": "concept",
+      "name": "劳动能力鉴定"
+    }
+  ],
+  "伤残鉴定": [
+    {
+      "id": "labor_capacity_assessment",
+      "kind": "concept",
+      "name": "劳动能力鉴定"
+    }
+  ],
+  "低于最低工资": [
+    {
+      "id": "minimum_wage",
+      "kind": "scenario",
+      "name": "最低工资"
+    }
+  ],
+  "使用、收益": [
+    {
+      "id": "usufruct",
+      "kind": "concept",
+      "name": "用益物权"
+    }
+  ],
+  "供养亲属": [
+    {
+      "id": "survivor_benefit",
+      "kind": "concept",
+      "name": "遗属待遇"
+    }
+  ],
+  "供役地": [
+    {
+      "id": "easement",
+      "kind": "concept",
+      "name": "地役权"
+    }
+  ],
+  "侵权": [
+    {
+      "id": "tort_liability",
+      "kind": "concept",
+      "name": "侵权责任"
+    }
+  ],
+  "侵权责任": [
+    {
+      "id": "tort_liability",
+      "kind": "concept",
+      "name": "侵权责任"
+    }
+  ],
+  "保守商业秘密": [
+    {
+      "id": "confidentiality",
+      "kind": "concept",
+      "name": "保密义务"
+    }
+  ],
+  "保密义务": [
+    {
+      "id": "confidentiality",
+      "kind": "concept",
+      "name": "保密义务"
+    }
+  ],
+  "保密信息": [
+    {
+      "id": "trade_secret",
+      "kind": "concept",
+      "name": "商业秘密"
+    }
+  ],
+  "保密协议": [
+    {
+      "id": "confidentiality",
+      "kind": "concept",
+      "name": "保密义务"
+    },
+    {
+      "id": "confidentiality_breach",
+      "kind": "scenario",
+      "name": "泄密纠纷"
+    }
+  ],
+  "保管人": [
+    {
+      "id": "custody_contract",
+      "kind": "concept",
+      "name": "保管合同"
+    }
+  ],
+  "保管合同": [
+    {
+      "id": "custody_contract",
+      "kind": "concept",
+      "name": "保管合同"
+    }
+  ],
+  "保证": [
+    {
+      "id": "guarantee",
+      "kind": "concept",
+      "name": "保证"
+    }
+  ],
+  "保证人": [
+    {
+      "id": "guarantee",
+      "kind": "concept",
+      "name": "保证"
+    },
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "保证合同": [
+    {
+      "id": "guarantee_contract",
+      "kind": "concept",
+      "name": "保证合同"
+    }
+  ],
+  "保证方式": [
+    {
+      "id": "guarantee_contract",
+      "kind": "concept",
+      "name": "保证合同"
+    }
+  ],
+  "倒班": [
+    {
+      "id": "shift_system",
+      "kind": "concept",
+      "name": "轮班制"
+    }
+  ],
+  "借条": [
+    {
+      "id": "loan_dispute",
+      "kind": "scenario",
+      "name": "民间借贷"
+    }
+  ],
+  "借款": [
+    {
+      "id": "loan_contract",
+      "kind": "concept",
+      "name": "借款合同"
+    }
+  ],
+  "借款合同": [
+    {
+      "id": "loan_contract",
+      "kind": "concept",
+      "name": "借款合同"
+    }
+  ],
+  "借贷": [
+    {
+      "id": "loan_contract",
+      "kind": "concept",
+      "name": "借款合同"
+    }
+  ],
+  "借钱不还": [
+    {
+      "id": "loan_dispute",
+      "kind": "scenario",
+      "name": "民间借贷"
+    }
+  ],
+  "债务免除": [
+    {
+      "id": "release",
+      "kind": "concept",
+      "name": "免除"
+    }
+  ],
+  "债务加入": [
+    {
+      "id": "debt_assumption",
+      "kind": "concept",
+      "name": "债务加入"
+    }
+  ],
+  "债权人撤销": [
+    {
+      "id": "revocation_right",
+      "kind": "concept",
+      "name": "撤销权"
+    }
+  ],
+  "债权债务同归于一人": [
+    {
+      "id": "confusion",
+      "kind": "concept",
+      "name": "混同"
+    }
+  ],
+  "债权债务终止": [
+    {
+      "id": "contract_termination_civil",
+      "kind": "concept",
+      "name": "合同终止"
+    }
+  ],
+  "债权转让": [
+    {
+      "id": "creditor_assignment",
+      "kind": "concept",
+      "name": "债权转让"
+    }
+  ],
+  "假借订立合同": [
+    {
+      "id": "precontractual_liability",
+      "kind": "concept",
+      "name": "缔约过失责任"
+    }
+  ],
+  "健康权": [
+    {
+      "id": "life_health_right",
+      "kind": "concept",
+      "name": "生命健康权"
+    }
+  ],
+  "健康检查": [
+    {
+      "id": "occupational_health_check",
+      "kind": "concept",
+      "name": "职业健康检查"
+    }
+  ],
+  "偷拍": [
+    {
+      "id": "privacy_infringe",
+      "kind": "scenario",
+      "name": "隐私与个人信息"
+    }
+  ],
+  "先履行一方": [
+    {
+      "id": "first_performance_defense",
+      "kind": "concept",
+      "name": "先履行抗辩权"
+    }
+  ],
+  "先履行抗辩": [
+    {
+      "id": "first_performance_defense",
+      "kind": "concept",
+      "name": "先履行抗辩权"
+    }
+  ],
+  "先履行抗辩权": [
+    {
+      "id": "first_performance_defense",
+      "kind": "concept",
+      "name": "先履行抗辩权"
+    }
+  ],
+  "克扣": [
+    {
+      "id": "wage_deduction",
+      "kind": "concept",
+      "name": "克扣或拖欠工资"
+    }
+  ],
+  "克扣工资": [
+    {
+      "id": "wage_deduction",
+      "kind": "concept",
+      "name": "克扣或拖欠工资"
+    },
+    {
+      "id": "wage_deduction",
+      "kind": "scenario",
+      "name": "扣罚工资"
+    }
+  ],
+  "克扣或拖欠工资": [
+    {
+      "id": "wage_deduction",
+      "kind": "concept",
+      "name": "克扣或拖欠工资"
+    }
+  ],
+  "免除": [
+    {
+      "id": "release",
+      "kind": "concept",
+      "name": "免除"
+    }
+  ],
+  "全面履行": [
+    {
+      "id": "contract_performance",
+      "kind": "concept",
+      "name": "合同履行"
+    }
+  ],
+  "八周岁以上": [
+    {
+      "id": "limited_civil_capacity",
+      "kind": "concept",
+      "name": "限制民事行为能力"
+    }
+  ],
+  "公司": [
+    {
+      "id": "legal_person",
+      "kind": "concept",
+      "name": "法人"
+    }
+  ],
+  "公司破产": [
+    {
+      "id": "wage_priority",
+      "kind": "scenario",
+      "name": "公司破产欠薪"
+    }
+  ],
+  "公司破产欠薪": [
+    {
+      "id": "wage_priority",
+      "kind": "scenario",
+      "name": "公司破产欠薪"
+    }
+  ],
+  "公司裁员": [
+    {
+      "id": "economic_layoff",
+      "kind": "scenario",
+      "name": "经济性裁员"
+    }
+  ],
+  "公平责任": [
+    {
+      "id": "fair_liability",
+      "kind": "concept",
+      "name": "公平责任"
+    }
+  ],
+  "共同共有": [
+    {
+      "id": "co_ownership",
+      "kind": "concept",
+      "name": "共有"
+    }
+  ],
+  "共同财产": [
+    {
+      "id": "marital_common_property",
+      "kind": "concept",
+      "name": "夫妻共同财产"
+    }
+  ],
+  "共有": [
+    {
+      "id": "co_ownership",
+      "kind": "concept",
+      "name": "共有"
+    }
+  ],
+  "典型合同": [
+    {
+      "id": "typical_contract",
+      "kind": "concept",
+      "name": "典型合同"
+    }
+  ],
+  "养老保险": [
+    {
+      "id": "pension_insurance",
+      "kind": "concept",
+      "name": "养老保险"
+    }
+  ],
+  "兼职": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "净身出户": [
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "出租": [
+    {
+      "id": "lease_contract",
+      "kind": "concept",
+      "name": "租赁合同"
+    }
+  ],
+  "出质": [
+    {
+      "id": "pledge",
+      "kind": "concept",
+      "name": "质权"
+    }
+  ],
+  "分割财产": [
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "分担损失": [
+    {
+      "id": "fair_liability",
+      "kind": "concept",
+      "name": "公平责任"
+    }
+  ],
+  "利息过高": [
+    {
+      "id": "loan_dispute",
+      "kind": "scenario",
+      "name": "民间借贷"
+    }
+  ],
+  "办理交接": [
+    {
+      "id": "handover",
+      "kind": "concept",
+      "name": "工作交接"
+    }
+  ],
+  "加工、附合、混合": [
+    {
+      "id": "attachment",
+      "kind": "concept",
+      "name": "添附"
+    }
+  ],
+  "加点": [
+    {
+      "id": "work_hour_extension",
+      "kind": "concept",
+      "name": "延长工作时间"
+    }
+  ],
+  "加班工资": [
+    {
+      "id": "overtime_pay",
+      "kind": "concept",
+      "name": "加班工资"
+    }
+  ],
+  "加班费": [
+    {
+      "id": "overtime_pay",
+      "kind": "concept",
+      "name": "加班工资"
+    },
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "加班费争议": [
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "动物致害": [
+    {
+      "id": "animal_liability",
+      "kind": "concept",
+      "name": "饲养动物损害责任"
+    }
+  ],
+  "劳务派遣": [
+    {
+      "id": "labor_dispatch",
+      "kind": "concept",
+      "name": "劳务派遣"
+    },
+    {
+      "id": "labor_dispatch",
+      "kind": "scenario",
+      "name": "劳务派遣"
+    }
+  ],
+  "劳务派遣单位": [
+    {
+      "id": "dispatch_unit",
+      "kind": "concept",
+      "name": "劳务派遣单位"
+    }
+  ],
+  "劳动争议": [
+    {
+      "id": "labor_dispute",
+      "kind": "concept",
+      "name": "劳动争议"
+    }
+  ],
+  "劳动争议仲裁": [
+    {
+      "id": "arbitration",
+      "kind": "concept",
+      "name": "劳动仲裁"
+    }
+  ],
+  "劳动争议诉讼": [
+    {
+      "id": "labor_dispute_litigation",
+      "kind": "concept",
+      "name": "劳动争议诉讼"
+    },
+    {
+      "id": "labor_litigation",
+      "kind": "scenario",
+      "name": "劳动争议诉讼"
+    },
+    {
+      "id": "labor_litigation",
+      "kind": "scenario",
+      "name": "劳动争议诉讼"
+    }
+  ],
+  "劳动争议调解": [
+    {
+      "id": "labor_dispute_mediation",
+      "kind": "concept",
+      "name": "劳动争议调解"
+    }
+  ],
+  "劳动仲裁": [
+    {
+      "id": "arbitration",
+      "kind": "concept",
+      "name": "劳动仲裁"
+    },
+    {
+      "id": "arbitration_procedure",
+      "kind": "scenario",
+      "name": "劳动仲裁流程"
+    }
+  ],
+  "劳动仲裁流程": [
+    {
+      "id": "arbitration_procedure",
+      "kind": "scenario",
+      "name": "劳动仲裁流程"
+    }
+  ],
+  "劳动保护": [
+    {
+      "id": "labor_protection",
+      "kind": "concept",
+      "name": "劳动保护"
+    }
+  ],
+  "劳动保障行政部门": [
+    {
+      "id": "labor_administration",
+      "kind": "concept",
+      "name": "劳动行政部门"
+    }
+  ],
+  "劳动关系": [
+    {
+      "id": "labor_relationship",
+      "kind": "concept",
+      "name": "劳动关系"
+    }
+  ],
+  "劳动关系认定": [
+    {
+      "id": "contractor_vs_employee",
+      "kind": "scenario",
+      "name": "劳动关系认定"
+    }
+  ],
+  "劳动合同": [
+    {
+      "id": "labor_contract",
+      "kind": "concept",
+      "name": "劳动合同"
+    }
+  ],
+  "劳动合同书": [
+    {
+      "id": "labor_contract",
+      "kind": "concept",
+      "name": "劳动合同"
+    }
+  ],
+  "劳动合同变更": [
+    {
+      "id": "contract_modification",
+      "kind": "concept",
+      "name": "劳动合同变更"
+    }
+  ],
+  "劳动合同应当具备的条款": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    }
+  ],
+  "劳动合同文本": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    },
+    {
+      "id": "contract_text",
+      "kind": "concept",
+      "name": "劳动合同文本"
+    }
+  ],
+  "劳动合同无效": [
+    {
+      "id": "invalid_contract",
+      "kind": "concept",
+      "name": "无效劳动合同"
+    }
+  ],
+  "劳动合同条款": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    }
+  ],
+  "劳动合同终止": [
+    {
+      "id": "contract_termination",
+      "kind": "concept",
+      "name": "劳动合同终止"
+    }
+  ],
+  "劳动合同解除": [
+    {
+      "id": "contract_rescission",
+      "kind": "concept",
+      "name": "劳动合同解除"
+    }
+  ],
+  "劳动安全卫生": [
+    {
+      "id": "labor_protection",
+      "kind": "concept",
+      "name": "劳动保护"
+    }
+  ],
+  "劳动安全卫生教育": [
+    {
+      "id": "safety_training",
+      "kind": "concept",
+      "name": "安全培训"
+    }
+  ],
+  "劳动定额": [
+    {
+      "id": "labor_quota",
+      "kind": "concept",
+      "name": "劳动定额"
+    }
+  ],
+  "劳动报酬": [
+    {
+      "id": "wage",
+      "kind": "concept",
+      "name": "工资"
+    }
+  ],
+  "劳动监察": [
+    {
+      "id": "labor_supervision",
+      "kind": "concept",
+      "name": "劳动监察"
+    }
+  ],
+  "劳动纠纷": [
+    {
+      "id": "labor_dispute",
+      "kind": "concept",
+      "name": "劳动争议"
+    }
+  ],
+  "劳动者": [
+    {
+      "id": "worker",
+      "kind": "concept",
+      "name": "劳动者"
+    }
+  ],
+  "劳动者单方解除": [
+    {
+      "id": "unilateral_rescission_by_worker",
+      "kind": "concept",
+      "name": "劳动者单方解除"
+    }
+  ],
+  "劳动者即时解除": [
+    {
+      "id": "immediate_rescission",
+      "kind": "concept",
+      "name": "劳动者即时解除"
+    }
+  ],
+  "劳动者提前通知解除": [
+    {
+      "id": "unilateral_rescission_by_worker",
+      "kind": "concept",
+      "name": "劳动者单方解除"
+    }
+  ],
+  "劳动者解除劳动合同": [
+    {
+      "id": "unilateral_rescission_by_worker",
+      "kind": "concept",
+      "name": "劳动者单方解除"
+    }
+  ],
+  "劳动能力鉴定": [
+    {
+      "id": "labor_capacity_assessment",
+      "kind": "concept",
+      "name": "劳动能力鉴定"
+    }
+  ],
+  "劳动行政部门": [
+    {
+      "id": "labor_administration",
+      "kind": "concept",
+      "name": "劳动行政部门"
+    }
+  ],
+  "医疗事故": [
+    {
+      "id": "tort_medical",
+      "kind": "scenario",
+      "name": "医疗损害"
+    }
+  ],
+  "医疗保险": [
+    {
+      "id": "medical_insurance",
+      "kind": "concept",
+      "name": "医疗保险"
+    }
+  ],
+  "医疗损害": [
+    {
+      "id": "medical_malpractice_liability",
+      "kind": "concept",
+      "name": "医疗损害责任"
+    },
+    {
+      "id": "tort_medical",
+      "kind": "scenario",
+      "name": "医疗损害"
+    }
+  ],
+  "医疗损害责任": [
+    {
+      "id": "medical_malpractice_liability",
+      "kind": "concept",
+      "name": "医疗损害责任"
+    }
+  ],
+  "医疗期": [
+    {
+      "id": "sick_leave",
+      "kind": "concept",
+      "name": "病假与医疗期"
+    },
+    {
+      "id": "sick_leave",
+      "kind": "scenario",
+      "name": "病假与医疗期"
+    }
+  ],
+  "医疗机构": [
+    {
+      "id": "medical_malpractice_liability",
+      "kind": "concept",
+      "name": "医疗损害责任"
+    }
+  ],
+  "医院赔偿": [
+    {
+      "id": "tort_medical",
+      "kind": "scenario",
+      "name": "医疗损害"
+    }
+  ],
+  "十五日": [
+    {
+      "id": "part_time_wage_settlement",
+      "kind": "concept",
+      "name": "非全日制工资结算"
+    }
+  ],
+  "协商订立集体合同": [
+    {
+      "id": "collective_consultation",
+      "kind": "concept",
+      "name": "集体协商"
+    }
+  ],
+  "协议离婚": [
+    {
+      "id": "divorce",
+      "kind": "concept",
+      "name": "离婚"
+    }
+  ],
+  "占有": [
+    {
+      "id": "possession",
+      "kind": "concept",
+      "name": "占有"
+    }
+  ],
+  "占有人": [
+    {
+      "id": "possession",
+      "kind": "concept",
+      "name": "占有"
+    }
+  ],
+  "双休日": [
+    {
+      "id": "rest_day",
+      "kind": "concept",
+      "name": "休息日"
+    }
+  ],
+  "双倍工资": [
+    {
+      "id": "double_wage",
+      "kind": "concept",
+      "name": "二倍工资"
+    },
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    }
+  ],
+  "双方代理": [
+    {
+      "id": "self_dealing",
+      "kind": "concept",
+      "name": "自己代理"
+    }
+  ],
+  "发生自然灾害": [
+    {
+      "id": "emergency_overtime",
+      "kind": "concept",
+      "name": "紧急情况加班"
+    }
+  ],
+  "受托人": [
+    {
+      "id": "entrustment_contract",
+      "kind": "concept",
+      "name": "委托合同"
+    }
+  ],
+  "受要约人": [
+    {
+      "id": "acceptance",
+      "kind": "concept",
+      "name": "承诺"
+    }
+  ],
+  "受遗赠人": [
+    {
+      "id": "legacy",
+      "kind": "concept",
+      "name": "遗赠"
+    }
+  ],
+  "受雇人": [
+    {
+      "id": "worker",
+      "kind": "concept",
+      "name": "劳动者"
+    }
+  ],
+  "变更劳动合同": [
+    {
+      "id": "contract_modification",
+      "kind": "concept",
+      "name": "劳动合同变更"
+    }
+  ],
+  "变更合同": [
+    {
+      "id": "contract_modification",
+      "kind": "concept",
+      "name": "劳动合同变更"
+    },
+    {
+      "id": "contract_modification_civil",
+      "kind": "concept",
+      "name": "合同变更"
+    }
+  ],
+  "可撤销": [
+    {
+      "id": "voidable_act",
+      "kind": "concept",
+      "name": "可撤销民事法律行为"
+    }
+  ],
+  "可撤销民事法律行为": [
+    {
+      "id": "voidable_act",
+      "kind": "concept",
+      "name": "可撤销民事法律行为"
+    }
+  ],
+  "合伙人": [
+    {
+      "id": "partnership_contract",
+      "kind": "concept",
+      "name": "合伙合同"
+    }
+  ],
+  "合伙企业": [
+    {
+      "id": "unincorporated_organization",
+      "kind": "concept",
+      "name": "非法人组织"
+    }
+  ],
+  "合伙合同": [
+    {
+      "id": "partnership_contract",
+      "kind": "concept",
+      "name": "合伙合同"
+    }
+  ],
+  "合同不给员工": [
+    {
+      "id": "contract_terms_missing",
+      "kind": "scenario",
+      "name": "合同条款缺失"
+    }
+  ],
+  "合同到期": [
+    {
+      "id": "contract_renewal",
+      "kind": "scenario",
+      "name": "合同到期续签"
+    }
+  ],
+  "合同到期不续": [
+    {
+      "id": "contract_renewal",
+      "kind": "scenario",
+      "name": "合同到期续签"
+    }
+  ],
+  "合同到期续签": [
+    {
+      "id": "contract_renewal",
+      "kind": "scenario",
+      "name": "合同到期续签"
+    }
+  ],
+  "合同变更": [
+    {
+      "id": "contract_modification_civil",
+      "kind": "concept",
+      "name": "合同变更"
+    }
+  ],
+  "合同履行": [
+    {
+      "id": "contract_performance",
+      "kind": "concept",
+      "name": "合同履行"
+    }
+  ],
+  "合同成立": [
+    {
+      "id": "contract_establishment",
+      "kind": "concept",
+      "name": "合同成立"
+    }
+  ],
+  "合同文本": [
+    {
+      "id": "contract_text",
+      "kind": "concept",
+      "name": "劳动合同文本"
+    }
+  ],
+  "合同无效": [
+    {
+      "id": "invalid_contract",
+      "kind": "concept",
+      "name": "无效劳动合同"
+    },
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    },
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    }
+  ],
+  "合同权利义务转让": [
+    {
+      "id": "contract_transfer",
+      "kind": "concept",
+      "name": "合同权利义务转让"
+    }
+  ],
+  "合同条款": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    },
+    {
+      "id": "contract_terms_missing",
+      "kind": "scenario",
+      "name": "合同条款缺失"
+    }
+  ],
+  "合同条款缺失": [
+    {
+      "id": "contract_terms_missing",
+      "kind": "scenario",
+      "name": "合同条款缺失"
+    }
+  ],
+  "合同欺诈": [
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    }
+  ],
+  "合同没写工资": [
+    {
+      "id": "contract_terms_missing",
+      "kind": "scenario",
+      "name": "合同条款缺失"
+    }
+  ],
+  "合同终止": [
+    {
+      "id": "contract_termination",
+      "kind": "concept",
+      "name": "劳动合同终止"
+    },
+    {
+      "id": "contract_termination_civil",
+      "kind": "concept",
+      "name": "合同终止"
+    }
+  ],
+  "合同自": [
+    {
+      "id": "contract_establishment",
+      "kind": "concept",
+      "name": "合同成立"
+    }
+  ],
+  "合同转让": [
+    {
+      "id": "contract_transfer",
+      "kind": "concept",
+      "name": "合同权利义务转让"
+    }
+  ],
+  "同业竞争": [
+    {
+      "id": "non_compete_dispute",
+      "kind": "scenario",
+      "name": "竞业限制纠纷"
+    }
+  ],
+  "同业竞争限制": [
+    {
+      "id": "non_compete",
+      "kind": "concept",
+      "name": "竞业限制"
+    }
+  ],
+  "同时履行": [
+    {
+      "id": "simultaneous_performance_defense",
+      "kind": "concept",
+      "name": "同时履行抗辩权"
+    }
+  ],
+  "同时履行抗辩": [
+    {
+      "id": "simultaneous_performance_defense",
+      "kind": "concept",
+      "name": "同时履行抗辩权"
+    }
+  ],
+  "同时履行抗辩权": [
+    {
+      "id": "simultaneous_performance_defense",
+      "kind": "concept",
+      "name": "同时履行抗辩权"
+    }
+  ],
+  "名称权": [
+    {
+      "id": "right_of_name",
+      "kind": "concept",
+      "name": "姓名权"
+    }
+  ],
+  "名誉": [
+    {
+      "id": "right_of_reputation",
+      "kind": "concept",
+      "name": "名誉权"
+    }
+  ],
+  "名誉侵权": [
+    {
+      "id": "reputation_infringe",
+      "kind": "scenario",
+      "name": "名誉侵权"
+    }
+  ],
+  "名誉权": [
+    {
+      "id": "right_of_reputation",
+      "kind": "concept",
+      "name": "名誉权"
+    },
+    {
+      "id": "reputation_infringe",
+      "kind": "scenario",
+      "name": "名誉侵权"
+    }
+  ],
+  "向人民法院提起诉讼": [
+    {
+      "id": "labor_dispute_litigation",
+      "kind": "concept",
+      "name": "劳动争议诉讼"
+    }
+  ],
+  "员工": [
+    {
+      "id": "worker",
+      "kind": "concept",
+      "name": "劳动者"
+    }
+  ],
+  "周休日": [
+    {
+      "id": "rest_day",
+      "kind": "concept",
+      "name": "休息日"
+    }
+  ],
+  "周末加班": [
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "哺乳期": [
+    {
+      "id": "female_worker_protection",
+      "kind": "concept",
+      "name": "女职工特殊保护"
+    },
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "商业机密": [
+    {
+      "id": "trade_secret",
+      "kind": "concept",
+      "name": "商业秘密"
+    }
+  ],
+  "商业秘密": [
+    {
+      "id": "trade_secret",
+      "kind": "concept",
+      "name": "商业秘密"
+    }
+  ],
+  "善意取得": [
+    {
+      "id": "bona_fide_acquisition",
+      "kind": "concept",
+      "name": "善意取得"
+    }
+  ],
+  "善意受让人": [
+    {
+      "id": "bona_fide_acquisition",
+      "kind": "concept",
+      "name": "善意取得"
+    }
+  ],
+  "因工负伤": [
+    {
+      "id": "work_injury",
+      "kind": "concept",
+      "name": "工伤"
+    }
+  ],
+  "固定期限": [
+    {
+      "id": "fixed_term_contract",
+      "kind": "concept",
+      "name": "固定期限劳动合同"
+    }
+  ],
+  "固定期限劳动合同": [
+    {
+      "id": "fixed_term_contract",
+      "kind": "concept",
+      "name": "固定期限劳动合同"
+    }
+  ],
+  "土地承包经营权": [
+    {
+      "id": "land_contract_management_right",
+      "kind": "concept",
+      "name": "土地承包经营权"
+    }
+  ],
+  "在家上班": [
+    {
+      "id": "remote_work",
+      "kind": "scenario",
+      "name": "远程办公"
+    }
+  ],
+  "地役权": [
+    {
+      "id": "easement",
+      "kind": "concept",
+      "name": "地役权"
+    }
+  ],
+  "坠落物": [
+    {
+      "id": "high_altitude_throwing",
+      "kind": "concept",
+      "name": "高空抛物"
+    }
+  ],
+  "培训后离职": [
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "培训费用": [
+    {
+      "id": "training",
+      "kind": "concept",
+      "name": "专业技术培训"
+    }
+  ],
+  "培训违约金": [
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "基本养老保险": [
+    {
+      "id": "pension_insurance",
+      "kind": "concept",
+      "name": "养老保险"
+    }
+  ],
+  "基本养老保险待遇": [
+    {
+      "id": "pension_insurance",
+      "kind": "concept",
+      "name": "养老保险"
+    }
+  ],
+  "基本医疗保险": [
+    {
+      "id": "medical_insurance",
+      "kind": "concept",
+      "name": "医疗保险"
+    }
+  ],
+  "基础条件发生": [
+    {
+      "id": "change_of_circumstances",
+      "kind": "concept",
+      "name": "情势变更"
+    }
+  ],
+  "备案": [
+    {
+      "id": "employment_registration",
+      "kind": "concept",
+      "name": "用工登记"
+    }
+  ],
+  "外包": [
+    {
+      "id": "labor_dispatch",
+      "kind": "scenario",
+      "name": "劳务派遣"
+    }
+  ],
+  "外卖骑手": [
+    {
+      "id": "platform_worker",
+      "kind": "scenario",
+      "name": "平台用工"
+    }
+  ],
+  "夫妻": [
+    {
+      "id": "marriage",
+      "kind": "concept",
+      "name": "婚姻"
+    }
+  ],
+  "夫妻共同财产": [
+    {
+      "id": "marital_common_property",
+      "kind": "concept",
+      "name": "夫妻共同财产"
+    },
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "失业": [
+    {
+      "id": "unemployment_insurance",
+      "kind": "concept",
+      "name": "失业保险"
+    }
+  ],
+  "失业保险": [
+    {
+      "id": "unemployment_insurance",
+      "kind": "concept",
+      "name": "失业保险"
+    }
+  ],
+  "失业保险待遇": [
+    {
+      "id": "unemployment_benefit",
+      "kind": "concept",
+      "name": "失业保险待遇"
+    }
+  ],
+  "失业保险金": [
+    {
+      "id": "unemployment_benefit",
+      "kind": "concept",
+      "name": "失业保险待遇"
+    }
+  ],
+  "女职工": [
+    {
+      "id": "female_worker_protection",
+      "kind": "concept",
+      "name": "女职工特殊保护"
+    }
+  ],
+  "女职工特殊保护": [
+    {
+      "id": "female_worker_protection",
+      "kind": "concept",
+      "name": "女职工特殊保护"
+    }
+  ],
+  "姓名权": [
+    {
+      "id": "right_of_name",
+      "kind": "concept",
+      "name": "姓名权"
+    }
+  ],
+  "委托代理": [
+    {
+      "id": "agency",
+      "kind": "concept",
+      "name": "代理"
+    }
+  ],
+  "委托代理终止": [
+    {
+      "id": "agency_termination",
+      "kind": "concept",
+      "name": "代理终止"
+    }
+  ],
+  "委托合同": [
+    {
+      "id": "entrustment_contract",
+      "kind": "concept",
+      "name": "委托合同"
+    }
+  ],
+  "威胁": [
+    {
+      "id": "coercion",
+      "kind": "concept",
+      "name": "胁迫"
+    }
+  ],
+  "婚姻": [
+    {
+      "id": "marriage",
+      "kind": "concept",
+      "name": "婚姻"
+    }
+  ],
+  "子女抚养": [
+    {
+      "id": "child_support",
+      "kind": "concept",
+      "name": "抚养"
+    }
+  ],
+  "孕产期": [
+    {
+      "id": "female_worker_protection",
+      "kind": "concept",
+      "name": "女职工特殊保护"
+    }
+  ],
+  "宅基地": [
+    {
+      "id": "homestead_right",
+      "kind": "concept",
+      "name": "宅基地使用权"
+    }
+  ],
+  "宅基地使用权": [
+    {
+      "id": "homestead_right",
+      "kind": "concept",
+      "name": "宅基地使用权"
+    }
+  ],
+  "安全卫生": [
+    {
+      "id": "labor_protection",
+      "kind": "concept",
+      "name": "劳动保护"
+    }
+  ],
+  "安全培训": [
+    {
+      "id": "safety_training",
+      "kind": "concept",
+      "name": "安全培训"
+    }
+  ],
+  "安全生产教育": [
+    {
+      "id": "safety_training",
+      "kind": "concept",
+      "name": "安全培训"
+    }
+  ],
+  "完全民事行为能力": [
+    {
+      "id": "civil_capacity",
+      "kind": "concept",
+      "name": "民事行为能力"
+    }
+  ],
+  "完成一定工作任务": [
+    {
+      "id": "project_term_contract",
+      "kind": "concept",
+      "name": "以完成一定工作任务为期限的劳动合同"
+    }
+  ],
+  "定金": [
+    {
+      "id": "deposit",
+      "kind": "concept",
+      "name": "定金"
+    },
+    {
+      "id": "deposit_dispute",
+      "kind": "scenario",
+      "name": "定金纠纷"
+    }
+  ],
+  "定金不退": [
+    {
+      "id": "deposit_dispute",
+      "kind": "scenario",
+      "name": "定金纠纷"
+    }
+  ],
+  "定金双倍": [
+    {
+      "id": "deposit_dispute",
+      "kind": "scenario",
+      "name": "定金纠纷"
+    }
+  ],
+  "定金合同": [
+    {
+      "id": "deposit",
+      "kind": "concept",
+      "name": "定金"
+    }
+  ],
+  "定金纠纷": [
+    {
+      "id": "deposit_dispute",
+      "kind": "scenario",
+      "name": "定金纠纷"
+    }
+  ],
+  "定金罚则": [
+    {
+      "id": "deposit",
+      "kind": "concept",
+      "name": "定金"
+    }
+  ],
+  "定额标准": [
+    {
+      "id": "labor_quota",
+      "kind": "concept",
+      "name": "劳动定额"
+    }
+  ],
+  "实际用工单位": [
+    {
+      "id": "accepting_unit",
+      "kind": "concept",
+      "name": "用工单位"
+    }
+  ],
+  "宣告失踪": [
+    {
+      "id": "declaration_of_disappearance",
+      "kind": "concept",
+      "name": "宣告失踪"
+    }
+  ],
+  "宣告死亡": [
+    {
+      "id": "declaration_of_death",
+      "kind": "concept",
+      "name": "宣告死亡"
+    }
+  ],
+  "封控不能履行": [
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "小时工": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "小时计酬": [
+    {
+      "id": "part_time_wage_settlement",
+      "kind": "concept",
+      "name": "非全日制工资结算"
+    }
+  ],
+  "尘肺": [
+    {
+      "id": "occupational_disease",
+      "kind": "scenario",
+      "name": "职业病"
+    }
+  ],
+  "就业机会均等": [
+    {
+      "id": "equal_employment_right",
+      "kind": "concept",
+      "name": "平等就业权"
+    }
+  ],
+  "就业歧视": [
+    {
+      "id": "employment_discrimination",
+      "kind": "concept",
+      "name": "就业歧视"
+    },
+    {
+      "id": "employment_discrimination",
+      "kind": "scenario",
+      "name": "就业歧视"
+    }
+  ],
+  "居住权": [
+    {
+      "id": "residence_right",
+      "kind": "concept",
+      "name": "居住权"
+    }
+  ],
+  "居家办公": [
+    {
+      "id": "remote_work",
+      "kind": "scenario",
+      "name": "远程办公"
+    }
+  ],
+  "届满": [
+    {
+      "id": "period_calculation",
+      "kind": "concept",
+      "name": "期间计算"
+    }
+  ],
+  "履行": [
+    {
+      "id": "contract_performance",
+      "kind": "concept",
+      "name": "合同履行"
+    }
+  ],
+  "工会": [
+    {
+      "id": "labor_union",
+      "kind": "concept",
+      "name": "工会"
+    }
+  ],
+  "工会签合同": [
+    {
+      "id": "collective_contract",
+      "kind": "scenario",
+      "name": "集体合同"
+    }
+  ],
+  "工会组织": [
+    {
+      "id": "labor_union",
+      "kind": "concept",
+      "name": "工会"
+    }
+  ],
+  "工伤": [
+    {
+      "id": "work_injury",
+      "kind": "concept",
+      "name": "工伤"
+    },
+    {
+      "id": "work_injury",
+      "kind": "scenario",
+      "name": "工伤认定与待遇"
+    }
+  ],
+  "工伤事故": [
+    {
+      "id": "work_injury",
+      "kind": "concept",
+      "name": "工伤"
+    }
+  ],
+  "工伤保险": [
+    {
+      "id": "work_injury_insurance",
+      "kind": "concept",
+      "name": "工伤保险"
+    }
+  ],
+  "工伤保险待遇": [
+    {
+      "id": "work_injury_benefit",
+      "kind": "concept",
+      "name": "工伤保险待遇"
+    }
+  ],
+  "工伤待遇": [
+    {
+      "id": "work_injury_benefit",
+      "kind": "concept",
+      "name": "工伤保险待遇"
+    }
+  ],
+  "工伤认定": [
+    {
+      "id": "work_injury_recognition",
+      "kind": "concept",
+      "name": "工伤认定"
+    },
+    {
+      "id": "work_injury",
+      "kind": "scenario",
+      "name": "工伤认定与待遇"
+    }
+  ],
+  "工伤认定与待遇": [
+    {
+      "id": "work_injury",
+      "kind": "scenario",
+      "name": "工伤认定与待遇"
+    }
+  ],
+  "工伤赔偿": [
+    {
+      "id": "work_injury",
+      "kind": "scenario",
+      "name": "工伤认定与待遇"
+    }
+  ],
+  "工作交接": [
+    {
+      "id": "handover",
+      "kind": "concept",
+      "name": "工作交接"
+    },
+    {
+      "id": "handover_dispute",
+      "kind": "scenario",
+      "name": "离职交接与证明"
+    }
+  ],
+  "工作时间": [
+    {
+      "id": "working_hours",
+      "kind": "concept",
+      "name": "工时制度"
+    },
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "工时与休息": [
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "工时制度": [
+    {
+      "id": "working_hours",
+      "kind": "concept",
+      "name": "工时制度"
+    }
+  ],
+  "工程款": [
+    {
+      "id": "construction_contract",
+      "kind": "concept",
+      "name": "建设工程合同"
+    }
+  ],
+  "工资": [
+    {
+      "id": "wage",
+      "kind": "concept",
+      "name": "工资"
+    }
+  ],
+  "工资优先": [
+    {
+      "id": "wage_priority",
+      "kind": "scenario",
+      "name": "公司破产欠薪"
+    }
+  ],
+  "工资优先支付": [
+    {
+      "id": "wage_priority_payment",
+      "kind": "concept",
+      "name": "工资优先支付"
+    }
+  ],
+  "工资太低": [
+    {
+      "id": "minimum_wage",
+      "kind": "scenario",
+      "name": "最低工资"
+    }
+  ],
+  "工资支付": [
+    {
+      "id": "wage_payment",
+      "kind": "concept",
+      "name": "工资支付"
+    }
+  ],
+  "工资没结": [
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "差评被删": [
+    {
+      "id": "reputation_infringe",
+      "kind": "scenario",
+      "name": "名誉侵权"
+    }
+  ],
+  "已满十六周岁未满十八周岁": [
+    {
+      "id": "minor_worker",
+      "kind": "concept",
+      "name": "未成年工"
+    }
+  ],
+  "带薪年休假": [
+    {
+      "id": "annual_leave",
+      "kind": "concept",
+      "name": "年休假"
+    }
+  ],
+  "带走客户名单": [
+    {
+      "id": "confidentiality_breach",
+      "kind": "scenario",
+      "name": "泄密纠纷"
+    }
+  ],
+  "平台用工": [
+    {
+      "id": "platform_worker",
+      "kind": "scenario",
+      "name": "平台用工"
+    },
+    {
+      "id": "platform_worker",
+      "kind": "scenario",
+      "name": "平台用工"
+    }
+  ],
+  "平等协商": [
+    {
+      "id": "collective_consultation",
+      "kind": "concept",
+      "name": "集体协商"
+    }
+  ],
+  "平等就业": [
+    {
+      "id": "equal_employment_right",
+      "kind": "concept",
+      "name": "平等就业权"
+    }
+  ],
+  "平等就业权": [
+    {
+      "id": "equal_employment_right",
+      "kind": "concept",
+      "name": "平等就业权"
+    }
+  ],
+  "年休假": [
+    {
+      "id": "annual_leave",
+      "kind": "concept",
+      "name": "年休假"
+    },
+    {
+      "id": "annual_leave",
+      "kind": "scenario",
+      "name": "年休假"
+    },
+    {
+      "id": "annual_leave",
+      "kind": "scenario",
+      "name": "年休假"
+    }
+  ],
+  "年假": [
+    {
+      "id": "annual_leave",
+      "kind": "concept",
+      "name": "年休假"
+    },
+    {
+      "id": "annual_leave",
+      "kind": "scenario",
+      "name": "年休假"
+    }
+  ],
+  "年假折现": [
+    {
+      "id": "annual_leave",
+      "kind": "scenario",
+      "name": "年休假"
+    }
+  ],
+  "年龄歧视": [
+    {
+      "id": "employment_discrimination",
+      "kind": "scenario",
+      "name": "就业歧视"
+    }
+  ],
+  "并存的债务承担": [
+    {
+      "id": "debt_assumption",
+      "kind": "concept",
+      "name": "债务加入"
+    }
+  ],
+  "延长工作时间": [
+    {
+      "id": "work_hour_extension",
+      "kind": "concept",
+      "name": "延长工作时间"
+    }
+  ],
+  "延长工作时间的工资报酬": [
+    {
+      "id": "overtime_pay",
+      "kind": "concept",
+      "name": "加班工资"
+    }
+  ],
+  "建筑物": [
+    {
+      "id": "building_liability",
+      "kind": "concept",
+      "name": "建筑物物件损害责任"
+    }
+  ],
+  "建筑物物件损害责任": [
+    {
+      "id": "building_liability",
+      "kind": "concept",
+      "name": "建筑物物件损害责任"
+    }
+  ],
+  "建设工程合同": [
+    {
+      "id": "construction_contract",
+      "kind": "concept",
+      "name": "建设工程合同"
+    }
+  ],
+  "建设用地使用权": [
+    {
+      "id": "construction_land_use_right",
+      "kind": "concept",
+      "name": "建设用地使用权"
+    }
+  ],
+  "强制加班": [
+    {
+      "id": "overtime_pay_dispute",
+      "kind": "scenario",
+      "name": "加班费争议"
+    }
+  ],
+  "当地最低工资": [
+    {
+      "id": "minimum_wage_standard",
+      "kind": "concept",
+      "name": "最低工资标准"
+    }
+  ],
+  "录用登记": [
+    {
+      "id": "employment_registration",
+      "kind": "concept",
+      "name": "用工登记"
+    }
+  ],
+  "必备条款": [
+    {
+      "id": "contract_terms",
+      "kind": "concept",
+      "name": "劳动合同条款"
+    }
+  ],
+  "怀孕被辞": [
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "患病或者非因工负伤": [
+    {
+      "id": "sick_leave",
+      "kind": "concept",
+      "name": "病假与医疗期"
+    }
+  ],
+  "情势变更": [
+    {
+      "id": "change_of_circumstances",
+      "kind": "concept",
+      "name": "情势变更"
+    },
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "意思表示": [
+    {
+      "id": "expression_of_intent",
+      "kind": "concept",
+      "name": "意思表示"
+    }
+  ],
+  "房东违约": [
+    {
+      "id": "lease_dispute",
+      "kind": "scenario",
+      "name": "房屋租赁纠纷"
+    }
+  ],
+  "房屋租赁纠纷": [
+    {
+      "id": "lease_dispute",
+      "kind": "scenario",
+      "name": "房屋租赁纠纷"
+    }
+  ],
+  "所有人": [
+    {
+      "id": "ownership",
+      "kind": "concept",
+      "name": "所有权"
+    }
+  ],
+  "所有权": [
+    {
+      "id": "ownership",
+      "kind": "concept",
+      "name": "所有权"
+    }
+  ],
+  "手术失败": [
+    {
+      "id": "tort_medical",
+      "kind": "scenario",
+      "name": "医疗损害"
+    }
+  ],
+  "打零工": [
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "扣押档案": [
+    {
+      "id": "handover_dispute",
+      "kind": "scenario",
+      "name": "离职交接与证明"
+    }
+  ],
+  "扣着档案": [
+    {
+      "id": "handover_dispute",
+      "kind": "scenario",
+      "name": "离职交接与证明"
+    }
+  ],
+  "扣绩效": [
+    {
+      "id": "wage_deduction",
+      "kind": "scenario",
+      "name": "扣罚工资"
+    }
+  ],
+  "扣罚工资": [
+    {
+      "id": "wage_deduction",
+      "kind": "scenario",
+      "name": "扣罚工资"
+    }
+  ],
+  "批量辞退": [
+    {
+      "id": "economic_layoff",
+      "kind": "scenario",
+      "name": "经济性裁员"
+    }
+  ],
+  "承包": [
+    {
+      "id": "land_contract_management_right",
+      "kind": "concept",
+      "name": "土地承包经营权"
+    }
+  ],
+  "承揽": [
+    {
+      "id": "work_contract",
+      "kind": "concept",
+      "name": "承揽合同"
+    }
+  ],
+  "承揽合同": [
+    {
+      "id": "work_contract",
+      "kind": "concept",
+      "name": "承揽合同"
+    }
+  ],
+  "承租": [
+    {
+      "id": "lease_contract",
+      "kind": "concept",
+      "name": "租赁合同"
+    }
+  ],
+  "承诺": [
+    {
+      "id": "acceptance",
+      "kind": "concept",
+      "name": "承诺"
+    }
+  ],
+  "承运人": [
+    {
+      "id": "transport_contract",
+      "kind": "concept",
+      "name": "运输合同"
+    }
+  ],
+  "技术合同": [
+    {
+      "id": "technology_contract",
+      "kind": "concept",
+      "name": "技术合同"
+    }
+  ],
+  "技术开发": [
+    {
+      "id": "technology_contract",
+      "kind": "concept",
+      "name": "技术合同"
+    }
+  ],
+  "抚养": [
+    {
+      "id": "child_support",
+      "kind": "concept",
+      "name": "抚养"
+    }
+  ],
+  "抚养费": [
+    {
+      "id": "child_support",
+      "kind": "concept",
+      "name": "抚养"
+    }
+  ],
+  "抚恤": [
+    {
+      "id": "survivor_benefit",
+      "kind": "concept",
+      "name": "遗属待遇"
+    }
+  ],
+  "抛掷物": [
+    {
+      "id": "high_altitude_throwing",
+      "kind": "concept",
+      "name": "高空抛物"
+    }
+  ],
+  "抢修": [
+    {
+      "id": "emergency_overtime",
+      "kind": "concept",
+      "name": "紧急情况加班"
+    }
+  ],
+  "抵押": [
+    {
+      "id": "mortgage",
+      "kind": "concept",
+      "name": "抵押权"
+    }
+  ],
+  "抵押人": [
+    {
+      "id": "mortgage",
+      "kind": "concept",
+      "name": "抵押权"
+    }
+  ],
+  "抵押权": [
+    {
+      "id": "mortgage",
+      "kind": "concept",
+      "name": "抵押权"
+    }
+  ],
+  "抵销": [
+    {
+      "id": "set_off",
+      "kind": "concept",
+      "name": "抵销"
+    }
+  ],
+  "抵销权": [
+    {
+      "id": "set_off",
+      "kind": "concept",
+      "name": "抵销"
+    }
+  ],
+  "押金不退": [
+    {
+      "id": "lease_dispute",
+      "kind": "scenario",
+      "name": "房屋租赁纠纷"
+    }
+  ],
+  "担保": [
+    {
+      "id": "security_interest",
+      "kind": "concept",
+      "name": "担保物权"
+    },
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "担保物权": [
+    {
+      "id": "security_interest",
+      "kind": "concept",
+      "name": "担保物权"
+    }
+  ],
+  "担保纠纷": [
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "担保责任": [
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "拖欠劳动报酬": [
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "拖欠工资": [
+    {
+      "id": "wage_deduction",
+      "kind": "concept",
+      "name": "克扣或拖欠工资"
+    },
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "招用未成年人": [
+    {
+      "id": "minor_worker",
+      "kind": "scenario",
+      "name": "未成年工与童工"
+    }
+  ],
+  "拾得": [
+    {
+      "id": "lost_property",
+      "kind": "concept",
+      "name": "拾得遗失物"
+    }
+  ],
+  "拾得遗失物": [
+    {
+      "id": "lost_property",
+      "kind": "concept",
+      "name": "拾得遗失物"
+    }
+  ],
+  "按份共有": [
+    {
+      "id": "co_ownership",
+      "kind": "concept",
+      "name": "共有"
+    }
+  ],
+  "按份责任": [
+    {
+      "id": "several_liability",
+      "kind": "concept",
+      "name": "按份责任"
+    }
+  ],
+  "按劳动者在本单位工作的年限": [
+    {
+      "id": "severance_standard",
+      "kind": "concept",
+      "name": "经济补偿计算标准"
+    }
+  ],
+  "按月支付": [
+    {
+      "id": "wage_payment",
+      "kind": "concept",
+      "name": "工资支付"
+    }
+  ],
+  "按月给予劳动者经济补偿": [
+    {
+      "id": "non_compete_compensation",
+      "kind": "concept",
+      "name": "竞业限制经济补偿"
+    }
+  ],
+  "按照约定履行": [
+    {
+      "id": "contract_performance",
+      "kind": "concept",
+      "name": "合同履行"
+    }
+  ],
+  "损失赔偿": [
+    {
+      "id": "damages_civil",
+      "kind": "concept",
+      "name": "损害赔偿"
+    }
+  ],
+  "损害赔偿": [
+    {
+      "id": "damages_civil",
+      "kind": "concept",
+      "name": "损害赔偿"
+    },
+    {
+      "id": "divorce_damages",
+      "kind": "concept",
+      "name": "离婚损害赔偿"
+    }
+  ],
+  "接受派遣的单位": [
+    {
+      "id": "accepting_unit",
+      "kind": "concept",
+      "name": "用工单位"
+    }
+  ],
+  "提供格式条款": [
+    {
+      "id": "standard_terms",
+      "kind": "concept",
+      "name": "格式条款"
+    }
+  ],
+  "提前30天": [
+    {
+      "id": "resignation_notice",
+      "kind": "scenario",
+      "name": "主动辞职"
+    }
+  ],
+  "提前三十日": [
+    {
+      "id": "notice_period",
+      "kind": "concept",
+      "name": "提前通知期"
+    }
+  ],
+  "提前三十日以书面形式通知": [
+    {
+      "id": "non_fault_dismissal",
+      "kind": "concept",
+      "name": "非过失性辞退"
+    }
+  ],
+  "提前三日": [
+    {
+      "id": "notice_period",
+      "kind": "concept",
+      "name": "提前通知期"
+    }
+  ],
+  "提前通知期": [
+    {
+      "id": "notice_period",
+      "kind": "concept",
+      "name": "提前通知期"
+    }
+  ],
+  "提存": [
+    {
+      "id": "deposit_escrow",
+      "kind": "concept",
+      "name": "提存"
+    }
+  ],
+  "提存物": [
+    {
+      "id": "deposit_escrow",
+      "kind": "concept",
+      "name": "提存"
+    }
+  ],
+  "搁置物": [
+    {
+      "id": "building_liability",
+      "kind": "concept",
+      "name": "建筑物物件损害责任"
+    }
+  ],
+  "撞车": [
+    {
+      "id": "tort_traffic",
+      "kind": "scenario",
+      "name": "交通事故赔偿"
+    }
+  ],
+  "撤销权": [
+    {
+      "id": "revocation_right",
+      "kind": "concept",
+      "name": "撤销权"
+    }
+  ],
+  "撤销权人": [
+    {
+      "id": "voidable_act",
+      "kind": "concept",
+      "name": "可撤销民事法律行为"
+    }
+  ],
+  "支付劳动报酬": [
+    {
+      "id": "wage_payment",
+      "kind": "concept",
+      "name": "工资支付"
+    }
+  ],
+  "支付违约金": [
+    {
+      "id": "liquidated_damages",
+      "kind": "concept",
+      "name": "违约金"
+    }
+  ],
+  "放弃继承": [
+    {
+      "id": "inheritance_renunciation",
+      "kind": "concept",
+      "name": "放弃继承"
+    }
+  ],
+  "敏感个人信息": [
+    {
+      "id": "personal_information",
+      "kind": "concept",
+      "name": "个人信息"
+    }
+  ],
+  "文本由用人单位": [
+    {
+      "id": "contract_text",
+      "kind": "concept",
+      "name": "劳动合同文本"
+    }
+  ],
+  "无固定期限": [
+    {
+      "id": "open_ended_contract",
+      "kind": "concept",
+      "name": "无固定期限劳动合同"
+    },
+    {
+      "id": "open_ended_contract_request",
+      "kind": "scenario",
+      "name": "要求签无固定期限"
+    }
+  ],
+  "无固定期限劳动合同": [
+    {
+      "id": "open_ended_contract",
+      "kind": "concept",
+      "name": "无固定期限劳动合同"
+    }
+  ],
+  "无故拖欠": [
+    {
+      "id": "wage_deduction",
+      "kind": "concept",
+      "name": "克扣或拖欠工资"
+    }
+  ],
+  "无故辞退": [
+    {
+      "id": "illegal_dismissal",
+      "kind": "scenario",
+      "name": "违法解除"
+    }
+  ],
+  "无效": [
+    {
+      "id": "void_act",
+      "kind": "concept",
+      "name": "无效民事法律行为"
+    }
+  ],
+  "无效劳动合同": [
+    {
+      "id": "invalid_contract",
+      "kind": "concept",
+      "name": "无效劳动合同"
+    }
+  ],
+  "无效民事法律行为": [
+    {
+      "id": "void_act",
+      "kind": "concept",
+      "name": "无效民事法律行为"
+    }
+  ],
+  "无权代理": [
+    {
+      "id": "unauthorized_agency",
+      "kind": "concept",
+      "name": "无权代理"
+    },
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "无民事行为能力": [
+    {
+      "id": "no_civil_capacity",
+      "kind": "concept",
+      "name": "无民事行为能力"
+    }
+  ],
+  "无过错责任": [
+    {
+      "id": "no_fault_liability",
+      "kind": "concept",
+      "name": "无过错责任"
+    }
+  ],
+  "无须告知": [
+    {
+      "id": "immediate_rescission",
+      "kind": "concept",
+      "name": "劳动者即时解除"
+    }
+  ],
+  "时效中断": [
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    }
+  ],
+  "时效期间": [
+    {
+      "id": "limitation_period",
+      "kind": "concept",
+      "name": "诉讼时效"
+    }
+  ],
+  "是不是劳动关系": [
+    {
+      "id": "contractor_vs_employee",
+      "kind": "scenario",
+      "name": "劳动关系认定"
+    }
+  ],
+  "是不是雇佣": [
+    {
+      "id": "contractor_vs_employee",
+      "kind": "scenario",
+      "name": "劳动关系认定"
+    }
+  ],
+  "显失公平": [
+    {
+      "id": "gross_unfairness",
+      "kind": "concept",
+      "name": "显失公平"
+    }
+  ],
+  "最低工资": [
+    {
+      "id": "minimum_wage",
+      "kind": "concept",
+      "name": "最低工资"
+    },
+    {
+      "id": "minimum_wage",
+      "kind": "scenario",
+      "name": "最低工资"
+    }
+  ],
+  "最低工资保障": [
+    {
+      "id": "minimum_wage_standard",
+      "kind": "concept",
+      "name": "最低工资标准"
+    }
+  ],
+  "最低工资标准": [
+    {
+      "id": "minimum_wage",
+      "kind": "concept",
+      "name": "最低工资"
+    },
+    {
+      "id": "minimum_wage_standard",
+      "kind": "concept",
+      "name": "最低工资标准"
+    },
+    {
+      "id": "minimum_wage",
+      "kind": "scenario",
+      "name": "最低工资"
+    }
+  ],
+  "月工资": [
+    {
+      "id": "severance_standard",
+      "kind": "concept",
+      "name": "经济补偿计算标准"
+    }
+  ],
+  "有名合同": [
+    {
+      "id": "typical_contract",
+      "kind": "concept",
+      "name": "典型合同"
+    }
+  ],
+  "有期限合同": [
+    {
+      "id": "fixed_term_contract",
+      "kind": "concept",
+      "name": "固定期限劳动合同"
+    }
+  ],
+  "服务期": [
+    {
+      "id": "service_period",
+      "kind": "concept",
+      "name": "服务期"
+    },
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "服务期与培训": [
+    {
+      "id": "service_period_training",
+      "kind": "scenario",
+      "name": "服务期与培训"
+    }
+  ],
+  "服务期限": [
+    {
+      "id": "service_period",
+      "kind": "concept",
+      "name": "服务期"
+    }
+  ],
+  "期间": [
+    {
+      "id": "period_calculation",
+      "kind": "concept",
+      "name": "期间计算"
+    }
+  ],
+  "期间计算": [
+    {
+      "id": "period_calculation",
+      "kind": "concept",
+      "name": "期间计算"
+    }
+  ],
+  "未成年工": [
+    {
+      "id": "minor_worker",
+      "kind": "concept",
+      "name": "未成年工"
+    },
+    {
+      "id": "minor_worker",
+      "kind": "scenario",
+      "name": "未成年工与童工"
+    }
+  ],
+  "未成年工与童工": [
+    {
+      "id": "minor_worker",
+      "kind": "scenario",
+      "name": "未成年工与童工"
+    }
+  ],
+  "未满十六周岁": [
+    {
+      "id": "child_labor",
+      "kind": "concept",
+      "name": "童工"
+    }
+  ],
+  "机动车": [
+    {
+      "id": "traffic_accident_liability",
+      "kind": "concept",
+      "name": "机动车交通事故责任"
+    }
+  ],
+  "机动车交通事故责任": [
+    {
+      "id": "traffic_accident_liability",
+      "kind": "concept",
+      "name": "机动车交通事故责任"
+    }
+  ],
+  "权利义务一并转让": [
+    {
+      "id": "contract_transfer",
+      "kind": "concept",
+      "name": "合同权利义务转让"
+    }
+  ],
+  "构筑物": [
+    {
+      "id": "building_liability",
+      "kind": "concept",
+      "name": "建筑物物件损害责任"
+    }
+  ],
+  "标准工时": [
+    {
+      "id": "working_hours",
+      "kind": "concept",
+      "name": "工时制度"
+    }
+  ],
+  "格式合同": [
+    {
+      "id": "standard_terms",
+      "kind": "concept",
+      "name": "格式条款"
+    }
+  ],
+  "格式条款": [
+    {
+      "id": "standard_terms",
+      "kind": "concept",
+      "name": "格式条款"
+    }
+  ],
+  "档案": [
+    {
+      "id": "file_transfer",
+      "kind": "concept",
+      "name": "档案和社保转移"
+    }
+  ],
+  "档案和社保转移": [
+    {
+      "id": "file_transfer",
+      "kind": "concept",
+      "name": "档案和社保转移"
+    }
+  ],
+  "欠薪": [
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "欺诈": [
+    {
+      "id": "fraud",
+      "kind": "concept",
+      "name": "欺诈"
+    }
+  ],
+  "欺骗": [
+    {
+      "id": "fraud",
+      "kind": "concept",
+      "name": "欺诈"
+    }
+  ],
+  "歧视": [
+    {
+      "id": "employment_discrimination",
+      "kind": "concept",
+      "name": "就业歧视"
+    },
+    {
+      "id": "employment_discrimination",
+      "kind": "scenario",
+      "name": "就业歧视"
+    }
+  ],
+  "每日工作时间": [
+    {
+      "id": "working_hours",
+      "kind": "concept",
+      "name": "工时制度"
+    }
+  ],
+  "每满一年支付一个月工资": [
+    {
+      "id": "severance_standard",
+      "kind": "concept",
+      "name": "经济补偿计算标准"
+    }
+  ],
+  "民事主体": [
+    {
+      "id": "civil_subject",
+      "kind": "concept",
+      "name": "民事主体"
+    }
+  ],
+  "民事权利能力": [
+    {
+      "id": "civil_subject",
+      "kind": "concept",
+      "name": "民事主体"
+    }
+  ],
+  "民事法律行为": [
+    {
+      "id": "civil_legal_act",
+      "kind": "concept",
+      "name": "民事法律行为"
+    }
+  ],
+  "民事法律行为无效": [
+    {
+      "id": "void_act",
+      "kind": "concept",
+      "name": "无效民事法律行为"
+    }
+  ],
+  "民事行为能力": [
+    {
+      "id": "civil_capacity",
+      "kind": "concept",
+      "name": "民事行为能力"
+    }
+  ],
+  "民办非企业单位": [
+    {
+      "id": "employer",
+      "kind": "concept",
+      "name": "用人单位"
+    }
+  ],
+  "民族、种族、性别、宗教信仰": [
+    {
+      "id": "employment_discrimination",
+      "kind": "concept",
+      "name": "就业歧视"
+    }
+  ],
+  "民间借贷": [
+    {
+      "id": "loan_dispute",
+      "kind": "scenario",
+      "name": "民间借贷"
+    },
+    {
+      "id": "loan_dispute",
+      "kind": "scenario",
+      "name": "民间借贷"
+    }
+  ],
+  "没交社保": [
+    {
+      "id": "social_insurance_dispute",
+      "kind": "scenario",
+      "name": "社保争议"
+    }
+  ],
+  "没休年假": [
+    {
+      "id": "annual_leave",
+      "kind": "scenario",
+      "name": "年休假"
+    }
+  ],
+  "没理由辞退": [
+    {
+      "id": "illegal_dismissal",
+      "kind": "scenario",
+      "name": "违法解除"
+    }
+  ],
+  "没签合同": [
+    {
+      "id": "double_wage_claim",
+      "kind": "scenario",
+      "name": "二倍工资"
+    }
+  ],
+  "没签合同算员工吗": [
+    {
+      "id": "contractor_vs_employee",
+      "kind": "scenario",
+      "name": "劳动关系认定"
+    }
+  ],
+  "泄密纠纷": [
+    {
+      "id": "confidentiality_breach",
+      "kind": "scenario",
+      "name": "泄密纠纷"
+    }
+  ],
+  "泄露个人信息": [
+    {
+      "id": "privacy_infringe",
+      "kind": "scenario",
+      "name": "隐私与个人信息"
+    }
+  ],
+  "泄露商业秘密": [
+    {
+      "id": "confidentiality_breach",
+      "kind": "scenario",
+      "name": "泄密纠纷"
+    }
+  ],
+  "法人": [
+    {
+      "id": "legal_person",
+      "kind": "concept",
+      "name": "法人"
+    }
+  ],
+  "法定休假日": [
+    {
+      "id": "statutory_holiday",
+      "kind": "concept",
+      "name": "法定休假日"
+    }
+  ],
+  "法定继承": [
+    {
+      "id": "statutory_inheritance",
+      "kind": "concept",
+      "name": "法定继承"
+    }
+  ],
+  "法定继承人": [
+    {
+      "id": "statutory_inheritance",
+      "kind": "concept",
+      "name": "法定继承"
+    }
+  ],
+  "法定节假日": [
+    {
+      "id": "statutory_holiday",
+      "kind": "concept",
+      "name": "法定休假日"
+    },
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "法律行为": [
+    {
+      "id": "civil_legal_act",
+      "kind": "concept",
+      "name": "民事法律行为"
+    }
+  ],
+  "派遣": [
+    {
+      "id": "labor_dispatch",
+      "kind": "concept",
+      "name": "劳务派遣"
+    },
+    {
+      "id": "labor_dispatch",
+      "kind": "scenario",
+      "name": "劳务派遣"
+    }
+  ],
+  "派遣公司": [
+    {
+      "id": "dispatch_unit",
+      "kind": "concept",
+      "name": "劳务派遣单位"
+    }
+  ],
+  "派遣单位": [
+    {
+      "id": "dispatch_unit",
+      "kind": "concept",
+      "name": "劳务派遣单位"
+    }
+  ],
+  "派遣工": [
+    {
+      "id": "labor_dispatch",
+      "kind": "scenario",
+      "name": "劳务派遣"
+    }
+  ],
+  "派遣用工": [
+    {
+      "id": "labor_dispatch",
+      "kind": "concept",
+      "name": "劳务派遣"
+    }
+  ],
+  "混同": [
+    {
+      "id": "confusion",
+      "kind": "concept",
+      "name": "混同"
+    }
+  ],
+  "添附": [
+    {
+      "id": "attachment",
+      "kind": "concept",
+      "name": "添附"
+    }
+  ],
+  "清偿被继承人依法应当缴纳的税款和债务": [
+    {
+      "id": "estate_debt",
+      "kind": "concept",
+      "name": "遗产债务清偿"
+    }
+  ],
+  "清算": [
+    {
+      "id": "wage_priority_payment",
+      "kind": "concept",
+      "name": "工资优先支付"
+    }
+  ],
+  "爆炸伤人": [
+    {
+      "id": "tort_product",
+      "kind": "scenario",
+      "name": "产品责任"
+    }
+  ],
+  "物业服务合同": [
+    {
+      "id": "property_service_contract",
+      "kind": "concept",
+      "name": "物业服务合同"
+    }
+  ],
+  "物业费": [
+    {
+      "id": "property_service_contract",
+      "kind": "concept",
+      "name": "物业服务合同"
+    }
+  ],
+  "物权": [
+    {
+      "id": "property_right",
+      "kind": "concept",
+      "name": "物权"
+    }
+  ],
+  "环境污染": [
+    {
+      "id": "environmental_liability",
+      "kind": "concept",
+      "name": "环境污染责任"
+    }
+  ],
+  "环境污染责任": [
+    {
+      "id": "environmental_liability",
+      "kind": "concept",
+      "name": "环境污染责任"
+    }
+  ],
+  "生产者": [
+    {
+      "id": "product_liability",
+      "kind": "concept",
+      "name": "产品责任"
+    }
+  ],
+  "生命健康权": [
+    {
+      "id": "life_health_right",
+      "kind": "concept",
+      "name": "生命健康权"
+    }
+  ],
+  "生命权": [
+    {
+      "id": "life_health_right",
+      "kind": "concept",
+      "name": "生命健康权"
+    }
+  ],
+  "生态破坏": [
+    {
+      "id": "environmental_liability",
+      "kind": "concept",
+      "name": "环境污染责任"
+    }
+  ],
+  "生病请假": [
+    {
+      "id": "sick_leave",
+      "kind": "scenario",
+      "name": "病假与医疗期"
+    }
+  ],
+  "生育与产假": [
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "生育保险": [
+    {
+      "id": "maternity_insurance",
+      "kind": "concept",
+      "name": "生育保险"
+    }
+  ],
+  "生育保险待遇": [
+    {
+      "id": "maternity_benefit",
+      "kind": "concept",
+      "name": "生育保险待遇"
+    }
+  ],
+  "生育医疗费用": [
+    {
+      "id": "maternity_benefit",
+      "kind": "concept",
+      "name": "生育保险待遇"
+    }
+  ],
+  "生育津贴": [
+    {
+      "id": "maternity_benefit",
+      "kind": "concept",
+      "name": "生育保险待遇"
+    },
+    {
+      "id": "maternity_leave",
+      "kind": "scenario",
+      "name": "生育与产假"
+    }
+  ],
+  "用人单位": [
+    {
+      "id": "employer",
+      "kind": "concept",
+      "name": "用人单位"
+    }
+  ],
+  "用人单位单方解除": [
+    {
+      "id": "rescission_by_employer",
+      "kind": "concept",
+      "name": "用人单位单方解除"
+    }
+  ],
+  "用人单位解除劳动合同": [
+    {
+      "id": "rescission_by_employer",
+      "kind": "concept",
+      "name": "用人单位单方解除"
+    }
+  ],
+  "用工关系": [
+    {
+      "id": "labor_relationship",
+      "kind": "concept",
+      "name": "劳动关系"
+    }
+  ],
+  "用工单位": [
+    {
+      "id": "accepting_unit",
+      "kind": "concept",
+      "name": "用工单位"
+    }
+  ],
+  "用工合同": [
+    {
+      "id": "labor_contract",
+      "kind": "concept",
+      "name": "劳动合同"
+    }
+  ],
+  "用工登记": [
+    {
+      "id": "employment_registration",
+      "kind": "concept",
+      "name": "用工登记"
+    }
+  ],
+  "用益物权": [
+    {
+      "id": "usufruct",
+      "kind": "concept",
+      "name": "用益物权"
+    }
+  ],
+  "申请仲裁": [
+    {
+      "id": "arbitration_procedure",
+      "kind": "scenario",
+      "name": "劳动仲裁流程"
+    }
+  ],
+  "留置": [
+    {
+      "id": "lien",
+      "kind": "concept",
+      "name": "留置权"
+    }
+  ],
+  "留置权": [
+    {
+      "id": "lien",
+      "kind": "concept",
+      "name": "留置权"
+    }
+  ],
+  "疫情": [
+    {
+      "id": "force_majeure_dispute",
+      "kind": "scenario",
+      "name": "不可抗力与情势变更"
+    }
+  ],
+  "病假": [
+    {
+      "id": "sick_leave",
+      "kind": "concept",
+      "name": "病假与医疗期"
+    },
+    {
+      "id": "sick_leave",
+      "kind": "scenario",
+      "name": "病假与医疗期"
+    }
+  ],
+  "病假与医疗期": [
+    {
+      "id": "sick_leave",
+      "kind": "concept",
+      "name": "病假与医疗期"
+    },
+    {
+      "id": "sick_leave",
+      "kind": "scenario",
+      "name": "病假与医疗期"
+    }
+  ],
+  "监察": [
+    {
+      "id": "labor_supervision",
+      "kind": "concept",
+      "name": "劳动监察"
+    }
+  ],
+  "监护": [
+    {
+      "id": "guardianship",
+      "kind": "concept",
+      "name": "监护"
+    }
+  ],
+  "监护人": [
+    {
+      "id": "guardianship",
+      "kind": "concept",
+      "name": "监护"
+    }
+  ],
+  "监督检查": [
+    {
+      "id": "labor_supervision",
+      "kind": "concept",
+      "name": "劳动监察"
+    }
+  ],
+  "相对人有理由相信": [
+    {
+      "id": "apparent_agency",
+      "kind": "concept",
+      "name": "表见代理"
+    }
+  ],
+  "相应的责任": [
+    {
+      "id": "several_liability",
+      "kind": "concept",
+      "name": "按份责任"
+    }
+  ],
+  "相邻关系": [
+    {
+      "id": "adjacent_relation",
+      "kind": "concept",
+      "name": "相邻关系"
+    }
+  ],
+  "相邻权利人": [
+    {
+      "id": "adjacent_relation",
+      "kind": "concept",
+      "name": "相邻关系"
+    }
+  ],
+  "真实意思": [
+    {
+      "id": "expression_of_intent",
+      "kind": "concept",
+      "name": "意思表示"
+    }
+  ],
+  "破产": [
+    {
+      "id": "wage_priority_payment",
+      "kind": "concept",
+      "name": "工资优先支付"
+    }
+  ],
+  "确认劳动关系": [
+    {
+      "id": "contractor_vs_employee",
+      "kind": "scenario",
+      "name": "劳动关系认定"
+    }
+  ],
+  "社会保险": [
+    {
+      "id": "social_insurance",
+      "kind": "concept",
+      "name": "社会保险"
+    }
+  ],
+  "社会保险关系转移": [
+    {
+      "id": "file_transfer",
+      "kind": "concept",
+      "name": "档案和社保转移"
+    }
+  ],
+  "社保": [
+    {
+      "id": "social_insurance",
+      "kind": "concept",
+      "name": "社会保险"
+    }
+  ],
+  "社保争议": [
+    {
+      "id": "social_insurance_dispute",
+      "kind": "scenario",
+      "name": "社保争议"
+    }
+  ],
+  "社保补缴": [
+    {
+      "id": "social_insurance_dispute",
+      "kind": "scenario",
+      "name": "社保争议"
+    }
+  ],
+  "禁止招用": [
+    {
+      "id": "child_labor",
+      "kind": "concept",
+      "name": "童工"
+    }
+  ],
+  "离婚": [
+    {
+      "id": "divorce",
+      "kind": "concept",
+      "name": "离婚"
+    },
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "离婚损害赔偿": [
+    {
+      "id": "divorce_damages",
+      "kind": "concept",
+      "name": "离婚损害赔偿"
+    }
+  ],
+  "离婚财产分割": [
+    {
+      "id": "divorce_property",
+      "kind": "scenario",
+      "name": "离婚财产分割"
+    }
+  ],
+  "离职交接与证明": [
+    {
+      "id": "handover_dispute",
+      "kind": "scenario",
+      "name": "离职交接与证明"
+    }
+  ],
+  "离职后不能去同行": [
+    {
+      "id": "non_compete_dispute",
+      "kind": "scenario",
+      "name": "竞业限制纠纷"
+    }
+  ],
+  "离职申请": [
+    {
+      "id": "resignation_notice",
+      "kind": "scenario",
+      "name": "主动辞职"
+    }
+  ],
+  "离职证明": [
+    {
+      "id": "separation_certificate",
+      "kind": "concept",
+      "name": "解除终止证明"
+    }
+  ],
+  "租房": [
+    {
+      "id": "lease_dispute",
+      "kind": "scenario",
+      "name": "房屋租赁纠纷"
+    }
+  ],
+  "租赁合同": [
+    {
+      "id": "lease_contract",
+      "kind": "concept",
+      "name": "租赁合同"
+    }
+  ],
+  "突然被开除": [
+    {
+      "id": "illegal_dismissal",
+      "kind": "scenario",
+      "name": "违法解除"
+    }
+  ],
+  "立即解除": [
+    {
+      "id": "immediate_rescission",
+      "kind": "concept",
+      "name": "劳动者即时解除"
+    }
+  ],
+  "竞业协议": [
+    {
+      "id": "non_compete_dispute",
+      "kind": "scenario",
+      "name": "竞业限制纠纷"
+    }
+  ],
+  "竞业禁止": [
+    {
+      "id": "non_compete",
+      "kind": "concept",
+      "name": "竞业限制"
+    }
+  ],
+  "竞业补偿": [
+    {
+      "id": "non_compete_compensation",
+      "kind": "concept",
+      "name": "竞业限制经济补偿"
+    }
+  ],
+  "竞业限制": [
+    {
+      "id": "non_compete",
+      "kind": "concept",
+      "name": "竞业限制"
+    },
+    {
+      "id": "non_compete_dispute",
+      "kind": "scenario",
+      "name": "竞业限制纠纷"
+    }
+  ],
+  "竞业限制期限内按月给予经济补偿": [
+    {
+      "id": "non_compete_compensation",
+      "kind": "concept",
+      "name": "竞业限制经济补偿"
+    }
+  ],
+  "竞业限制纠纷": [
+    {
+      "id": "non_compete_dispute",
+      "kind": "scenario",
+      "name": "竞业限制纠纷"
+    }
+  ],
+  "竞业限制经济补偿": [
+    {
+      "id": "non_compete_compensation",
+      "kind": "concept",
+      "name": "竞业限制经济补偿"
+    }
+  ],
+  "竞业限制补偿": [
+    {
+      "id": "non_compete_compensation",
+      "kind": "concept",
+      "name": "竞业限制经济补偿"
+    }
+  ],
+  "童工": [
+    {
+      "id": "child_labor",
+      "kind": "concept",
+      "name": "童工"
+    },
+    {
+      "id": "minor_worker",
+      "kind": "scenario",
+      "name": "未成年工与童工"
+    }
+  ],
+  "第三方用工": [
+    {
+      "id": "labor_dispatch",
+      "kind": "scenario",
+      "name": "劳务派遣"
+    }
+  ],
+  "第三次签合同": [
+    {
+      "id": "open_ended_contract_request",
+      "kind": "scenario",
+      "name": "要求签无固定期限"
+    }
+  ],
+  "签长期合同": [
+    {
+      "id": "open_ended_contract_request",
+      "kind": "scenario",
+      "name": "要求签无固定期限"
+    }
+  ],
+  "紧急情况": [
+    {
+      "id": "emergency_overtime",
+      "kind": "concept",
+      "name": "紧急情况加班"
+    }
+  ],
+  "紧急情况加班": [
+    {
+      "id": "emergency_overtime",
+      "kind": "concept",
+      "name": "紧急情况加班"
+    }
+  ],
+  "约定的违约金": [
+    {
+      "id": "liquidated_damages_civil",
+      "kind": "concept",
+      "name": "违约金"
+    }
+  ],
+  "约定违约金": [
+    {
+      "id": "liquidated_damages",
+      "kind": "concept",
+      "name": "违约金"
+    }
+  ],
+  "线上打卡": [
+    {
+      "id": "remote_work",
+      "kind": "scenario",
+      "name": "远程办公"
+    }
+  ],
+  "终止劳动合同": [
+    {
+      "id": "contract_termination",
+      "kind": "concept",
+      "name": "劳动合同终止"
+    }
+  ],
+  "经济性裁员": [
+    {
+      "id": "economic_layoff",
+      "kind": "concept",
+      "name": "经济性裁员"
+    },
+    {
+      "id": "economic_layoff",
+      "kind": "scenario",
+      "name": "经济性裁员"
+    }
+  ],
+  "经济补偿": [
+    {
+      "id": "severance",
+      "kind": "concept",
+      "name": "经济补偿"
+    },
+    {
+      "id": "severance_calculation",
+      "kind": "scenario",
+      "name": "经济补偿计算"
+    }
+  ],
+  "经济补偿计算": [
+    {
+      "id": "severance_calculation",
+      "kind": "scenario",
+      "name": "经济补偿计算"
+    }
+  ],
+  "经济补偿计算标准": [
+    {
+      "id": "severance_standard",
+      "kind": "concept",
+      "name": "经济补偿计算标准"
+    }
+  ],
+  "经济补偿金": [
+    {
+      "id": "severance",
+      "kind": "concept",
+      "name": "经济补偿"
+    }
+  ],
+  "结婚": [
+    {
+      "id": "marriage",
+      "kind": "concept",
+      "name": "婚姻"
+    }
+  ],
+  "结算支付周期": [
+    {
+      "id": "part_time_wage_settlement",
+      "kind": "concept",
+      "name": "非全日制工资结算"
+    }
+  ],
+  "继承": [
+    {
+      "id": "inheritance",
+      "kind": "concept",
+      "name": "继承"
+    },
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "继承人": [
+    {
+      "id": "inheritance",
+      "kind": "concept",
+      "name": "继承"
+    }
+  ],
+  "继承纠纷": [
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "继承顺序": [
+    {
+      "id": "statutory_inheritance",
+      "kind": "concept",
+      "name": "法定继承"
+    }
+  ],
+  "续签": [
+    {
+      "id": "contract_renewal",
+      "kind": "scenario",
+      "name": "合同到期续签"
+    }
+  ],
+  "综合工时": [
+    {
+      "id": "working_hours_dispute",
+      "kind": "scenario",
+      "name": "工时与休息"
+    }
+  ],
+  "综合计算工时": [
+    {
+      "id": "shift_system",
+      "kind": "concept",
+      "name": "轮班制"
+    }
+  ],
+  "缔约过失": [
+    {
+      "id": "precontractual_liability",
+      "kind": "concept",
+      "name": "缔约过失责任"
+    }
+  ],
+  "缔约过失责任": [
+    {
+      "id": "precontractual_liability",
+      "kind": "concept",
+      "name": "缔约过失责任"
+    }
+  ],
+  "网约车司机": [
+    {
+      "id": "platform_worker",
+      "kind": "scenario",
+      "name": "平台用工"
+    }
+  ],
+  "网络侵权": [
+    {
+      "id": "network_tort",
+      "kind": "concept",
+      "name": "网络侵权"
+    }
+  ],
+  "网络服务提供者": [
+    {
+      "id": "network_tort",
+      "kind": "concept",
+      "name": "网络侵权"
+    }
+  ],
+  "网络诽谤": [
+    {
+      "id": "reputation_infringe",
+      "kind": "scenario",
+      "name": "名誉侵权"
+    }
+  ],
+  "罚款": [
+    {
+      "id": "wage_deduction",
+      "kind": "scenario",
+      "name": "扣罚工资"
+    }
+  ],
+  "老板没钱了": [
+    {
+      "id": "wage_priority",
+      "kind": "scenario",
+      "name": "公司破产欠薪"
+    }
+  ],
+  "老板跑路": [
+    {
+      "id": "unpaid_wages",
+      "kind": "scenario",
+      "name": "拖欠工资"
+    }
+  ],
+  "职业健康检查": [
+    {
+      "id": "occupational_health_check",
+      "kind": "concept",
+      "name": "职业健康检查"
+    },
+    {
+      "id": "occupational_disease",
+      "kind": "scenario",
+      "name": "职业病"
+    }
+  ],
+  "职业危害": [
+    {
+      "id": "occupational_disease",
+      "kind": "concept",
+      "name": "职业病"
+    },
+    {
+      "id": "occupational_disease",
+      "kind": "scenario",
+      "name": "职业病"
+    }
+  ],
+  "职业病": [
+    {
+      "id": "occupational_disease",
+      "kind": "concept",
+      "name": "职业病"
+    },
+    {
+      "id": "occupational_disease",
+      "kind": "scenario",
+      "name": "职业病"
+    },
+    {
+      "id": "occupational_disease",
+      "kind": "scenario",
+      "name": "职业病"
+    }
+  ],
+  "职工": [
+    {
+      "id": "worker",
+      "kind": "concept",
+      "name": "劳动者"
+    }
+  ],
+  "职工代表大会": [
+    {
+      "id": "labor_union",
+      "kind": "concept",
+      "name": "工会"
+    }
+  ],
+  "职工名册": [
+    {
+      "id": "employment_registration",
+      "kind": "concept",
+      "name": "用工登记"
+    }
+  ],
+  "职工解除": [
+    {
+      "id": "unilateral_rescission_by_worker",
+      "kind": "concept",
+      "name": "劳动者单方解除"
+    }
+  ],
+  "聘用合同": [
+    {
+      "id": "labor_contract",
+      "kind": "concept",
+      "name": "劳动合同"
+    }
+  ],
+  "肖像": [
+    {
+      "id": "right_of_portrait",
+      "kind": "concept",
+      "name": "肖像权"
+    }
+  ],
+  "肖像权": [
+    {
+      "id": "right_of_portrait",
+      "kind": "concept",
+      "name": "肖像权"
+    }
+  ],
+  "胁迫": [
+    {
+      "id": "coercion",
+      "kind": "concept",
+      "name": "胁迫"
+    }
+  ],
+  "自己代理": [
+    {
+      "id": "self_dealing",
+      "kind": "concept",
+      "name": "自己代理"
+    }
+  ],
+  "自然人": [
+    {
+      "id": "natural_person",
+      "kind": "concept",
+      "name": "自然人"
+    }
+  ],
+  "节假日": [
+    {
+      "id": "statutory_holiday",
+      "kind": "concept",
+      "name": "法定休假日"
+    }
+  ],
+  "薪资": [
+    {
+      "id": "wage",
+      "kind": "concept",
+      "name": "工资"
+    }
+  ],
+  "薪酬": [
+    {
+      "id": "wage",
+      "kind": "concept",
+      "name": "工资"
+    }
+  ],
+  "行纪人": [
+    {
+      "id": "brokerage_contract",
+      "kind": "concept",
+      "name": "行纪合同"
+    }
+  ],
+  "行纪合同": [
+    {
+      "id": "brokerage_contract",
+      "kind": "concept",
+      "name": "行纪合同"
+    }
+  ],
+  "补偿几个月工资": [
+    {
+      "id": "severance_calculation",
+      "kind": "scenario",
+      "name": "经济补偿计算"
+    }
+  ],
+  "补偿金": [
+    {
+      "id": "severance",
+      "kind": "concept",
+      "name": "经济补偿"
+    }
+  ],
+  "表见代理": [
+    {
+      "id": "apparent_agency",
+      "kind": "concept",
+      "name": "表见代理"
+    },
+    {
+      "id": "agency_dispute",
+      "kind": "scenario",
+      "name": "代理纠纷"
+    }
+  ],
+  "被迫即时解除": [
+    {
+      "id": "immediate_resignation",
+      "kind": "scenario",
+      "name": "被迫即时解除"
+    }
+  ],
+  "被迫离职": [
+    {
+      "id": "immediate_resignation",
+      "kind": "scenario",
+      "name": "被迫即时解除"
+    }
+  ],
+  "被骗签合同": [
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    }
+  ],
+  "裁减人员": [
+    {
+      "id": "economic_layoff",
+      "kind": "concept",
+      "name": "经济性裁员"
+    }
+  ],
+  "裁员": [
+    {
+      "id": "economic_layoff",
+      "kind": "concept",
+      "name": "经济性裁员"
+    },
+    {
+      "id": "economic_layoff",
+      "kind": "scenario",
+      "name": "经济性裁员"
+    }
+  ],
+  "裁员补偿": [
+    {
+      "id": "economic_layoff",
+      "kind": "scenario",
+      "name": "经济性裁员"
+    }
+  ],
+  "要求签无固定期限": [
+    {
+      "id": "open_ended_contract_request",
+      "kind": "scenario",
+      "name": "要求签无固定期限"
+    }
+  ],
+  "要约": [
+    {
+      "id": "offer",
+      "kind": "concept",
+      "name": "要约"
+    }
+  ],
+  "要约人": [
+    {
+      "id": "offer",
+      "kind": "concept",
+      "name": "要约"
+    }
+  ],
+  "见习期": [
+    {
+      "id": "probation_period",
+      "kind": "concept",
+      "name": "试用期"
+    }
+  ],
+  "视同工伤": [
+    {
+      "id": "work_injury_recognition",
+      "kind": "concept",
+      "name": "工伤认定"
+    }
+  ],
+  "解除劳动合同": [
+    {
+      "id": "contract_rescission",
+      "kind": "concept",
+      "name": "劳动合同解除"
+    }
+  ],
+  "解除劳动合同证明": [
+    {
+      "id": "separation_certificate",
+      "kind": "concept",
+      "name": "解除终止证明"
+    }
+  ],
+  "解除合同": [
+    {
+      "id": "contract_rescission",
+      "kind": "concept",
+      "name": "劳动合同解除"
+    }
+  ],
+  "解除或者终止劳动合同的证明": [
+    {
+      "id": "separation_certificate",
+      "kind": "concept",
+      "name": "解除终止证明"
+    }
+  ],
+  "解除终止证明": [
+    {
+      "id": "separation_certificate",
+      "kind": "concept",
+      "name": "解除终止证明"
+    }
+  ],
+  "计件": [
+    {
+      "id": "piece_rate",
+      "kind": "concept",
+      "name": "计件工资"
+    }
+  ],
+  "计件定额": [
+    {
+      "id": "labor_quota",
+      "kind": "concept",
+      "name": "劳动定额"
+    }
+  ],
+  "计件工资": [
+    {
+      "id": "piece_rate",
+      "kind": "concept",
+      "name": "计件工资"
+    }
+  ],
+  "计件报酬": [
+    {
+      "id": "piece_rate",
+      "kind": "concept",
+      "name": "计件工资"
+    }
+  ],
+  "订立书面": [
+    {
+      "id": "written_form",
+      "kind": "concept",
+      "name": "书面形式"
+    }
+  ],
+  "订立合同": [
+    {
+      "id": "contract_establishment",
+      "kind": "concept",
+      "name": "合同成立"
+    }
+  ],
+  "订金": [
+    {
+      "id": "deposit_dispute",
+      "kind": "scenario",
+      "name": "定金纠纷"
+    }
+  ],
+  "认定工伤": [
+    {
+      "id": "work_injury_recognition",
+      "kind": "concept",
+      "name": "工伤认定"
+    }
+  ],
+  "证据": [
+    {
+      "id": "burden_of_proof",
+      "kind": "concept",
+      "name": "举证责任"
+    }
+  ],
+  "诉讼时效": [
+    {
+      "id": "limitation_period",
+      "kind": "concept",
+      "name": "诉讼时效"
+    },
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    },
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    }
+  ],
+  "诉讼时效中断": [
+    {
+      "id": "limitation_interruption",
+      "kind": "concept",
+      "name": "诉讼时效中断"
+    }
+  ],
+  "诉讼时效中止": [
+    {
+      "id": "limitation_suspension",
+      "kind": "concept",
+      "name": "诉讼时效中止"
+    }
+  ],
+  "诉讼离婚": [
+    {
+      "id": "divorce",
+      "kind": "concept",
+      "name": "离婚"
+    }
+  ],
+  "诊疗活动": [
+    {
+      "id": "medical_malpractice_liability",
+      "kind": "concept",
+      "name": "医疗损害责任"
+    }
+  ],
+  "试岗期": [
+    {
+      "id": "probation_period",
+      "kind": "concept",
+      "name": "试用期"
+    }
+  ],
+  "试用期": [
+    {
+      "id": "probation_period",
+      "kind": "concept",
+      "name": "试用期"
+    }
+  ],
+  "试用期不合格": [
+    {
+      "id": "probation_dismissal",
+      "kind": "scenario",
+      "name": "试用期辞退"
+    }
+  ],
+  "试用期开除": [
+    {
+      "id": "probation_dismissal",
+      "kind": "scenario",
+      "name": "试用期辞退"
+    }
+  ],
+  "试用期被辞": [
+    {
+      "id": "probation_dismissal",
+      "kind": "scenario",
+      "name": "试用期辞退"
+    }
+  ],
+  "试用期解除": [
+    {
+      "id": "trial_dismissal",
+      "kind": "concept",
+      "name": "试用期解除"
+    }
+  ],
+  "试用期辞退": [
+    {
+      "id": "probation_dismissal",
+      "kind": "scenario",
+      "name": "试用期辞退"
+    }
+  ],
+  "试用期间被证明不符合录用条件": [
+    {
+      "id": "trial_dismissal",
+      "kind": "concept",
+      "name": "试用期解除"
+    }
+  ],
+  "误解": [
+    {
+      "id": "major_misunderstanding",
+      "kind": "concept",
+      "name": "重大误解"
+    }
+  ],
+  "请求人民法院或者仲裁机构予以撤销": [
+    {
+      "id": "voidable_act",
+      "kind": "concept",
+      "name": "可撤销民事法律行为"
+    }
+  ],
+  "调解": [
+    {
+      "id": "labor_dispute_mediation",
+      "kind": "concept",
+      "name": "劳动争议调解"
+    }
+  ],
+  "调解组织": [
+    {
+      "id": "labor_dispute_mediation",
+      "kind": "concept",
+      "name": "劳动争议调解"
+    }
+  ],
+  "财产权": [
+    {
+      "id": "property_right",
+      "kind": "concept",
+      "name": "物权"
+    }
+  ],
+  "责令改正": [
+    {
+      "id": "labor_administration",
+      "kind": "concept",
+      "name": "劳动行政部门"
+    }
+  ],
+  "责任认定": [
+    {
+      "id": "tort_traffic",
+      "kind": "scenario",
+      "name": "交通事故赔偿"
+    }
+  ],
+  "货款不给": [
+    {
+      "id": "sales_breach",
+      "kind": "scenario",
+      "name": "买卖违约"
+    }
+  ],
+  "质押": [
+    {
+      "id": "pledge",
+      "kind": "concept",
+      "name": "质权"
+    }
+  ],
+  "质权": [
+    {
+      "id": "pledge",
+      "kind": "concept",
+      "name": "质权"
+    }
+  ],
+  "质量不符": [
+    {
+      "id": "sales_breach",
+      "kind": "scenario",
+      "name": "买卖违约"
+    }
+  ],
+  "赔偿": [
+    {
+      "id": "damages",
+      "kind": "concept",
+      "name": "赔偿金"
+    }
+  ],
+  "赔偿损失": [
+    {
+      "id": "damages_civil",
+      "kind": "concept",
+      "name": "损害赔偿"
+    }
+  ],
+  "赔偿标准": [
+    {
+      "id": "severance_calculation",
+      "kind": "scenario",
+      "name": "经济补偿计算"
+    }
+  ],
+  "赔偿金": [
+    {
+      "id": "damages",
+      "kind": "concept",
+      "name": "赔偿金"
+    }
+  ],
+  "赠与": [
+    {
+      "id": "gift_contract",
+      "kind": "concept",
+      "name": "赠与合同"
+    }
+  ],
+  "赠与合同": [
+    {
+      "id": "gift_contract",
+      "kind": "concept",
+      "name": "赠与合同"
+    }
+  ],
+  "赡养": [
+    {
+      "id": "alimony",
+      "kind": "concept",
+      "name": "赡养"
+    }
+  ],
+  "赡养费": [
+    {
+      "id": "alimony",
+      "kind": "concept",
+      "name": "赡养"
+    }
+  ],
+  "起算": [
+    {
+      "id": "period_calculation",
+      "kind": "concept",
+      "name": "期间计算"
+    }
+  ],
+  "起诉": [
+    {
+      "id": "labor_dispute_litigation",
+      "kind": "concept",
+      "name": "劳动争议诉讼"
+    }
+  ],
+  "起诉公司": [
+    {
+      "id": "labor_litigation",
+      "kind": "scenario",
+      "name": "劳动争议诉讼"
+    }
+  ],
+  "超时工作": [
+    {
+      "id": "work_hour_extension",
+      "kind": "concept",
+      "name": "延长工作时间"
+    }
+  ],
+  "超越代理权": [
+    {
+      "id": "unauthorized_agency",
+      "kind": "concept",
+      "name": "无权代理"
+    }
+  ],
+  "超龄用工": [
+    {
+      "id": "retirement_rehire",
+      "kind": "scenario",
+      "name": "退休返聘"
+    }
+  ],
+  "足额支付": [
+    {
+      "id": "wage_payment",
+      "kind": "concept",
+      "name": "工资支付"
+    }
+  ],
+  "身体权": [
+    {
+      "id": "life_health_right",
+      "kind": "concept",
+      "name": "生命健康权"
+    }
+  ],
+  "车祸赔偿": [
+    {
+      "id": "tort_traffic",
+      "kind": "scenario",
+      "name": "交通事故赔偿"
+    }
+  ],
+  "转正被拒": [
+    {
+      "id": "probation_dismissal",
+      "kind": "scenario",
+      "name": "试用期辞退"
+    }
+  ],
+  "转移手续": [
+    {
+      "id": "file_transfer",
+      "kind": "concept",
+      "name": "档案和社保转移"
+    }
+  ],
+  "转让债权": [
+    {
+      "id": "creditor_assignment",
+      "kind": "concept",
+      "name": "债权转让"
+    }
+  ],
+  "轮班": [
+    {
+      "id": "shift_system",
+      "kind": "concept",
+      "name": "轮班制"
+    }
+  ],
+  "轮班制": [
+    {
+      "id": "shift_system",
+      "kind": "concept",
+      "name": "轮班制"
+    }
+  ],
+  "辞职": [
+    {
+      "id": "resignation_notice",
+      "kind": "scenario",
+      "name": "主动辞职"
+    }
+  ],
+  "达到法定退休年龄": [
+    {
+      "id": "retirement",
+      "kind": "concept",
+      "name": "退休"
+    }
+  ],
+  "达到退休年龄": [
+    {
+      "id": "retirement_rehire",
+      "kind": "scenario",
+      "name": "退休返聘"
+    }
+  ],
+  "过了时效": [
+    {
+      "id": "statute_limitation",
+      "kind": "scenario",
+      "name": "诉讼时效"
+    }
+  ],
+  "过失性辞退": [
+    {
+      "id": "fault_dismissal",
+      "kind": "concept",
+      "name": "过失性辞退"
+    }
+  ],
+  "过错": [
+    {
+      "id": "fault_liability",
+      "kind": "concept",
+      "name": "过错责任"
+    }
+  ],
+  "过错责任": [
+    {
+      "id": "fault_liability",
+      "kind": "concept",
+      "name": "过错责任"
+    }
+  ],
+  "运输合同": [
+    {
+      "id": "transport_contract",
+      "kind": "concept",
+      "name": "运输合同"
+    }
+  ],
+  "远程办公": [
+    {
+      "id": "remote_work",
+      "kind": "scenario",
+      "name": "远程办公"
+    },
+    {
+      "id": "remote_work",
+      "kind": "scenario",
+      "name": "远程办公"
+    }
+  ],
+  "违反本法规定解除或者终止劳动合同": [
+    {
+      "id": "illegal_rescission",
+      "kind": "concept",
+      "name": "违法解除"
+    }
+  ],
+  "违法开除": [
+    {
+      "id": "illegal_dismissal",
+      "kind": "scenario",
+      "name": "违法解除"
+    }
+  ],
+  "违法终止": [
+    {
+      "id": "illegal_rescission",
+      "kind": "concept",
+      "name": "违法解除"
+    }
+  ],
+  "违法解除": [
+    {
+      "id": "illegal_rescission",
+      "kind": "concept",
+      "name": "违法解除"
+    },
+    {
+      "id": "illegal_dismissal",
+      "kind": "scenario",
+      "name": "违法解除"
+    }
+  ],
+  "违法解除劳动合同": [
+    {
+      "id": "illegal_rescission",
+      "kind": "concept",
+      "name": "违法解除"
+    }
+  ],
+  "违约": [
+    {
+      "id": "breach_of_contract",
+      "kind": "concept",
+      "name": "违约责任"
+    }
+  ],
+  "违约责任": [
+    {
+      "id": "breach_of_contract",
+      "kind": "concept",
+      "name": "违约责任"
+    }
+  ],
+  "违约金": [
+    {
+      "id": "liquidated_damages",
+      "kind": "concept",
+      "name": "违约金"
+    },
+    {
+      "id": "liquidated_damages_civil",
+      "kind": "concept",
+      "name": "违约金"
+    }
+  ],
+  "连带保证": [
+    {
+      "id": "guarantee_dispute",
+      "kind": "scenario",
+      "name": "担保纠纷"
+    }
+  ],
+  "连带责任": [
+    {
+      "id": "joint_liability",
+      "kind": "concept",
+      "name": "连带责任"
+    }
+  ],
+  "连带赔偿": [
+    {
+      "id": "joint_liability",
+      "kind": "concept",
+      "name": "连带责任"
+    }
+  ],
+  "连续签两次": [
+    {
+      "id": "open_ended_contract_request",
+      "kind": "scenario",
+      "name": "要求签无固定期限"
+    }
+  ],
+  "退休": [
+    {
+      "id": "retirement",
+      "kind": "concept",
+      "name": "退休"
+    }
+  ],
+  "退休返聘": [
+    {
+      "id": "retirement_rehire",
+      "kind": "scenario",
+      "name": "退休返聘"
+    },
+    {
+      "id": "retirement_rehire",
+      "kind": "scenario",
+      "name": "退休返聘"
+    }
+  ],
+  "退货": [
+    {
+      "id": "sales_breach",
+      "kind": "scenario",
+      "name": "买卖违约"
+    }
+  ],
+  "通知删除": [
+    {
+      "id": "network_tort",
+      "kind": "concept",
+      "name": "网络侵权"
+    }
+  ],
+  "造谣": [
+    {
+      "id": "reputation_infringe",
+      "kind": "scenario",
+      "name": "名誉侵权"
+    }
+  ],
+  "遗产": [
+    {
+      "id": "inheritance",
+      "kind": "concept",
+      "name": "继承"
+    },
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "遗产债务": [
+    {
+      "id": "estate_debt",
+      "kind": "concept",
+      "name": "遗产债务清偿"
+    }
+  ],
+  "遗产债务清偿": [
+    {
+      "id": "estate_debt",
+      "kind": "concept",
+      "name": "遗产债务清偿"
+    }
+  ],
+  "遗产分割": [
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "遗嘱": [
+    {
+      "id": "testament",
+      "kind": "concept",
+      "name": "遗嘱"
+    },
+    {
+      "id": "inheritance_dispute",
+      "kind": "scenario",
+      "name": "继承纠纷"
+    }
+  ],
+  "遗嘱继承": [
+    {
+      "id": "testament",
+      "kind": "concept",
+      "name": "遗嘱"
+    }
+  ],
+  "遗失物": [
+    {
+      "id": "lost_property",
+      "kind": "concept",
+      "name": "拾得遗失物"
+    }
+  ],
+  "遗属": [
+    {
+      "id": "survivor_benefit",
+      "kind": "concept",
+      "name": "遗属待遇"
+    }
+  ],
+  "遗属待遇": [
+    {
+      "id": "survivor_benefit",
+      "kind": "concept",
+      "name": "遗属待遇"
+    }
+  ],
+  "遗赠": [
+    {
+      "id": "legacy",
+      "kind": "concept",
+      "name": "遗赠"
+    }
+  ],
+  "遗赠扶养协议": [
+    {
+      "id": "testament",
+      "kind": "concept",
+      "name": "遗嘱"
+    }
+  ],
+  "重大变化": [
+    {
+      "id": "change_of_circumstances",
+      "kind": "concept",
+      "name": "情势变更"
+    }
+  ],
+  "重大误解": [
+    {
+      "id": "major_misunderstanding",
+      "kind": "concept",
+      "name": "重大误解"
+    }
+  ],
+  "长期合同": [
+    {
+      "id": "open_ended_contract",
+      "kind": "concept",
+      "name": "无固定期限劳动合同"
+    }
+  ],
+  "长期病假被辞": [
+    {
+      "id": "sick_leave",
+      "kind": "scenario",
+      "name": "病假与医疗期"
+    }
+  ],
+  "限制民事行为能力": [
+    {
+      "id": "limited_civil_capacity",
+      "kind": "concept",
+      "name": "限制民事行为能力"
+    }
+  ],
+  "随时走人": [
+    {
+      "id": "immediate_resignation",
+      "kind": "scenario",
+      "name": "被迫即时解除"
+    }
+  ],
+  "随时通知用人单位解除": [
+    {
+      "id": "immediate_rescission",
+      "kind": "concept",
+      "name": "劳动者即时解除"
+    }
+  ],
+  "隐私": [
+    {
+      "id": "right_of_privacy",
+      "kind": "concept",
+      "name": "隐私权"
+    },
+    {
+      "id": "privacy_infringe",
+      "kind": "scenario",
+      "name": "隐私与个人信息"
+    }
+  ],
+  "隐私与个人信息": [
+    {
+      "id": "privacy_infringe",
+      "kind": "scenario",
+      "name": "隐私与个人信息"
+    }
+  ],
+  "隐私权": [
+    {
+      "id": "right_of_privacy",
+      "kind": "concept",
+      "name": "隐私权"
+    }
+  ],
+  "集体协商": [
+    {
+      "id": "collective_consultation",
+      "kind": "concept",
+      "name": "集体协商"
+    },
+    {
+      "id": "collective_contract",
+      "kind": "scenario",
+      "name": "集体合同"
+    }
+  ],
+  "集体协议": [
+    {
+      "id": "collective_contract",
+      "kind": "concept",
+      "name": "集体合同"
+    }
+  ],
+  "集体合同": [
+    {
+      "id": "collective_contract",
+      "kind": "concept",
+      "name": "集体合同"
+    },
+    {
+      "id": "collective_contract",
+      "kind": "scenario",
+      "name": "集体合同"
+    },
+    {
+      "id": "collective_contract",
+      "kind": "scenario",
+      "name": "集体合同"
+    }
+  ],
+  "雇佣关系": [
+    {
+      "id": "labor_relationship",
+      "kind": "concept",
+      "name": "劳动关系"
+    }
+  ],
+  "霸王条款": [
+    {
+      "id": "contract_invalid",
+      "kind": "scenario",
+      "name": "合同无效"
+    }
+  ],
+  "非全日制": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "非全日制工资结算": [
+    {
+      "id": "part_time_wage_settlement",
+      "kind": "concept",
+      "name": "非全日制工资结算"
+    }
+  ],
+  "非全日制用工": [
+    {
+      "id": "part_time_employment",
+      "kind": "concept",
+      "name": "非全日制用工"
+    },
+    {
+      "id": "part_time_job",
+      "kind": "scenario",
+      "name": "非全日制用工"
+    }
+  ],
+  "非法人组织": [
+    {
+      "id": "unincorporated_organization",
+      "kind": "concept",
+      "name": "非法人组织"
+    }
+  ],
+  "非过失性辞退": [
+    {
+      "id": "non_fault_dismissal",
+      "kind": "concept",
+      "name": "非过失性辞退"
+    }
+  ],
+  "饲养动物": [
+    {
+      "id": "animal_liability",
+      "kind": "concept",
+      "name": "饲养动物损害责任"
+    }
+  ],
+  "饲养动物损害责任": [
+    {
+      "id": "animal_liability",
+      "kind": "concept",
+      "name": "饲养动物损害责任"
+    }
+  ],
+  "高危作业": [
+    {
+      "id": "ultra_hazard_liability",
+      "kind": "concept",
+      "name": "高度危险责任"
+    }
+  ],
+  "高度危险": [
+    {
+      "id": "ultra_hazard_liability",
+      "kind": "concept",
+      "name": "高度危险责任"
+    }
+  ],
+  "高度危险责任": [
+    {
+      "id": "ultra_hazard_liability",
+      "kind": "concept",
+      "name": "高度危险责任"
+    }
+  ],
+  "高空抛物": [
+    {
+      "id": "high_altitude_throwing",
+      "kind": "concept",
+      "name": "高空抛物"
+    }
+  ]
+}

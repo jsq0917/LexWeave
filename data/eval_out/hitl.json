@@ -1,0 +1,52 @@
+{
+  "cases": [
+    {
+      "id": "e2e-1",
+      "query": "公司股东之间转让股权需要缴什么税？",
+      "suspended": true,
+      "resumed": true,
+      "answer_len": 389,
+      "citations": [
+        "中华人民共和国民法典第一千一百六十一条",
+        "中华人民共和国民法典第一千一百六十三条",
+        "中华人民共和国民法典第一千一百五十九条"
+      ],
+      "ok": true
+    },
+    {
+      "id": "e2e-2",
+      "query": "公司股东之间转让股权需要缴什么税？",
+      "suspended": true,
+      "resumed": true,
+      "citations": [
+        "中华人民共和国劳动合同法第八十五条",
+        "中华人民共和国劳动法第九十一条"
+      ],
+      "citations_swapped": true,
+      "ok": true
+    },
+    {
+      "id": "e2e-3",
+      "query": "公司拖了我两个月工资，我能要回来吗？",
+      "suspended": true,
+      "restart_resumed": true,
+      "answer": "结论：拖欠工资违法，可要求足额支付并可主张赔偿。",
+      "ok": true
+    }
+  ],
+  "all_pass": true,
+  "stats": {
+    "total_tasks": 3,
+    "reviewed_tasks": 3,
+    "intervention_rate": 1.0,
+    "correction_types": {
+      "accept": 1,
+      "edit_articles": 1,
+      "provide_answer": 1
+    },
+    "corrections": 3,
+    "pending": 0,
+    "completed": 3
+  },
+  "checkpoint_files": 3
+}
