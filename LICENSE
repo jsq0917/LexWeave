@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-关于数据：`data/corpus/` 与 `data/extracted/` 中的法律条文来自公开的法律文本
-（《中华人民共和国民法典》《中华人民共和国劳动法》《中华人民共和国劳动合同法》），
-法律条文本身不受著作权保护；本仓库对其的加工产物（结构化 jsonl、概念词表、图谱）
-随本仓库一并以 MIT 协议提供，供学习与研究使用，不构成法律意见。
