@@ -268,15 +268,25 @@ RETURN a.citation AS from_law, b.citation AS to_law LIMIT 10
 
 ```bash
 uv sync --extra dev                                    # 1) 建环境（lock 固定版本）
-uv run python scripts/build_graph.py                   # 2) 建图 + 刷新 stats.json（约 10 秒）
+uv run python scripts/build_graph.py                   # 2) 建图 + 刷新 stats.json（约 15 秒）
 uv run python -m pytest tests -q                       # 3) 单元测试（18 项，不依赖模型）
 ```
 
 第 2 条跑完，日志里的 `nodes 1736 / edges 4259 / DEFINES 3621` 应与本文 §2、§3 的数字逐位一致；
-若不一致，说明你的 `data/extracted` 与本仓库不同。Linux / macOS 把 `uv run python` 换成同一个意思即可，
-`uv run` 不依赖 `.venv\Scripts\` 这种 Windows 路径。
+若不一致，说明你的 `data/extracted` 与本仓库不同。`uv run` 自带环境切换，Linux / macOS 同样适用，
+不依赖 `.venv\Scripts\` 这种 Windows 路径。
 
-> 这三条已在**独立 clone** 上验证过（`git clone` → 新目录，无 `.venv`、无 `data/graph`，全部从 `data/extracted` 重建）。
+> **已验证**：`git clone` 到全新目录（无 `.venv`、无 `data/graph`，全部从 `data/extracted` 重建），
+> 三条命令按序执行通过，图统计与本 README 逐位一致，18 项单测全绿。
+
+**首次 `uv sync` 会装 CUDA 版 torch**（`sentence-transformers` 的传递依赖，3.5 GB / 本机约 9 分钟）。
+只想跑上面三条（建图 + 单测，都不 import 模型）可以省掉它：
+
+```bash
+uv sync --extra dev --no-install-package torch          # venv 明显更小，建图与单测同样通过（已验证）
+```
+
+要跑检索评测（§10.2）才需要 torch 与三个 bge 模型。
 
 ### 10.2 全量流水线（需要模型与 LLM key）
 
@@ -354,7 +364,7 @@ Neo4j 连接失败时自动回落 NetworkX 离线镜像，不阻塞任何评测�
 | B4 | 槽位 / 20 脚本 / 继承 90% / 指代 5 条 / 重连 | 全部达标 |
 | B5 | 阈值挂起 / 三种修正 / 回流 / 3 条 E2E / 统计 | 全部达标 |
 | B6 | 三档 ×60 / bootstrap / 成本表 / 结论 | 见 §8 |
-| A4 | 公开仓库 / README ≥150 行 / ≥2 张图 / 3 条命令可复现 / 已知局限 ≥5 条 | README 370 行、4 张图（1 架构 + 3 结果）、三条命令在独立 clone 上验过、已知局限 9 条；**仓库公开状态见 README 顶部徽标** |
+| A4 | 公开仓库 / README ≥150 行 / ≥2 张图 / 3 条命令可复现 / 已知局限 ≥5 条 | README 380 行、4 张图（1 架构 + 3 结果）、三条命令在独立 clone 上验过（含无 torch 的轻量路径）、已知局限 9 条；**唯一未完成项：仓库仍为 private，需在 GitHub 网页端改为 Public** |
 
 ---
 
