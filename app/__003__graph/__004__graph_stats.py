@@ -44,6 +44,12 @@ def run_audit(store, concepts: dict[str, dict]) -> dict:
         "sampled": checked,
         "pass": ok,
         "precision": round(ok / checked, 4) if checked else 0.0,
+        "scope": "literal_mention_proxy",
+        "scope_note": (
+            "只验概念名/别名是否出现在条文正文，是『召回侧字面命中』的代理指标，"
+            "不等于『该条在定义该概念』。定义级精度需人工浏览，实测 20 条中 15 条成立（75%），"
+            "见 README §3 与 §12 第 6 条。"
+        ),
         "failures": failures[:10],
     }
 
@@ -79,7 +85,7 @@ def main() -> None:
     }
     write_json("data/graph/stats.json", out)
     log.info("图统计 %s", {k: out[k] for k in ("backend", "nodes", "edges", "labels", "relationships")})
-    log.info("概念覆盖 %.1f%%，抽检精度 %.1f%%", out["concept_coverage"]["coverage"] * 100, audit["precision"] * 100)
+    log.info("概念覆盖 %.1f%%，字面命中精度 %.1f%%", out["concept_coverage"]["coverage"] * 100, audit["precision"] * 100)
 
     problems = []
     if out["labels"].get("Article", 0) != 1465:
@@ -89,11 +95,17 @@ def main() -> None:
     if out["relationships"].get("DEFINES", 0) < 800:
         problems.append("DEFINES 少于 800")
     if audit["precision"] < 0.85:
-        problems.append(f"抽检精度 {audit['precision']} < 0.85")
+        problems.append(f"字面命中精度 {audit['precision']} < 0.85")
     if problems:
-        log.warning("B1 验收未过: %s", "; ".join(problems))
+        log.warning("B1 结构验收未过: %s", "; ".join(problems))
     else:
-        log.info("B1 验收通过")
+        log.info("B1 结构验收通过（规模 / provenance / 字面命中）")
+    # 口径提醒：避免把「结构达标」误读成「定义级精度达标」
+    log.warning(
+        "抽检口径：%.1f%% 是『字面命中』代理（只验概念名是否出现在正文），"
+        "不等于『该条在定义该概念』；人工浏览 20 条的定义级精度为 75%%，仍未达 85%%，见 README §3 / §12",
+        audit["precision"] * 100,
+    )
 
 
 if __name__ == "__main__":

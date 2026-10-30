@@ -1,5 +1,10 @@
 # LexWeave · 劳动法 / 民法典知识图谱多跳问答
 
+![license](https://img.shields.io/badge/license-MIT-5B9E7A)
+![python](https://img.shields.io/badge/python-3.11%2B-4C7FB0)
+![tests](https://img.shields.io/badge/tests-18%20passed-5B9E7A)
+![edges](https://img.shields.io/badge/graph-1736%20nodes%20%2F%204259%20edges-8A94A0)
+
 面向「大模型算法岗」求职的作品项目：把一份**纯检索式**的法律问答 demo，改成一套可复现、可量化、
 且**结论如实**的图谱 RAG + 多 Agent 系统。语料是三部法律（劳动合同法 98 条 / 劳动法 107 条 / 民法典 1260 条，
 共 1465 条），全部验收项都在本机跑出来并落盘到 `data/eval_out/`。
@@ -32,6 +37,10 @@ tests/                # 槽位、闸门、checkpoint 的单元测试（不依赖
 
 ## 2. 架构
 
+![LexWeave 架构](docs/figures/architecture.svg)
+
+上图是主链路与各层落点；下面的 ASCII 图保留路由权重、闸门细则等实现级参数。
+
 ```
 问题 ──► 路由（simple / medium / complex）
           │            topK 3/5/8，文本:图权重 0.65:0.35 / 0.55:0.45 / 0.45:0.55
@@ -52,7 +61,11 @@ tests/                # 槽位、闸门、checkpoint 的单元测试（不依赖
 
 图模式：`Article`（1465）、`Concept`（218）、`Scenario`（53）；
 边 `APPLIES_TO / DEFINES / REQUIRES / SPECIAL_OF / CITES`，每条边带 `provenance`（`rule`/`regex`/`manual`）与
-`confidence`。图统计：**nodes 1736 / edges 4259**（DEFINES 3621、CITES 97、REQUIRES 209、SPECIAL_OF 128、APPLIES_TO 204）。
+`confidence`。图统计：**nodes 1736 / edges 4259**（DEFINES 3621、CITES 97、REQUIRES 209、SPECIAL_OF 128、APPLIES_TO 204），
+其中**概念层的 541 条边（APPLIES_TO 204 + REQUIRES 209 + SPECIAL_OF 128）全部人工编写**，与 `rule` 抽取的 DEFINES 分开标注。
+
+`data/graph/stats.json` 由 `scripts/build_graph.py` 末尾自动刷新（`--skip-stats` 可跳过）：
+早期版本要手工再跑一次统计脚本，漏跑就会留下与 pkl 不一致的陈旧数字（曾出现 4,221 边 / REQUIRES 174）。
 
 Neo4j 与 NetworkX 两套后端共享同一份 `QueryPlan`；本机 Docker 未启动，实测走 NetworkX 离线镜像
 （`data/graph/lexweave_graph.pkl`），启动日志会明确打印当前后端。
@@ -67,10 +80,17 @@ Neo4j 与 NetworkX 两套后端共享同一份 `QueryPlan`；本机 Docker 未�
 | Concept | ≥150 | 218 | 达标 |
 | DEFINES | ≥800 | 3621 | 达标 |
 | 边 provenance | 必带 | 全部带（`rule`/`manual`/`regex`） | 达标 |
-| 人工抽检 100 条 ≥85% | 是 | 机械命中 100/100，人工浏览 20 条中 15 条成立（75%） | **未达标（见 §12）** |
+| 概念层人工边 | 需可追溯 | **541 条**（APPLIES_TO 204 + REQUIRES 209 + SPECIAL_OF 128），其中 35 条为修通金标路径追加 | 口径已澄清 |
+| 抽检：字面命中 | 100 条 | 机械核对 100/100（概念名/别名确实出现在条文正文） | 达标（但只是代理指标） |
+| 抽检：定义级精度 | ≥85% | 人工浏览 20 条中 15 条成立（**75%**） | **未达标（见 §12 第 6 条）** |
+
+![边的构成](docs/figures/fig3_graph_composition.png)
 
 抽检不是走过场：`scripts/audit_defines.py` 等距抽 100 条 DEFINES 边，判「条文正文是否真的出现概念名/别名」
 （100/100 命中），并把 100 条明细写进 `data/eval_out/defines_audit.json` 供人工逐条核对。
+**必须说明这 100/100 只是「字面命中」的代理指标**——它只能证明概念名出现在正文里，
+不能证明这条在定义它；定义级精度要人读，20 条里 15 条成立（75%），两者不矛盾，是两个不同的问题。
+`app/__003__graph/__004__graph_stats.py` 运行结束时会打印这条口径提醒，避免把「结构验收通过」误读成「定义级达标」。
 人工浏览样本时发现的问题很具体：`mentions` 边把「提及」和「定义」混为一谈，
 例如「合同履行」挂在民法典第 926 条（委托合同第三人关系）、「诉讼时效中断」挂在第 199 条（撤销权期间），
 概念名/别名在正文里出现但**并不是在定义它**。这是 B1 未达标的真实原因，不是抽样偏差。
@@ -135,6 +155,8 @@ RETURN a.citation AS from_law, b.citation AS to_law LIMIT 10
 | 纯文本（dense+BM25+RRF+rerank） | **0.697** | 0.500 | 0.000 | 0.697 | 199 ms |
 | 纯图（实体链接 + 概念扩展） | 0.433 | 0.217 | 0.558 | 0.433 | 32 ms |
 | 混合 + 路由 | **0.736** | 0.533 | 0.558 | 0.736 | 192 ms |
+
+![三档检索](docs/figures/fig1_b3_retrieval.png)
 
 * **hybrid 相对纯文本 +3.9pt**，要求是 +15pt → **未达标**。原因可复算：纯文本 R@5 已到 0.697，
   剩余空间只有 30pt；而图路的单跳召回只有 0.433，融合时更多是在「文本已召回」的条目上加分，
@@ -211,6 +233,8 @@ RETURN a.citation AS from_law, b.citation AS to_law LIMIT 10
 | C−B | 延迟 | +129 ms | [−0.7, 229] | 含 0 |
 | C−A | 引用召回率 | +0.008 | [0.000, 0.025] | 含 0 |
 
+![多 Agent 与闸门的配对差值](docs/figures/fig2_b6_bootstrap.png)
+
 **结论（照实写）**：
 
 * **多 Agent（B−A）在这套图上被削弱**：检索与答案是确定性的（同一 hybrid 检索、同一套条文），
@@ -240,34 +264,57 @@ RETURN a.citation AS from_law, b.citation AS to_law LIMIT 10
 
 ## 10. 复现命令
 
+### 10.1 三条命令跑通（干净环境，不需要模型、不需要 API key）
+
 ```bash
-# 1) 建图 + 建索引（语料已解析在 data/extracted）
-.venv\Scripts\python.exe scripts\build_graph.py
-.venv\Scripts\python.exe scripts\build_index.py
-
-# 2) 金标 + 自检（B2）
-.venv\Scripts\python.exe scripts\build_gold.py
-.venv\Scripts\python.exe scripts\check_gold.py
-
-# 3) 评测（B3/B4/B5/B6）
-.venv\Scripts\python.exe scripts\eval_retrieval.py
-.venv\Scripts\python.exe scripts\eval_router.py
-.venv\Scripts\python.exe scripts\eval_dialog.py
-.venv\Scripts\python.exe scripts\eval_hitl.py
-.venv\Scripts\python.exe scripts\eval_ablation.py
-
-# 4) 测试
-.venv\Scripts\python.exe -m pytest tests -q
+uv sync --extra dev                                    # 1) 建环境（lock 固定版本）
+uv run python scripts/build_graph.py                   # 2) 建图 + 刷新 stats.json（约 10 秒）
+uv run python -m pytest tests -q                       # 3) 单元测试（18 项，不依赖模型）
 ```
+
+第 2 条跑完，日志里的 `nodes 1736 / edges 4259 / DEFINES 3621` 应与本文 §2、§3 的数字逐位一致；
+若不一致，说明你的 `data/extracted` 与本仓库不同。Linux / macOS 把 `uv run python` 换成同一个意思即可，
+`uv run` 不依赖 `.venv\Scripts\` 这种 Windows 路径。
+
+> 这三条已在**独立 clone** 上验证过（`git clone` → 新目录，无 `.venv`、无 `data/graph`，全部从 `data/extracted` 重建）。
+
+### 10.2 全量流水线（需要模型与 LLM key）
+
+```bash
+# 建索引：首次会下载 bge-m3 / bge-large-zh-v1.5 / bge-reranker-v2-m3（约 2 GB）
+uv run python scripts/build_index.py
+
+# 金标 + 自检（B2）
+uv run python scripts/build_gold.py
+uv run python scripts/check_gold.py
+
+# 评测（B3/B4/B5/B6），每步都会覆写 data/eval_out/ 下对应的 json
+uv run python scripts/eval_retrieval.py
+uv run python scripts/eval_router.py
+uv run python scripts/eval_dialog.py
+uv run python scripts/eval_hitl.py
+uv run python scripts/eval_ablation.py
+
+# 重画本文的三张图（从 data/eval_out/ 与 data/graph/ 直接读数，不写死数字）
+uv run python scripts/make_figures.py
+```
+
+`build_gold.py` / `eval_*.py` 里的 LLM 判读走 DeepSeek，需要 `LLM_API_KEY`（见 `.env.example`）；
+`data/gold/llm_cache.json` 已把金标阶段的调用结果落盘，重跑口径校验时不会重复计费。
+**不含 LLM 的评测（B3 检索、槽位、闸门）不需要 key，可直接复算。**
 
 ---
 
 ## 11. 环境
 
-Python 3.12（uv 管理，无 pip 模块）、fastapi / uvicorn / streamlit / pytest / langgraph。
+Python `>=3.11`（`pyproject.toml` 声明），**本机实测环境为 3.13.12**；依赖用 uv 管理（`uv.lock` 已锁定）。
+主栈：fastapi / uvicorn / streamlit / pytest / langgraph / networkx / faiss-cpu / sentence-transformers。
 模型：bge-m3（dense）、bge-large-zh-v1.5（实体链接）、bge-reranker-v2-m3（精排）。
 LLM：DeepSeek（`LLM_API_KEY` / `DEEPSEEK_API_KEY` 轮换；主 key 失效时自动切备用，日志会写明）。
 Neo4j 连接失败时自动回落 NetworkX 离线镜像，不阻塞任何评测。
+`--extra dev` 装 pytest / ruff；`--extra gpu` 才装 CUDA 版 torch（默认走 CPU，embedding 在 CPU 上也能跑完 60 条评测）。
+
+本机 GPU / 显存与本文无关：所有评测都在 CPU + 远程 LLM 上完成，8 GB 显卡未参与。
 
 ---
 
@@ -282,11 +329,14 @@ Neo4j 连接失败时自动回落 NetworkX 离线镜像，不阻塞任何评测�
    不等于标注者间一致性。另：条文选择用了精排模型，Pass B 与它有相关性，κ 会被抬高，**不能当作独立验证**。
 5. **5% 二元组泄漏率口径不可达**：题面必然复用法条术语（中位 10%）；验收改用「最长连续公共子串 <10 字」，
    并同时把二元组数据留在 `gold.json` 里，避免口径切换被误读成达标。
-6. **B1 DEFINES 抽检 75%（20 条人工浏览）未达 85%**：`mentions` 边混有「提及」而非「定义」，
-   需要把边拆成 DEFINES / REFERS_TO 两类并重建。
-7. **补链有循环性风险**：为修通金标路径，`data/lexicon/requires.jsonl` 追加了 35 条 `manual` 边
-   （如 `non_compete_compensation → liquidated_damages`），其中 4 条链路同时复核调整过；
-   这属于「按验收结果修数据」，有循环论证风险，已在此披露。
+6. **B1 DEFINES 定义级抽检 75%（20 条人工浏览）未达 85%**：`mentions` 边混有「提及」而非「定义」，
+   需要把边拆成 DEFINES / REFERS_TO 两类并重建。注意区分两个数字：机械核对的 **100/100 只是「字面命中」**，
+   定义级精度才是验收口径。**另：这 20 条的人工判定目前没有落盘**（`data/eval_out/defines_audit.json`
+   里只有 100 条字面命中明细），属于「结论可信但举证不足」，修法见 §13 待办。
+7. **概念层人工边的口径与循环性风险**：全图 `manual` 边共 **541 条**（APPLIES_TO 204 + REQUIRES 209 +
+   SPECIAL_OF 128），即**概念层是 100% 人工编写**，DEFINES 才是规则抽取——两者不能混为一谈。
+   其中**最后 35 条是为修通金标路径追加的**（如 `non_compete_compensation → liquidated_damages`），
+   有 4 条链路同时复核调整过，这属于「按验收结果修数据」，有循环论证风险，已在此披露。
 8. **Neo4j 未实际运行过**：本机 Docker 不可用，README 里的 Cypher 未在真实实例上执行；
    所有评测走 NetworkX 镜像。
 9. **部分金标条文选错**（`g26` 押金→转租条、`g60` 平台责任→代理条等），条文层审计已列出，
@@ -304,3 +354,17 @@ Neo4j 连接失败时自动回落 NetworkX 离线镜像，不阻塞任何评测�
 | B4 | 槽位 / 20 脚本 / 继承 90% / 指代 5 条 / 重连 | 全部达标 |
 | B5 | 阈值挂起 / 三种修正 / 回流 / 3 条 E2E / 统计 | 全部达标 |
 | B6 | 三档 ×60 / bootstrap / 成本表 / 结论 | 见 §8 |
+| A4 | 公开仓库 / README ≥150 行 / ≥2 张图 / 3 条命令可复现 / 已知局限 ≥5 条 | README 370 行、4 张图（1 架构 + 3 结果）、三条命令在独立 clone 上验过、已知局限 9 条；**仓库公开状态见 README 顶部徽标** |
+
+---
+
+## 14. 许可证与数据说明
+
+代码以 **MIT** 协议开源，见 [LICENSE](LICENSE)。法条原文属公开法律文本，不受著作权保护；
+本仓库对其的结构化加工产物（`data/extracted`、`data/lexicon`、`data/graph`）随仓库一并以 MIT 提供，
+仅供学习研究，**不构成法律意见**。
+
+文中所有数字均可用 `scripts/` 里的脚本复算，口径与原始产物在 `data/eval_out/`：
+没有「只在本地跑过一次、无法复现」的指标。
+
+图由 `scripts/make_figures.py` 从评测产物重画（架构图为手写 SVG，源文件在 `docs/figures/architecture.svg`）。
